@@ -71,13 +71,13 @@ void checkLoc() {
     if (!digitalRead(sF1)) {
         locNow = 1;
     }
-    else if (!digitalRead(sF2)) {
+    if (!digitalRead(sF2)) {
         locNow = 2;
     }
-    else if (!digitalRead(sF3)) {
+    if (!digitalRead(sF3)) {
         locNow = 3;
     }
-    else if (!digitalRead(sF4)) {
+    if (!digitalRead(sF4)) {
         locNow = 4;
     }
 }
