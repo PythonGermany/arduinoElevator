@@ -6,7 +6,6 @@ int sensorDoor = 12;
 
 int locNow = 0;
 int locStop = 0;
-bool active = false;
 
 void setup() {
     //Serial.begin(9600);
@@ -21,23 +20,17 @@ void setup() {
 
 void loop() {
     locNow = checkLoc();
-    if (locStop && locNow) {
-        if (locStop == locNow || digitalRead(sensorDoor)) {
-            //Serial.println("Stop floor reached or door open");
-            digitalWrite(powerP, LOW);
-            digitalWrite(powerP + 1, LOW);
-            active = false;
-            locStop = 0;
-        }
-        else if (!active)
-        {
-            digitalWrite(powerP + (locStop > locNow), HIGH); //if (locStop > locNow) {Serial.println("Going up");} else {Serial.println("Going down");}
-            active = true;
-        }
+    if (locStop && locNow && (locStop == locNow || digitalRead(sensorDoor))) {
+      //Serial.println("Stop floor reached or door open");
+      digitalWrite(powerP, LOW);
+      digitalWrite(powerP + 1, LOW);
+      locStop = 0;
     }
-    else
+    else if (locStop && locNow && locStop != locNow)
+      digitalWrite(powerP + (locStop > locNow), HIGH); //if (locStop > locNow) {Serial.println("Going up");} else {Serial.println("Going down");}
+    else if (!locStop)
         locStop = checkRequest();
-    //Serial.print(locNow); Serial.print(locStop); Serial.print(active); Serial.println(!digitalRead(sensorDoor)); delay(1000);
+    //Serial.print(locNow); Serial.print(locStop); Serial.println(!digitalRead(sensorDoor)); //delay(1000);
 }
 
 int checkLoc() {
