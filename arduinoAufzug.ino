@@ -6,7 +6,7 @@ const int sensorDoor = 12;
 
 int locNow = 0;
 int locStop = 0;
-bool validInput = true
+bool validInput = false;
 
 void setup()
 {
@@ -37,7 +37,7 @@ void loop()
 	else if (!locStop && locNow && validInput && !digitalRead(sensorDoor))
 	{
 		locStop = checkRequest(); // Serial.print(locNow); Serial.print(locStop); Serial.println(!digitalRead(sensorDoor));}
-		if (!locStop )
+		if (!locStop)
 			digitalWrite(powerP + (locStop > locNow), HIGH); // if (locStop > locNow) {Serial.println("Going up");} else {Serial.println("Going down");}
 	}
 }
@@ -64,7 +64,7 @@ int checkLoc()
 int checkRequest()
 {
 	for (int i = requestStartP; i < requestStartP + floors; i++)
-		if (!digitalRead(i) && i - requestStartP + 1 != checkLoc())
+		if (!digitalRead(i) && i - requestStartP + 1 != locNow)
 			return (i - requestStartP + 1);
 	return (0);
 }
