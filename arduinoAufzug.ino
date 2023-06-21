@@ -49,9 +49,10 @@ void loop() {
   if (!error && locNow >= 0) {
     if (!active)
       while (Serial.available() <= 0) continue;
-    else
+    else {
+      locNow += (locStop > locNow) ? 1 : -1;
       delay(1000);
-    if (active) locNow += (locStop > locNow) ? 1 : -1;
+    }
   }
 #endif
   if (!error) {
