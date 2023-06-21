@@ -98,6 +98,7 @@ int updateState(int start, int floors, int prev) {
 #endif
 }
 
+#ifdef DEBUG
 void printSimState(int now, int stop, bool active, bool error) {
   for (int i = floorCount - 1; i >= 0; i--) {
     Serial.print(i == now ? "N " : ". ");
@@ -107,3 +108,4 @@ void printSimState(int now, int stop, bool active, bool error) {
   Serial.println(error ? " Error!" : "");
   Serial.println();
 }
+#endif
