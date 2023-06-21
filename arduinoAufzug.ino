@@ -31,7 +31,6 @@ void setup() {
     pinMode(i, INPUT_PULLUP);
   for (int i = sensorStartP; i < sensorStartP + floorCount; i++)
     pinMode(i, INPUT_PULLUP);
-  pinMode(sensorDoor, INPUT_PULLUP);
   pinMode(powerP, OUTPUT);
   pinMode(powerP + 1, OUTPUT);
 #ifdef DEBUG
