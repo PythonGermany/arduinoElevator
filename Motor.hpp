@@ -9,10 +9,9 @@
 
 class Motor {
  private:
-  byte pinDown_;
-  byte pinUp_;
+  const byte pinDown_;
+  const byte pinUp_;
   int8_t state_;
-  bool blink_;
 
  public:
   Motor(byte pinDown, byte pinUp);

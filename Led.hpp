@@ -8,7 +8,7 @@
 
 class Led {
  private:
-  byte pin_;
+  const byte pin_;
   bool state_;
   uint16_t interval_;
 
