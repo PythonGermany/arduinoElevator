@@ -1,22 +1,18 @@
-
 #include "Inputs.hpp"
 #include "Led.hpp"
 #include "Motor.hpp"
-
-// Debug macros
-#define DEBUG
-#define DEBUGINTERVAL 2500
+#include "debug.hpp"
 
 // Led timing macros
 #define ERRORLEDINTERVAL 250
-#define LEDSTRIPINTERVAL 6000
-#define LEDSTRIPTIMER 60000
+#define LEDSTRIPINTERVAL 2500
+#define LEDSTRIPDELAY 600000
 
 // Floor data macros
 #define FLOORCOUNT 4
-#define FlOORTOP FLOORCOUNT - 1
 #define FLOORBOTTOM 0
-#define INITFLOOR 2
+#define FlOORTOP FLOORCOUNT - 1
+#define INITFLOOR 2  // DEV: Do I still need this?
 
 // Sensor save address location
 #define SAVESLOTADDRESS 0
@@ -24,23 +20,24 @@
 // In and out components
 Inputs request(2, FLOORCOUNT);
 Inputs sensor(8, FLOORCOUNT);  // DEV: Invert back for real sensor
-Led ledStrip(12, LEDSTRIPINTERVAL);
+Led ledStrip(12, LEDSTRIPINTERVAL, LEDSTRIPDELAY);
 Motor motor(6, 7, &ledStrip);
 Led errorLed(LED_BUILTIN, ERRORLEDINTERVAL);
 Inputs manual(14, 2);
+Inputs emergency(16, 1);  // DEV: Invert back for real sensor
 
 // Runtime state variables
 int8_t locNow = NONE;
-int8_t locStop = NONE;
+int8_t locStop = STOP;
 bool error = false;
 
 void setup() {
 #ifdef DEBUG
   Serial.begin(115200);
 #endif
-  ledStrip.updateTimer(false, LEDSTRIPTIMER);
   sensor.setSaveAddress(SAVESLOTADDRESS);
   locNow = sensor.update(true);
+  // DEV: Define behavior for first start
 }
 
 void loop() {
@@ -52,18 +49,18 @@ void loop() {
   }
 #endif
   if (!error) {
-    if (ledStrip.state() == ON && motor.state() == STOP) ledStrip.updateTimer();
-    processManualRequest();
-    if (locStop == NONE) locStop = request.update();
+    if (ledStrip.state() == ON && motor.state() == STOP) ledStrip.delay();
+    if (locStop == STOP) locStop = request.update();
     locNow = sensor.update(true);
-    error = sensor.error();
+    error = sensor.error() || emergency.update() != NONE;
+    processManualRequest();
   } else {
     errorLed.blink();
     ledStrip.blink();
   }
   if (motor.state() != STOP && (locStop == locNow || error))
     locStop = motor.stop();
-  else if (motor.state() == STOP && locStop != NONE && !error)
+  else if (motor.state() == STOP && locStop != STOP && !error)
     locStop > locNow ? motor.up() : motor.down();
 }
 
@@ -78,7 +75,7 @@ void processManualRequest() {
 #endif
       while (manual.update() == DOWN && locNow != FLOORBOTTOM && !error) {
         locNow = sensor.update(true);
-        error = sensor.error();
+        error = sensor.error() || emergency.update() != NONE;
       }
     } else if (manualRequest == UP && locNow != FlOORTOP) {
       motor.up();
@@ -87,7 +84,7 @@ void processManualRequest() {
 #endif
       while (manual.update() == UP && locNow != FlOORTOP && !error) {
         locNow = sensor.update(true);
-        error = sensor.error();
+        error = sensor.error() || emergency.update() != NONE;
       }
     }
     motor.stop();

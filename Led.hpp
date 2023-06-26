@@ -11,17 +11,20 @@ class Led {
   const byte pin_;
   bool state_;
   uint16_t interval_;
+  unsigned long delay_;
+  unsigned long start_;
 
  public:
-  Led(byte pin, uint16_t interval);
+  Led(byte pin, uint16_t interval = 1000, unsigned long delay = 0);
   ~Led();
 
   void init();
   void on();
   void off();
   void blink();
-  void updateInterval(uint16_t interval);
-  void updateTimer(bool setStart = false, long length = -1);
+  void setInterval(uint16_t interval);
+  void setDelay(unsigned long delay);
+  void delay(bool set = false);
   bool state() const;
 };
 

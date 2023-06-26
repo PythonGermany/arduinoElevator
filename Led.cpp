@@ -1,12 +1,14 @@
 #include "Led.hpp"
 
-Led::Led(byte pin, uint16_t interval = 1000) : pin_(pin), interval_(interval) {
+Led::Led(byte pin, uint16_t interval = 1000, unsigned long delay = 0)
+    : pin_(pin), interval_(interval), delay_(delay) {
   init();
 }
 
 Led::~Led() {}
 
 void Led::init() {
+  start_ = millis();
   pinMode(pin_, OUTPUT);
   off();
 }
@@ -22,24 +24,22 @@ void Led::off() {
 }
 
 void Led::blink() {
-  static unsigned long curr;
-  if (millis() - curr > interval_) {
+  if (millis() - start_ >= interval_) {
     state() ? off() : on();
-    curr = millis();
+    start_ = millis();
   }
 }
 
-void Led::updateInterval(uint16_t interval) { interval_ = interval; }
+void Led::setInterval(uint16_t interval) { interval_ = interval; }
 
-void Led::updateTimer(bool setStart = false, long length = -1) {
-  static unsigned long start = 0;
-  static long length_ = -1;
-  if (state() == OFF || setStart) start = millis();
-  if (length != -1) length_ = length;
-  if (millis() - start >= length_)
-    off();
-  else if (length_ != -1 && length == -1)
+void Led::setDelay(unsigned long delay) { delay_ = delay; }
+
+void Led::delay(bool set = false) {
+  if (set == true) {
+    start_ = millis();
     on();
+  } else if (millis() - start_ >= delay_)
+    off();
 }
 
 bool Led::state() const { return state_; }

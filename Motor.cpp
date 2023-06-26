@@ -29,7 +29,7 @@ void Motor::up() {
 }
 
 int8_t Motor::stop() {
-  if (led_ != NULL) led_->updateTimer(true);
+  if (led_ != NULL) led_->delay(true);
   digitalWrite(pinDown_, LOW);
   digitalWrite(pinUp_, LOW);
   state_ = STOP;

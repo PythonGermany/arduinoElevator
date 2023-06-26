@@ -4,6 +4,8 @@
 #include <Arduino.h>
 #include <EEPROM.h>
 
+#include "debug.hpp"
+
 #define SAVESPERADDRESS 1023
 #define NONE -1
 
@@ -15,6 +17,7 @@ class Inputs {
   int8_t last_;
   int16_t saveAddress_;
   int16_t save_;
+  int16_t saveCount_;
 
  public:
   Inputs(byte startPin, byte inputCount, bool invert = false);
