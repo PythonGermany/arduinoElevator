@@ -13,7 +13,6 @@ class Led {
   uint16_t interval_;
 
  public:
-  Led(byte pin);
   Led(byte pin, uint16_t interval);
   ~Led();
 
@@ -22,8 +21,8 @@ class Led {
   void off();
   void blink();
   void updateInterval(uint16_t interval);
-  void updateTimer(uint16_t length = -1);
-  bool state();
+  void updateTimer(bool setStart = false, long length = -1);
+  bool state() const;
 };
 
 #endif

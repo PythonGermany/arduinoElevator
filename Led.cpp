@@ -1,11 +1,6 @@
 #include "Led.hpp"
 
-Led::Led(byte pin) : pin_(pin) {
-  interval_ = 1000;
-  init();
-}
-Led::Led(byte pin, uint16_t interval) : pin_(pin) {
-  interval_ = interval;
+Led::Led(byte pin, uint16_t interval = 1000) : pin_(pin), interval_(interval) {
   init();
 }
 
@@ -29,23 +24,22 @@ void Led::off() {
 void Led::blink() {
   static unsigned long curr;
   if (millis() - curr > interval_) {
-    state_ ? off() : on();
+    state() ? off() : on();
     curr = millis();
   }
 }
 
 void Led::updateInterval(uint16_t interval) { interval_ = interval; }
 
-void Led::updateTimer(uint16_t length = -1) {
-  static unsigned long start;
-  static uint16_t length_;
-  if (length != -1) {
-    length_ = length;
-    start = millis();
-    on();
-  } else if (millis() - start >= length_) {
+void Led::updateTimer(bool setStart = false, long length = -1) {
+  static unsigned long start = 0;
+  static long length_ = -1;
+  if (state() == OFF || setStart) start = millis();
+  if (length != -1) length_ = length;
+  if (millis() - start >= length_)
     off();
-  }
+  else if (length_ != -1 && length == -1)
+    on();
 }
 
-bool Led::state() { return state_; }
+bool Led::state() const { return state_; }

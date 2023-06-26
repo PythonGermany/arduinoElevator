@@ -1,6 +1,7 @@
 #include "Motor.hpp"
 
-Motor::Motor(byte pinDown, byte pinUp) : pinDown_(pinDown), pinUp_(pinUp) {
+Motor::Motor(byte pinDown, byte pinUp, Led *led = NULL)
+    : pinDown_(pinDown), pinUp_(pinUp), led_(led) {
   init();
 }
 
@@ -10,26 +11,29 @@ void Motor::init() {
   pinMode(pinDown_, OUTPUT);
   pinMode(pinUp_, OUTPUT);
   stop();
-  state_ = DEFAULT;
+  state_ = STOP;
 }
 
 void Motor::down() {
-  if (state_ != DEFAULT) stop();
+  if (state_ != STOP) stop();
+  if (led_ != NULL) led_->on();
   digitalWrite(pinDown_, HIGH);
   state_ = DOWN;
 }
 
 void Motor::up() {
-  if (state_ != DEFAULT) stop();
+  if (state_ != STOP) stop();
+  if (led_ != NULL) led_->on();
   digitalWrite(pinUp_, HIGH);
   state_ = UP;
 }
 
 int8_t Motor::stop() {
+  if (led_ != NULL) led_->updateTimer(true);
   digitalWrite(pinDown_, LOW);
   digitalWrite(pinUp_, LOW);
-  state_ = DEFAULT;
+  state_ = STOP;
   return (state_);
 }
 
-int8_t Motor::state() { return (state_); }
+int8_t Motor::state() const { return (state_); }
