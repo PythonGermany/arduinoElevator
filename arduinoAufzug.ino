@@ -12,7 +12,7 @@
 #define FLOORCOUNT 4
 #define FLOORBOTTOM 0
 #define FlOORTOP FLOORCOUNT - 1
-#define INITFLOOR 2  // DEV: Do I still need this?
+#define INITFLOOR 2
 
 // Sensor save address location
 #define SAVESLOTADDRESS 0
@@ -24,7 +24,8 @@ Led ledStrip(12, LEDSTRIPINTERVAL, LEDSTRIPDELAY);
 Motor motor(6, 7, &ledStrip);
 Led errorLed(LED_BUILTIN, ERRORLEDINTERVAL);
 Inputs manual(14, 2);
-Inputs emergency(16, 1);  // DEV: Invert back for real sensor
+Inputs motion(16, 1, true);  // DEV: Optional!
+Inputs emergency(17, 1);     // DEV: Invert back for real sensor
 
 // Motor stop delay variables
 int16_t stopDelay[] = {1500, 1000, 500, 0};
@@ -47,14 +48,15 @@ void setup() {
     }
     if (!error) motor.up();
     while (locNow != FlOORTOP && !error) updateLoopStates();
-    motor.stop(stopDelay[locNow], error);
+    motor.stop(error ? 0 : stopDelay[locNow]);
     locStop = error ? NONE : INITFLOOR;
   }
 }
 
 void loop() {
 #ifdef DEBUG
-  printDebug(motor, ledStrip, locNow, locStop, manual, error, sensor, request);
+  printDebug(motor, ledStrip, locNow, locStop, manual, error, sensor, request,
+             motion, emergency);
 #endif
   if (!error) {
     if (ledStrip.state() == ON && motor.state() == STOP) ledStrip.delay();
@@ -66,7 +68,7 @@ void loop() {
     ledStrip.blink();
   }
   if (motor.state() != STOP && (locStop == locNow || error))
-    locStop = motor.stop(stopDelay[locNow], error);
+    locStop = motor.stop(error ? 0 : stopDelay[locNow]);
   else if (motor.state() == STOP && locStop != STOP && !error) {
     if (locStop != locNow) locStop > locNow ? motor.up() : motor.down();
   }
@@ -84,7 +86,7 @@ void processManualRequest() {
     while (manual.update() == UP && locNow != FlOORTOP && !error)
       updateLoopStates();
   }
-  if (manualRequest != NONE) locStop = motor.stop(stopDelay[locNow], error);
+  if (manualRequest != NONE) locStop = motor.stop(0);
 }
 
 void updateLoopStates() {
