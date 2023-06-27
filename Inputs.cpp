@@ -1,6 +1,6 @@
 #include "Inputs.hpp"
 
-Inputs::Inputs(byte startPin, byte inputCount, bool invert = false)
+Inputs::Inputs(uint8_t startPin, uint8_t inputCount, bool invert = false)
     : startPin_(startPin), inputCount_(inputCount), invert_(invert) {
   init();
 }
@@ -12,13 +12,13 @@ void Inputs::init() {
   saveAddress_ = NONE;
   save_ = NONE;
   saveCount_ = 0;
-  for (byte i = 0; i < inputCount_; i++) {
+  for (uint8_t i = 0; i < inputCount_; i++) {
     pinMode(startPin_ + i, INPUT_PULLUP);
   }
 }
 
 int8_t Inputs::update(bool lastPressed = false) {
-  for (int8_t i = 0; i < inputCount_; i++) {
+  for (uint8_t i = 0; i < inputCount_; i++) {
     if (digitalRead(startPin_ + i) == invert_) {
       if (save_ != NONE && i != last()) {
         if (++saveCount_ >= SAVESPERADDRESS) {
@@ -43,15 +43,15 @@ int8_t Inputs::update(bool lastPressed = false) {
 }
 
 bool Inputs::error() {
-  byte pressed = 0;
-  for (int8_t i = 0; i < inputCount_; i++)
+  uint8_t pressed = 0;
+  for (uint8_t i = 0; i < inputCount_; i++)
     if (digitalRead(startPin_ + i) == invert_) pressed++;
   return pressed > 1;
 }
 
 int8_t Inputs::last() const { return last_; }
 
-void Inputs::setSaveAddress(int16_t saveAddress) {
+void Inputs::setSaveAddress(uint16_t saveAddress) {
   saveAddress_ = saveAddress;
   save_ = EEPROM.read(saveAddress_);
   if (save_ == saveAddress_ || save_ == 0) save_ = saveAddress_ + 1;
