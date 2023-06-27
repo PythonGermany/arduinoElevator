@@ -1,5 +1,6 @@
 #include "Inputs.hpp"
 #include "Led.hpp"
+#include "Memory.hpp"
 #include "Motor.hpp"
 #include "debug.hpp"
 
@@ -15,7 +16,7 @@
 #define INITFLOOR 2
 
 // Sensor save address location
-#define SAVESLOTADDRESS 0
+#define SAVESLOT 0
 
 // In and out components
 Inputs request(2, FLOORCOUNT);
@@ -26,6 +27,9 @@ Led errorLed(LED_BUILTIN, ERRORLEDINTERVAL);
 Inputs manual(14, 2);
 Inputs motion(16, 1, true);  // DEV: Optional!
 Inputs emergency(17, 1);     // DEV: Invert back for real sensor
+
+// Location memory
+Memory memory((EEPROM.length() - SAVESLOT) / 3, SAVESLOT, 3);
 
 // Motor stop delay variables
 int16_t stopDelay[] = {1500, 1000, 500, 0};
@@ -38,8 +42,10 @@ void setup() {
 #ifdef DEBUG
   Serial.begin(115200);
 #endif
-  // sensor.setSaveAddress(SAVESLOTADDRESS); // DEV: Is it worth it?
-  locNow = sensor.update(true);
+  bool error = false;
+  sensor.setLast(memory.read(error));
+  if (error) errorState();
+  locNow = sensor.last();
   if (locNow < FLOORBOTTOM || locNow > FlOORTOP) {
     while (request.update() == NONE) {
       updateInputStates();
@@ -81,7 +87,9 @@ void processManualRequest() {
 }
 
 void updateInputStates() {
+  uint8_t last = sensor.last();
   locNow = sensor.update(true);
+  if (locNow != last) memory.write(locNow);
   if (sensor.error()) errorState();
   if (emergency.update() != NONE) emergencyState();
 }
