@@ -42,15 +42,12 @@ int8_t locNow;
 int8_t locStop = STOP;
 
 void setup() {
-  unsigned long seed = 0;
-  for (uint8_t i = 0; i < 32; i++)
-    seed |= (analogRead(UNCONNECTED) & 0x01) << i;
-  randomSeed(seed);
-  bool error = memory.init(reset.update() != NONE);
+  bool error = memory.init(generateSeed(), reset.update() != NONE);
 #ifdef DEBUG
   Serial.begin(115200);
   memory.debug();
 #endif
+  if (error) memory.init(generateSeed(), true);
   int8_t curr = memory.read(error);
   error ? sensor.setLast(NONE) : sensor.setLast(curr);
   locNow = sensor.update(true);
@@ -64,6 +61,13 @@ void setup() {
     motor.stop(stopDelay[locNow]);
     locStop = INITFLOOR;
   }
+}
+
+unsigned long generateSeed() {
+  unsigned long seed = 0;
+  for (uint8_t i = 0; i < 32; i++)
+    seed |= (analogRead(UNCONNECTED) & 0x01) << i;
+  return seed;
 }
 
 void loop() {
