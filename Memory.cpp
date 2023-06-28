@@ -7,22 +7,25 @@ Memory::Memory(uint16_t size, uint16_t currAddress, uint8_t redundancy,
   redundancy_ = redundancy;
   dataAddress_ = address_ + 2 * redundancy_;
   id_ = 0;
+  saveCount_ = 0;
 }
 
 Memory::~Memory() {}
 
-void Memory::init(bool first = false) {
+bool Memory::init(bool first = false) {
   uint16_t rand = random(size_);
   if (first) {
-    for (uint8_t i = 0; i < 2; i++)
-      EEPROM.update(address_ + i, (rand >> (8 * i)));
     id_ = rand;
+    for (uint8_t i = 0; i < 2; i++)
+      for (uint8_t j = 0; j < redundancy_; j++)
+        EEPROM.update(address_ + i * redundancy_ + j, (id_ >> (8 * i)));
     uint16_t currAddress = dataAddress_ + id_ * redundancy_;
     for (uint8_t i = 0; i < redundancy_; i++)
       EEPROM.update(currAddress + i, -1);
   } else
-    for (uint8_t i = 0; i < 2; i++) id_ += EEPROM.read(address_ + i) << (8 * i);
-  saveCount_ = random(size_);
+    for (uint8_t i = 0; i < 2; i++)
+      id_ += EEPROM.read(address_ + i * redundancy_) << (8 * i);
+  return true;
 }
 
 int8_t Memory::read(bool &error) {
@@ -32,10 +35,7 @@ int8_t Memory::read(bool &error) {
     uint8_t count = 1;
     for (uint8_t j = i + 1; j < redundancy_; j++)
       if (data == EEPROM.read(currAddress + j)) count++;
-    if (count >= redundancy_ / 2 + 1) {
-      error = false;
-      return data;
-    }
+    if (count >= redundancy_ / 2 + 1) return data;
   }
   error = true;
   return ERROR;
@@ -49,7 +49,8 @@ void Memory::write(int8_t data) {
       EEPROM.update(address_ + i, (id_ >> (8 * i)) & 0xFF);
   }
   uint16_t currAddress = dataAddress_ + id_ * redundancy_;
-  for (uint8_t i = 0; i < redundancy_; i++) EEPROM.write(currAddress + i, data);
+  for (uint8_t i = 0; i < redundancy_; i++)
+    EEPROM.update(currAddress + i, data);
 #ifdef DEBUG
   Serial.print("WRITE:   ");
   Serial.print("Memory write at id: " + String(id_));
