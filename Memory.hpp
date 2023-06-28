@@ -4,6 +4,8 @@
 #include <Arduino.h>
 #include <EEPROM.h>
 
+#include "debug.hpp"
+
 #define ERROR -1
 
 class Memory {
@@ -16,15 +18,15 @@ class Memory {
   uint16_t saveCount_;
 
  public:
-  Memory(uint16_t size, uint16_t address, uint8_t redundancy,
-         bool clear = false);
+  Memory(uint16_t size, uint16_t address, uint8_t redundancy, uint8_t random);
   ~Memory();
 
-  void firstInit();
-  void init();
-  uint8_t read(bool &error);
-  void write(uint8_t data);
+  void init(bool first = false);
+  int8_t read(bool &error);
+  void write(int8_t data);
+#ifdef DEBUG
   void debug();
+#endif
 };
 
 #endif
