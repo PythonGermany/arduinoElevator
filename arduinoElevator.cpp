@@ -94,12 +94,14 @@ void processManualRequest() {
 }
 
 void setup() {
-  bool error = memory.init(generateSeed(), reset.update() != NONE);
 #ifdef DEBUG
   Serial.begin(115200);
+#endif
+  bool error = memory.init(generateSeed(), reset.update() != NONE);
+#ifdef DEBUG
   memory.debug();
 #endif
-  if (error) memory.init(generateSeed(), true);
+  if (error) error = memory.init(generateSeed(), true);
   int8_t curr = memory.read(error);
   error ? sensor.setLast(NONE) : sensor.setLast(curr);
   locNow = sensor.update(true);

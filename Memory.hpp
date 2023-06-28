@@ -24,7 +24,12 @@ class Memory {
   bool init(unsigned long seed, bool first = false);
   int8_t read(bool &error);
   void write(int8_t data);
+
+ private:
+  int8_t readAt(int16_t address, bool &error);
+  void writeAt(int16_t address, int8_t data);
 #ifdef DEBUG
+ public:
   void debug();
 #endif
 };
