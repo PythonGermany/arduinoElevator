@@ -1,3 +1,5 @@
+#include <Arduino.h>
+
 #include "Inputs.hpp"
 #include "Led.hpp"
 #include "Memory.hpp"
@@ -41,69 +43,11 @@ int16_t stopDelay[] = {1500, 1000, 500, 0};
 int8_t locNow;
 int8_t locStop = STOP;
 
-void setup() {
-  bool error = memory.init(generateSeed(), reset.update() != NONE);
-#ifdef DEBUG
-  Serial.begin(115200);
-  memory.debug();
-#endif
-  if (error) memory.init(generateSeed(), true);
-  int8_t curr = memory.read(error);
-  error ? sensor.setLast(NONE) : sensor.setLast(curr);
-  locNow = sensor.update(true);
-  if (locNow < FLOORBOTTOM || locNow > FlOORTOP) {
-    while (request.update() == NONE) {
-      updateInputStates();
-      ledStrip.blink(INITINTERVAL);
-    }
-    motor.up();
-    while (locNow != FlOORTOP) updateInputStates();
-    motor.stop(stopDelay[locNow]);
-    locStop = INITFLOOR;
-  }
-}
-
 unsigned long generateSeed() {
   unsigned long seed = 0;
   for (uint8_t i = 0; i < 32; i++)
     seed |= (analogRead(UNCONNECTED) & 0x01) << i;
   return seed;
-}
-
-void loop() {
-#ifdef DEBUG
-  printDebug(motor, ledStrip, locNow, locStop, manual, sensor, request, motion);
-#endif
-  if (ledStrip.state() == ON && motor.state() == STOP) ledStrip.delay();
-  updateInputStates();
-  if (locStop == STOP) {
-    locStop = request.update();
-    if (locStop == locNow) locStop = STOP;
-  }
-  if (motor.state() != STOP && locStop == locNow)
-    locStop = motor.stop(stopDelay[locNow]);
-  else if (motor.state() == STOP && locStop != STOP)
-    locStop > locNow ? motor.up() : motor.down();
-  processManualRequest();
-}
-
-void processManualRequest() {
-  int8_t request = manual.update();
-  int8_t blockingFloor = request == UP ? FlOORTOP : FLOORBOTTOM;
-  if (request != NONE && locNow != blockingFloor) {
-    request == UP ? motor.up() : motor.down();
-    while (manual.update() == request && locNow != blockingFloor)
-      updateInputStates();
-  }
-  if (request != NONE) locStop = motor.stop(0);
-}
-
-void updateInputStates() {
-  int8_t last = sensor.last();
-  locNow = sensor.update(true);
-  if (locNow != last) memory.write(locNow);
-  if (sensor.error()) errorState(SENSORINTERVAL);
-  if (emergency.update() != NONE) emergencyState();
 }
 
 void errorState(uint16_t interval) {
@@ -128,4 +72,62 @@ void emergencyState() {
   }
   errorLed.off();
   ledStrip.delay(true);
+}
+
+void updateInputStates() {
+  int8_t last = sensor.last();
+  locNow = sensor.update(true);
+  if (locNow != last) memory.write(locNow);
+  if (sensor.error()) errorState(SENSORINTERVAL);
+  if (emergency.update() != NONE) emergencyState();
+}
+
+void processManualRequest() {
+  int8_t request = manual.update();
+  int8_t blockingFloor = request == UP ? FlOORTOP : FLOORBOTTOM;
+  if (request != NONE && locNow != blockingFloor) {
+    request == UP ? motor.up() : motor.down();
+    while (manual.update() == request && locNow != blockingFloor)
+      updateInputStates();
+  }
+  if (request != NONE) locStop = motor.stop(0);
+}
+
+void setup() {
+  bool error = memory.init(generateSeed(), reset.update() != NONE);
+#ifdef DEBUG
+  Serial.begin(115200);
+  memory.debug();
+#endif
+  if (error) memory.init(generateSeed(), true);
+  int8_t curr = memory.read(error);
+  error ? sensor.setLast(NONE) : sensor.setLast(curr);
+  locNow = sensor.update(true);
+  if (locNow < FLOORBOTTOM || locNow > FlOORTOP) {
+    while (request.update() == NONE) {
+      updateInputStates();
+      ledStrip.blink(INITINTERVAL);
+    }
+    motor.up();
+    while (locNow != FlOORTOP) updateInputStates();
+    motor.stop(stopDelay[locNow]);
+    locStop = INITFLOOR;
+  }
+}
+
+void loop() {
+#ifdef DEBUG
+  printDebug(motor, ledStrip, locNow, locStop, manual, sensor, request, motion);
+#endif
+  if (ledStrip.state() == ON && motor.state() == STOP) ledStrip.delay();
+  updateInputStates();
+  if (locStop == STOP) {
+    locStop = request.update();
+    if (locStop == locNow) locStop = STOP;
+  }
+  if (motor.state() != STOP && locStop == locNow)
+    locStop = motor.stop(stopDelay[locNow]);
+  else if (motor.state() == STOP && locStop != STOP)
+    locStop > locNow ? motor.up() : motor.down();
+  processManualRequest();
 }

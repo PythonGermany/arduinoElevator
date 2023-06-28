@@ -1,6 +1,6 @@
 #include "Inputs.hpp"
 
-Inputs::Inputs(uint8_t startPin, uint8_t inputCount, bool invert = false)
+Inputs::Inputs(uint8_t startPin, uint8_t inputCount, bool invert)
     : startPin_(startPin), inputCount_(inputCount), invert_(invert) {
   init();
 }
@@ -14,7 +14,7 @@ void Inputs::init() {
   }
 }
 
-int8_t Inputs::update(bool lastPressed = false) {
+int8_t Inputs::update(bool lastPressed) {
   for (uint8_t i = 0; i < inputCount_; i++) {
     if (digitalRead(startPin_ + i) == invert_) {
       last_ = i;
