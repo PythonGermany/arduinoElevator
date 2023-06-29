@@ -98,13 +98,16 @@ void setup() {
 #ifdef DEBUG
   Serial.begin(115200);
 #endif
-  bool error = memory.init(generateSeed(), reset.update() != NONE);
+  randomSeed(generateSeed());
+  bool resetMem = reset.update() != NONE;
+  bool error = memory.init(resetMem);
+  if (error == true) memory.init(true);
+  int8_t curr = NONE;
+  if (!error && !resetMem) curr = memory.read(error);
+  sensor.setLast(curr);
 #ifdef DEBUG
   memory.debug();
 #endif
-  if (error) error = memory.init(generateSeed(), true);
-  int8_t curr = memory.read(error);
-  error ? sensor.setLast(NONE) : sensor.setLast(curr);
   locNow = sensor.update(true);
   if (locNow < FLOORBOTTOM || locNow > FlOORTOP) {
     while (request.update() == NONE) {

@@ -10,7 +10,7 @@ Motor::~Motor() {}
 void Motor::init() {
   pinMode(pinDown_, OUTPUT);
   pinMode(pinUp_, OUTPUT);
-  stop(0);
+  stop();
   state_ = STOP;
 }
 
@@ -28,9 +28,9 @@ void Motor::up() {
   state_ = UP;
 }
 
-int8_t Motor::stop(uint16_t delayTime) {
+int8_t Motor::stop(int16_t delayTime) {
   if (delayTime > 0) delay(delayTime);
-  if (led_ != NULL) led_->delay(true);
+  if (delayTime >= 0 && led_ != NULL) led_->delay(true);
   digitalWrite(pinDown_, LOW);
   digitalWrite(pinUp_, LOW);
   state_ = STOP;

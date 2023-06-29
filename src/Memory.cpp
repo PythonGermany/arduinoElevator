@@ -10,14 +10,12 @@ Memory::Memory(uint16_t size, uint16_t address, uint8_t redundancy,
 
 Memory::~Memory() {}
 
-bool Memory::init(unsigned long seed, bool first) {
+bool Memory::init(bool first) {
   bool error = false;
   if (first) {
-    randomSeed(seed);
     id_ = random(HEADERSIZE, size_);
     writeAt(0, id_ & 0xFF);
     writeAt(1, (id_ >> 8) & 0xFF);
-    writeAt(id_, -1);
   } else
     id_ = readAt(0, error) + (readAt(1, error) << 8);
   return error;
