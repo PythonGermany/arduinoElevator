@@ -10,7 +10,7 @@
 #define INITINTERVAL 2000
 #define SENSORINTERVAL 4000
 #define EMERGENCYINTERVAL 8000
-#define LEDSTRIPDELAY 6000
+#define LEDSTRIPDELAY 60000
 
 // Floor data macros
 #define FLOORCOUNT 4
@@ -50,14 +50,15 @@ unsigned long generateSeed() {
   return seed;
 }
 
-void errorState(uint16_t interval) {
+void errorState() {
   locStop = motor.stop(0);
+  memory.write(NONE);
 #ifdef DEBUG
   Serial.println("ERROR:   Error state!");
 #endif
   while (true) {
-    errorLed.blink(interval);
-    ledStrip.blink(interval);
+    errorLed.blink(SENSORINTERVAL);
+    ledStrip.blink(SENSORINTERVAL);
   }
 }
 
@@ -78,7 +79,7 @@ void updateInputStates() {
   int8_t last = sensor.last();
   locNow = sensor.update(true);
   if (locNow != last) memory.write(locNow);
-  if (sensor.error()) errorState(SENSORINTERVAL);
+  if (sensor.error()) errorState();
   if (emergency.update() != NONE) emergencyState();
 }
 
