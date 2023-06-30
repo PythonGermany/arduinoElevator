@@ -39,17 +39,18 @@ Memory memory((EEPROM.length() - SAVESLOT) / 2, SAVESLOT, 2, UNCONNECTED);
 // Motor stop delay variables
 int16_t stopDelay[] = {1500, 1000, 500, 0};
 
-// Runtime state variables
+// Runtime elevator state variables
 int8_t locNow;
 int8_t locStop = STOP;
 
-unsigned long generateSeed() {
+// Generate based on value from unconnected pin
+unsigned long generateSeed(uint8_t pin) {
   unsigned long seed = 0;
-  for (uint8_t i = 0; i < 32; i++)
-    seed |= (analogRead(UNCONNECTED) & 0x01) << i;
+  for (uint8_t i = 0; i < 32; i++) seed |= (analogRead(pin) & 0x01) << i;
   return seed;
 }
 
+// Infinite loop due to unsolvable error
 void errorState() {
   locStop = motor.stop(0);
   memory.write(NONE);
@@ -62,6 +63,7 @@ void errorState() {
   }
 }
 
+// Loop while emergency button is pressed
 void emergencyState() {
   locStop = motor.stop(0);
 #ifdef DEBUG
@@ -75,6 +77,7 @@ void emergencyState() {
   ledStrip.delay(true);
 }
 
+// Update input states and write to memory if current location changed
 void updateInputStates() {
   int8_t last = sensor.last();
   locNow = sensor.update(true);
@@ -83,6 +86,7 @@ void updateInputStates() {
   if (emergency.update() != NONE) emergencyState();
 }
 
+// Process manual request if there is one
 void processManualRequest() {
   int8_t request = manual.update();
   int8_t blockingFloor = request == UP ? FlOORTOP : FLOORBOTTOM;
@@ -94,11 +98,13 @@ void processManualRequest() {
   if (request != NONE) locStop = motor.stop(0);
 }
 
+// Load location from memory or intialize elevator by moving to FLOORTOP and
+// back to INITFLOOR
 void setup() {
 #ifdef DEBUG
   Serial.begin(115200);
 #endif
-  randomSeed(generateSeed());
+  randomSeed(generateSeed(UNCONNECTED));
   bool resetMem = reset.update() != NONE;
   bool error = memory.init(resetMem);
   if (error == true) memory.init(true);
