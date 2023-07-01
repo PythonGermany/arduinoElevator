@@ -38,7 +38,7 @@ Inputs reset(18, 1);
 // for 600 (100 times up and down every day) changes a day that would be ~45y
 // years worst in the worst case.
 uint16_t maxMemorySize = (EEPROM.length() - SAVESLOT) / 2;
-Memory memory(min(100 + HEADERSIZE, maxMemorySize), SAVESLOT, 2);
+Memory memory(min(100, maxMemorySize), SAVESLOT, 2);
 
 // Motor stop delay variables
 int16_t stopDelay[] = {1500, 1000, 500, 0};
