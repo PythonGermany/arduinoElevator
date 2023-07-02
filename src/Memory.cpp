@@ -9,20 +9,20 @@ Memory::Memory(uint16_t size, uint16_t address, uint8_t redundancy) {
 
 Memory::~Memory() {}
 
-bool Memory::init(bool first) {
-  bool error = false;
+void Memory::init(bool first) {
   if (first) {
     id_ = random(size_);
     for (int16_t i = 0; i < size_; i++) writeAt(i, EMPTY);
   } else {
+    bool error = false;
     id_ = EMPTY;
     for (int16_t i = 0; i < size_ && id_ == EMPTY; i++)
-      if (readAt(i, error) != ERROR) id_ = i;
+      if (readAt(i) != EMPTY) id_ = i;
+    if (error || id_ == EMPTY) init(true);
   }
-  return error || id_ == EMPTY;
 }
 
-int8_t Memory::read(bool &error) { return readAt(id_, error); }
+int8_t Memory::read() { return readAt(id_); }
 
 void Memory::write(int8_t data) {
   if (++saveCount_ > size_) {
@@ -33,7 +33,7 @@ void Memory::write(int8_t data) {
   writeAt(id_, data);
 }
 
-uint8_t Memory::readAt(int16_t id, bool &error) {
+uint8_t Memory::readAt(int16_t id) {
 #ifdef DEBUG
   Serial.print("READ:    ");
   Serial.print("Memory read at id: " + String(id));
@@ -51,11 +51,10 @@ uint8_t Memory::readAt(int16_t id, bool &error) {
       return data;
     }
   }
-  error = true;
 #ifdef DEBUG
   Serial.println("ERROR");
 #endif
-  return ERROR;
+  return EMPTY;
 }
 
 void Memory::writeAt(int16_t id, uint8_t data) {
@@ -77,7 +76,6 @@ void Memory::debug() {
   Serial.print("Size: " + String(size_));
   Serial.print("; Address: " + String(address_));
   Serial.print("; Redundancy: " + String(redundancy_));
-  Serial.print("; Data id start: " + String(redundancy_));
   Serial.print("; Data id: " + String(id_));
   Serial.println("; Save count: " + String(saveCount_));
 }

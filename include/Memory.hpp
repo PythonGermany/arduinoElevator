@@ -6,8 +6,7 @@
 
 #include "debug.hpp"
 
-#define ERROR -1
-#define EMPTY -1
+#define EMPTY 255
 
 class Memory {
  private:
@@ -21,12 +20,12 @@ class Memory {
   Memory(uint16_t size, uint16_t address, uint8_t redundancy = 1);
   ~Memory();
 
-  bool init(bool first = false);
-  int8_t read(bool &error);
+  void init(bool first = false);
+  int8_t read();
   void write(int8_t data);
 
  private:
-  uint8_t readAt(int16_t address, bool &error);
+  uint8_t readAt(int16_t address);
   void writeAt(int16_t address, uint8_t data);
 #ifdef DEBUG
  public:
