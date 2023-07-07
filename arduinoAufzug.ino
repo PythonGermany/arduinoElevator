@@ -33,7 +33,6 @@ int16_t stopDelay[] = {1500, 1000, 500, 0};
 // Runtime state variables
 int8_t locNow;
 int8_t locStop = STOP;
-bool error = false;
 
 void setup() {
 #ifdef DEBUG
@@ -43,53 +42,69 @@ void setup() {
   locNow = sensor.update(true);
   if (locNow < FLOORBOTTOM || locNow > FlOORTOP) {
     while (request.update() == NONE) {
-      error = sensor.error() || emergency.update() != NONE;
+      updateInputStates();
       ledStrip.blink();
     }
-    if (!error) motor.up();
-    while (locNow != FlOORTOP && !error) updateLoopStates();
-    motor.stop(error ? 0 : stopDelay[locNow]);
-    locStop = error ? NONE : INITFLOOR;
+    motor.up();
+    while (locNow != FlOORTOP) updateInputStates();
+    motor.stop(stopDelay[locNow]);
+    locStop = INITFLOOR;
   }
 }
 
 void loop() {
 #ifdef DEBUG
-  printDebug(motor, ledStrip, locNow, locStop, manual, error, sensor, request,
-             motion, emergency);
+  printDebug(motor, ledStrip, locNow, locStop, manual, sensor, request, motion);
 #endif
-  if (!error) {
-    if (ledStrip.state() == ON && motor.state() == STOP) ledStrip.delay();
-    if (locStop == STOP) locStop = request.update();
-    updateLoopStates();
-    processManualRequest();
-  } else {
-    errorLed.blink();
-    ledStrip.blink();
+  if (ledStrip.state() == ON && motor.state() == STOP) ledStrip.delay();
+  updateInputStates();
+  if (locStop == STOP) {
+    locStop = request.update();
+    if (locStop == locNow) locStop = STOP;
   }
-  if (motor.state() != STOP && (locStop == locNow || error))
-    locStop = motor.stop(error ? 0 : stopDelay[locNow]);
-  else if (motor.state() == STOP && locStop != STOP && !error) {
-    if (locStop != locNow) locStop > locNow ? motor.up() : motor.down();
-  }
+  processManualRequest();
+  if (motor.state() != STOP && locStop == locNow)
+    locStop = motor.stop(stopDelay[locNow]);
+  else if (motor.state() == STOP && locStop != STOP)
+    locStop > locNow ? motor.up() : motor.down();
 }
 
 void processManualRequest() {
-  int8_t manualRequest = manual.update();
-  if (manualRequest != NONE) locStop = motor.stop(0);
-  if (manualRequest == DOWN && locNow != FLOORBOTTOM) {
-    motor.down();
-    while (manual.update() == DOWN && locNow != FLOORBOTTOM && !error)
-      updateLoopStates();
-  } else if (manualRequest == UP && locNow != FlOORTOP) {
-    motor.up();
-    while (manual.update() == UP && locNow != FlOORTOP && !error)
-      updateLoopStates();
+  int8_t request = manual.update();
+  int8_t blockingFloor = request == UP ? FlOORTOP : FLOORBOTTOM;
+  if (request != NONE && locNow != blockingFloor) {
+    request == UP ? motor.up() : motor.down();
+    while (manual.update() == request && locNow != blockingFloor)
+      updateInputStates();
   }
-  if (manualRequest != NONE) locStop = motor.stop(0);
+  if (request != NONE) locStop = motor.stop(0);
 }
 
-void updateLoopStates() {
+void updateInputStates() {
   locNow = sensor.update(true);
-  error = sensor.error() || emergency.update() != NONE;
+  if (sensor.error()) errorState();
+  if (emergency.update() != NONE) emergencyState();
+}
+
+void errorState() {
+  locStop = motor.stop(0);
+#ifdef DEBUG
+  Serial.println("Error state!");
+#endif
+  while (true) {
+    errorLed.blink();
+    ledStrip.blink();
+  }
+}
+
+// DEV: Separated emergency state needed?
+void emergencyState() {
+  locStop = motor.stop(0);
+#ifdef DEBUG
+  Serial.println("Emergency state!");
+#endif
+  while (emergency.update() != NONE) {
+    errorLed.blink();
+    ledStrip.blink();
+  }
 }

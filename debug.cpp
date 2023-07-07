@@ -2,8 +2,8 @@
 
 #ifdef DEBUG
 void printDebug(Motor &motor, Led &ledStrip, int8_t &locNow, int8_t &locStop,
-                Inputs &manual, bool &error, Inputs &sensor, Inputs &request,
-                Inputs &motion, Inputs &emergency) {
+                Inputs &manual, Inputs &sensor, Inputs &request,
+                Inputs &motion) {
   static unsigned long prev;
   if (millis() - prev <= DEBUGINTERVAL) return;
   prev = millis();
@@ -21,10 +21,6 @@ void printDebug(Motor &motor, Led &ledStrip, int8_t &locNow, int8_t &locStop,
   int8_t manualRequest = manual.update();
   Serial.print(manualRequest > NONE ? manualRequest > DOWN ? "Up  " : "Down"
                                     : "None");
-  Serial.print("; Error: ");
-  Serial.print(error ? "Yes" : "No ");
-  Serial.print("; Current Error: ");
-  Serial.print(sensor.error() ? "Yes" : "No ");
   Serial.print("; TestLocNow: ");
   int8_t testLocNow = sensor.update();
   Serial.print(testLocNow > NONE ? String(testLocNow) + "   " : "None");
@@ -32,8 +28,6 @@ void printDebug(Motor &motor, Led &ledStrip, int8_t &locNow, int8_t &locStop,
   int8_t testLocStop = request.update();
   Serial.print(testLocStop > NONE ? String(testLocStop) + "   " : "None");
   Serial.print("; Motion: ");
-  Serial.print(motion.update() > NONE ? "Yes" : "No ");
-  Serial.print("; Emergency: ");
-  Serial.println(emergency.update() > NONE ? "Yes" : "No ");
+  Serial.println(motion.update() > NONE ? "Yes" : "No ");
 }
 #endif
