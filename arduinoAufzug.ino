@@ -43,11 +43,13 @@ void setup() {
 void loop() {
 #ifdef DEBUG
   printSimState(locNow, locStop, active, error);
-  if (!active && !error)
-    while (Serial.available() <= 0) continue;
-  else if (!error)
-    delay(2500);
-  if (active && !error) locNow += (locStop > locNow) ? 1 : -1;
+  if (!error) {
+    if (!active)
+      while (Serial.available() <= 0) continue;
+    else
+      delay(2500);
+    if (active) locNow += (locStop > locNow) ? 1 : -1;
+  }
 #endif
   if (!error) {
     if (!active) locStop = updateState(requestStartP, floorCount, locStop);
