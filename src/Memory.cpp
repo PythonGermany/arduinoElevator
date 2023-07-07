@@ -1,7 +1,6 @@
 #include "Memory.hpp"
 
-Memory::Memory(uint16_t size, uint16_t address, uint8_t redundancy,
-               uint8_t randSrc) {
+Memory::Memory(uint16_t size, uint16_t address, uint8_t redundancy) {
   size_ = size;
   address_ = address;
   redundancy_ = redundancy;

@@ -34,7 +34,7 @@ Inputs emergency(17, 1);     // DEV: Invert back for real sensor
 Inputs reset(18, 1);
 
 // Location memory
-Memory memory((EEPROM.length() - SAVESLOT) / 2, SAVESLOT, 2, UNCONNECTED);
+Memory memory((EEPROM.length() - SAVESLOT) / 2, SAVESLOT, 2);
 
 // Motor stop delay variables
 int16_t stopDelay[] = {1500, 1000, 500, 0};

@@ -18,7 +18,7 @@ class Memory {
   uint16_t saveCount_;
 
  public:
-  Memory(uint16_t size, uint16_t address, uint8_t redundancy, uint8_t random);
+  Memory(uint16_t size, uint16_t address, uint8_t redundancy = 1);
   ~Memory();
 
   bool init(bool first = false);
