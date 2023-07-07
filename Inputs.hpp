@@ -2,9 +2,6 @@
 #define INPUTS_HPP
 
 #include <Arduino.h>
-#include <EEPROM.h>
-
-#include "debug.hpp"
 
 #define SAVESPERADDRESS 1023
 #define NONE -1
@@ -15,9 +12,6 @@ class Inputs {
   const uint8_t inputCount_;
   const bool invert_;
   int8_t last_;
-  uint16_t saveAddress_;
-  uint16_t save_;
-  uint16_t saveCount_;
 
  public:
   Inputs(uint8_t startPin, uint8_t inputCount, bool invert = false);
@@ -26,8 +20,8 @@ class Inputs {
   void init();
   int8_t update(bool lastPressed = false);
   bool error();
+  void setLast(int8_t last);
   int8_t last() const;
-  void setSaveAddress(uint16_t saveAddress);
 };
 
 #endif
