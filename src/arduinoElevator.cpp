@@ -10,7 +10,7 @@
 #define INITINTERVAL 2000
 #define SENSORINTERVAL 4000
 #define EMERGENCYINTERVAL 8000
-#define LEDSTRIPDELAY 600000
+#define LEDSTRIPDELAY 6000
 
 // Floor data macros
 #define FLOORCOUNT 4
@@ -121,7 +121,10 @@ void loop() {
 #ifdef DEBUG
   printDebug(motor, ledStrip, locNow, locStop, manual, sensor, request, motion);
 #endif
-  if (ledStrip.state() == ON && motor.state() == STOP) ledStrip.delay();
+  if (motor.state() == STOP) {
+    if (ledStrip.state() == ON) ledStrip.delay();
+    if (motion.update() != NONE) ledStrip.delay(true);
+  }
   updateInputStates();
   if (locStop == STOP) {
     locStop = request.update();
