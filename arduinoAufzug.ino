@@ -10,7 +10,7 @@ bool validInput = false;
 
 void setup()
 {
-	// Serial.begin(9600);
+	 Serial.begin(9600);
 	for (int i = requestStartP; i < requestStartP + floors; i++)
 		pinMode(i, INPUT_PULLUP);
 	for (int i = sensorStartP; i < sensorStartP + floors; i++)
@@ -26,19 +26,19 @@ void loop()
 	validInput = sensors_valid(sensorStartP);
 	if (locStop && (locStop == locNow || digitalRead(sensorDoor)) || !validInput)
 	{
-		// Serial.print(millis()); Serial.println(" Stop floor reached or door open");
+		Serial.print(millis()); Serial.println(" Stop floor reached or door open");
 		if (locNow == 1 && validInput)
 			delay(1000);
-		// Serial.print(millis()); Serial.println(" Motor stopped");
+		Serial.print(millis()); Serial.println(" Motor stopped");
 		digitalWrite(powerP, LOW);
 		digitalWrite(powerP + 1, LOW);
 		locStop = 0;
 	}
 	else if (!locStop && locNow && validInput && !digitalRead(sensorDoor))
 	{
-		locStop = checkRequest(); // Serial.print(locNow); Serial.print(locStop); Serial.println(!digitalRead(sensorDoor));}
-		if (!locStop)
-			digitalWrite(powerP + (locStop > locNow), HIGH); // if (locStop > locNow) {Serial.println("Going up");} else {Serial.println("Going down");}
+		locStop = checkRequest();
+		if (locStop)
+		  {digitalWrite(powerP + (locStop > locNow), HIGH); Serial.print(locNow); Serial.print(locStop); Serial.println(!digitalRead(sensorDoor)); if (locStop > locNow) {Serial.println("Going up");} else {Serial.println("Going down");}}
 	}
 }
 
