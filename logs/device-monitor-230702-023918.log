@@ -1,0 +1,783 @@
+02:39:19.000 > 0
+02:39:19.000 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None; Motion: Yes
+02:39:19.000 > ave count: 0
+02:39:19.000 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None; Motion: Yes
+02:39:20.579 > READ:    Memory read at id: 0; Data: 255
+02:39:20.583 > READ:    Memory read at id: 1; Data: 255
+02:39:20.587 > READ:    Memory read at id: 2; Data: 255
+02:39:20.592 > READ:    Memory read at id: 3; Data: 255
+02:39:20.596 > READ:    Memory read at id: 4; Data: 255
+02:39:20.600 > READ:    Memory read at id: 5; Data: 255
+02:39:20.600 > READ:    Memory read at id: 6; Data: 255
+02:39:20.604 > READ:    Memory read at id: 7; Data: 255
+02:39:20.608 > READ:    Memory read at id: 8; Data: 255
+02:39:20.612 > READ:    Memory read at id: 9; Data: 255
+02:39:20.616 > READ:    Memory read at id: 10; Data: 255
+02:39:20.620 > READ:    Memory read at id: 11; Data: 255
+02:39:20.624 > READ:    Memory read at id: 12; Data: 255
+02:39:20.628 > READ:    Memory read at id: 13; Data: 255
+02:39:20.628 > READ:    Memory read at id: 14; Data: 255
+02:39:20.632 > READ:    Memory read at id: 15; Data: 255
+02:39:20.637 > READ:    Memory read at id: 16; Data: 255
+02:39:20.641 > READ:    Memory read at id: 17; Data: 255
+02:39:20.645 > READ:    Memory read at id: 18; Data: 255
+02:39:20.649 > READ:    Memory read at id: 19; Data: 255
+02:39:20.653 > READ:    Memory read at id: 20; Data: 255
+02:39:20.657 > READ:    Memory read at id: 21; Data: 255
+02:39:20.661 > READ:    Memory read at id: 22; Data: 255
+02:39:20.661 > READ:    Memory read at id: 23; Data: 255
+02:39:20.665 > READ:    Memory read at id: 24; Data: 255
+02:39:20.669 > READ:    Memory read at id: 25; Data: 255
+02:39:20.673 > READ:    Memory read at id: 26; Data: 255
+02:39:20.678 > READ:    Memory read at id: 27; Data: 255
+02:39:20.682 > READ:    Memory read at id: 28; Data: 255
+02:39:20.686 > READ:    Memory read at id: 29; Data: 255
+02:39:20.689 > READ:    Memory read at id: 30; Data: 255
+02:39:20.694 > READ:    Memory read at id: 31; Data: 255
+02:39:20.698 > READ:    Memory read at id: 32; Data: 255
+02:39:20.698 > READ:    Memory read at id: 33; Data: 255
+02:39:20.702 > READ:    Memory read at id: 34; Data: 255
+02:39:20.706 > READ:    Memory read at id: 35; Data: 255
+02:39:20.710 > READ:    Memory read at id: 36; Data: 255
+02:39:20.714 > READ:    Memory read at id: 37; Data: 255
+02:39:20.718 > READ:    Memory read at id: 38; Data: 255
+02:39:20.722 > READ:    Memory read at id: 39; Data: 255
+02:39:20.726 > READ:    Memory read at id: 40; Data: 255
+02:39:20.730 > READ:    Memory read at id: 41; Data: 255
+02:39:20.730 > READ:    Memory read at id: 42; Data: 255
+02:39:20.735 > READ:    Memory read at id: 43; Data: 255
+02:39:20.739 > READ:    Memory read at id: 44; Data: 255
+02:39:20.743 > READ:    Memory read at id: 45; Data: 255
+02:39:20.747 > READ:    Memory read at id: 46; Data: 255
+02:39:20.751 > READ:    Memory read at id: 47; Data: 255
+02:39:20.755 > READ:    Memory read at id: 48; Data: 255
+02:39:20.759 > READ:    Memory read at id: 49; Data: 255
+02:39:20.763 > READ:    Memory read at id: 50; Data: 255
+02:39:20.767 > READ:    Memory read at id: 51; Data: 255
+02:39:20.767 > READ:    Memory read at id: 52; Data: 255
+02:39:20.771 > READ:    Memory read at id: 53; Data: 255
+02:39:20.775 > READ:    Memory read at id: 54; Data: 255
+02:39:20.780 > READ:    Memory read at id: 55; Data: 255
+02:39:20.784 > READ:    Memory read at id: 56; Data: 255
+02:39:20.788 > READ:    Memory read at id: 57; Data: 2
+02:39:20.792 > READ:    Memory read at id: 57; Data: 2
+02:39:20.796 > MEMORY:  Size: 100; Address: 0; Redundancy: 2; Data id: 57; Save count: 0
+02:39:22.582 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None; Motion: Yes
+02:39:24.584 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None; Motion: Yes
+02:39:26.588 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None; Motion: Yes
+02:39:28.591 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None; Motion: Yes
+02:39:30.593 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None; Motion: Yes
+02:39:32.596 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None; Motion: Yes
+02:39:34.599 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None; Motion: Yes
+02:39:36.602 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None; Motion: Yes
+02:39:38.605 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None; Motion: Yes
+02:39:40.608 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None; Motion: Yes
+02:39:42.614 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None; Motion: Yes
+02:39:44.617 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None; Motion: Yes
+02:39:46.620 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None; Motion: Yes
+02:39:48.430 > WRITE:   Memory write at id: 0; Data: 255->255 save count: 0
+02:39:48.435 > WRITE:   Memory write at id: 1; Data: 255->255 save count: 0
+02:39:48.439 > WRITE:   Memory write at id: 2; Data: 255->255 save count: 0
+02:39:48.447 > WRITE:   Memory write at id: 3; Data: 255->255 save count: 0
+02:39:48.451 > WRITE:   Memory write at id: 4; Data: 255->255 save count: 0
+02:39:48.455 > WRITE:   Memory write at id: 5; Data: 255->255 save count: 0
+02:39:48.463 > WRITE:   Memory write at id: 6; Data: 255->255 save count: 0
+02:39:48.467 > WRITE:   Memory write at id: 7; Data: 255->255 save count: 0
+02:39:48.471 > WRITE:   Memory write at id: 8; Data: 255->255 save count: 0
+02:39:48.479 > WRITE:   Memory write at id: 9; Data: 255->255 save count: 0
+02:39:48.483 > WRITE:   Memory write at id: 10; Data: 255->255 save count: 0
+02:39:48.488 > WRITE:   Memory write at id: 11; Data: 255->255 save count: 0
+02:39:48.492 > WRITE:   Memory write at id: 12; Data: 255->255 save count: 0
+02:39:48.500 > WRITE:   Memory write at id: 13; Data: 255->255 save count: 0
+02:39:48.504 > WRITE:   Memory write at id: 14; Data: 255->255 save count: 0
+02:39:48.508 > WRITE:   Memory write at id: 15; Data: 255->255 save count: 0
+02:39:48.516 > WRITE:   Memory write at id: 16; Data: 255->255 save count: 0
+02:39:48.520 > WRITE:   Memory write at id: 17; Data: 255->255 save count: 0
+02:39:48.524 > WRITE:   Memory write at id: 18; Data: 255->255 save count: 0
+02:39:48.533 > WRITE:   Memory write at id: 19; Data: 255->255 save count: 0
+02:39:48.537 > WRITE:   Memory write at id: 20; Data: 255->255 save count: 0
+02:39:48.541 > WRITE:   Memory write at id: 21; Data: 255->255 save count: 0
+02:39:48.549 > WRITE:   Memory write at id: 22; Data: 255->255 save count: 0
+02:39:48.553 > WRITE:   Memory write at id: 23; Data: 255->255 save count: 0
+02:39:48.557 > WRITE:   Memory write at id: 24; Data: 255->255 save count: 0
+02:39:48.561 > WRITE:   Memory write at id: 25; Data: 255->255 save count: 0
+02:39:48.569 > WRITE:   Memory write at id: 26; Data: 255->255 save count: 0
+02:39:48.574 > WRITE:   Memory write at id: 27; Data: 255->255 save count: 0
+02:39:48.578 > WRITE:   Memory write at id: 28; Data: 255->255 save count: 0
+02:39:48.585 > WRITE:   Memory write at id: 29; Data: 255->255 save count: 0
+02:39:48.590 > WRITE:   Memory write at id: 30; Data: 255->255 save count: 0
+02:39:48.594 > WRITE:   Memory write at id: 31; Data: 255->255 save count: 0
+02:39:48.602 > WRITE:   Memory write at id: 32; Data: 255->255 save count: 0
+02:39:48.606 > WRITE:   Memory write at id: 33; Data: 255->255 save count: 0
+02:39:48.610 > WRITE:   Memory write at id: 34; Data: 255->255 save count: 0
+02:39:48.618 > WRITE:   Memory write at id: 35; Data: 255->255 save count: 0
+02:39:48.622 > WRITE:   Memory write at id: 36; Data: 255->255 save count: 0
+02:39:48.627 > WRITE:   Memory write at id: 37; Data: 255->255 save count: 0
+02:39:48.631 > WRITE:   Memory write at id: 38; Data: 255->255 save count: 0
+02:39:48.639 > WRITE:   Memory write at id: 39; Data: 255->255 save count: 0
+02:39:48.644 > WRITE:   Memory write at id: 40; Data: 255->255 save count: 0
+02:39:48.647 > WRITE:   Memory write at id: 41; Data: 255->255 save count: 0
+02:39:48.656 > WRITE:   Memory write at id: 42; Data: 255->255 save count: 0
+02:39:48.660 > WRITE:   Memory write at id: 43; Data: 255->255 save count: 0
+02:39:48.664 > WRITE:   Memory write at id: 44; Data: 255->255 save count: 0
+02:39:48.672 > WRITE:   Memory write at id: 45; Data: 255->255 save count: 0
+02:39:48.676 > WRITE:   Memory write at id: 46; Data: 255->255 save count: 0
+02:39:48.680 > WRITE:   Memory write at id: 47; Data: 255->255 save count: 0
+02:39:48.688 > WRITE:   Memory write at id: 48; Data: 255->255 save count: 0
+02:39:48.692 > WRITE:   Memory write at id: 49; Data: 255->255 save count: 0
+02:39:48.697 > WRITE:   Memory write at id: 50; Data: 255->255 save count: 0
+02:39:48.701 > WRITE:   Memory write at id: 51; Data: 255->255 save count: 0
+02:39:48.709 > WRITE:   Memory write at id: 52; Data: 255->255 save count: 0
+02:39:48.713 > WRITE:   Memory write at id: 53; Data: 255->255 save count: 0
+02:39:48.717 > WRITE:   Memory write at id: 54; Data: 255->255 save count: 0
+02:39:48.725 > WRITE:   Memory write at id: 55; Data: 255->255 save count: 0
+02:39:48.729 > WRITE:   Memory write at id: 56; Data: 255->255 save count: 0
+02:39:48.733 > WRITE:   Memory write at id: 57; Data: 2->255 save count: 0
+02:39:48.742 > WRITE:   Memory write at id: 58; Data: 255->255 save count: 0
+02:39:48.746 > WRITE:   Memory write at id: 59; Data: 255->255 save count: 0
+02:39:48.750 > WRITE:   Memory write at id: 60; Data: 255->255 save count: 0
+02:39:48.758 > WRITE:   Memory write at id: 61; Data: 255->255 save count: 0
+02:39:48.762 > WRITE:   Memory write at id: 62; Data: 255->255 save count: 0
+02:39:48.766 > WRITE:   Memory write at id: 63; Data: 255->255 save count: 0
+02:39:48.770 > WRITE:   Memory write at id: 64; Data: 255->255 save count: 0
+02:39:48.778 > WRITE:   Memory write at id: 65; Data: 255->255 save count: 0
+02:39:48.783 > WRITE:   Memory write at id: 66; Data: 255->255 save count: 0
+02:39:48.787 > WRITE:   Memory write at id: 67; Data: 255->255 save count: 0
+02:39:48.795 > WRITE:   Memory write at id: 68; Data: 255->255 save count: 0
+02:39:48.799 > WRITE:   Memory write at id: 69; Data: 255->255 save count: 0
+02:39:48.803 > WRITE:   Memory write at id: 70; Data: 255->255 save count: 0
+02:39:48.811 > WRITE:   Memory write at id: 71; Data: 255->255 save count: 0
+02:39:48.815 > WRITE:   Memory write at id: 72; Data: 255->255 save count: 0
+02:39:48.819 > WRITE:   Memory write at id: 73; Data: 255->255 save count: 0
+02:39:48.828 > WRITE:   Memory write at id: 74; Data: 255->255 save count: 0
+02:39:48.832 > WRITE:   Memory write at id: 75; Data: 255->255 save count: 0
+02:39:48.836 > WRITE:   Memory write at id: 76; Data: 255->255 save count: 0
+02:39:48.840 > WRITE:   Memory write at id: 77; Data: 255->255 save count: 0
+02:39:48.848 > WRITE:   Memory write at id: 78; Data: 255->255 save count: 0
+02:39:48.852 > WRITE:   Memory write at id: 79; Data: 255->255 save count: 0
+02:39:48.856 > WRITE:   Memory write at id: 80; Data: 255->255 save count: 0
+02:39:48.864 > WRITE:   Memory write at id: 81; Data: 255->255 save count: 0
+02:39:48.869 > WRITE:   Memory write at id: 82; Data: 255->255 save count: 0
+02:39:48.873 > WRITE:   Memory write at id: 83; Data: 255->255 save count: 0
+02:39:48.881 > WRITE:   Memory write at id: 84; Data: 255->255 save count: 0
+02:39:48.885 > WRITE:   Memory write at id: 85; Data: 255->255 save count: 0
+02:39:48.889 > WRITE:   Memory write at id: 86; Data: 255->255 save count: 0
+02:39:48.897 > WRITE:   Memory write at id: 87; Data: 255->255 save count: 0
+02:39:48.901 > WRITE:   Memory write at id: 88; Data: 255->255 save count: 0
+02:39:48.905 > WRITE:   Memory write at id: 89; Data: 255->255 save count: 0
+02:39:48.910 > WRITE:   Memory write at id: 90; Data: 255->255 save count: 0
+02:39:48.918 > WRITE:   Memory write at id: 91; Data: 255->255 save count: 0
+02:39:48.922 > WRITE:   Memory write at id: 92; Data: 255->255 save count: 0
+02:39:48.926 > WRITE:   Memory write at id: 93; Data: 255->255 save count: 0
+02:39:48.934 > WRITE:   Memory write at id: 94; Data: 255->255 save count: 0
+02:39:48.938 > WRITE:   Memory write at id: 95; Data: 255->255 save count: 0
+02:39:48.942 > WRITE:   Memory write at id: 96; Data: 255->255 save count: 0
+02:39:48.950 > WRITE:   Memory write at id: 97; Data: 255->255 save count: 0
+02:39:48.954 > WRITE:   Memory write at id: 98; Data: 255->255 save count: 0
+02:39:48.958 > WRITE:   Memory write at id: 99; Data: 255->255 save count: 0
+02:39:48.967 > MEMORY:  Size: 100; Address: 0; Redundancy: 2; Data id: 83; Save count: 0
+02:40:04.895 > WRITE:   Memory write at id: 0; Data: 255->255 save count: 0
+02:40:04.903 > WRITE:   Memory write at id: 1; Data: 255->255 save count: 0
+02:40:04.907 > WRITE:   Memory write at id: 2; Data: 255->255 save count: 0
+02:40:04.911 > WRITE:   Memory write at id: 3; Data: 255->255 save count: 0
+02:40:04.915 > WRITE:   Memory write at id: 4; Data: 255->255 save count: 0
+02:40:04.924 > WRITE:   Memory write at id: 5; Data: 255->255 save count: 0
+02:40:04.928 > WRITE:   Memory write at id: 6; Data: 255->255 save count: 0
+02:40:04.932 > WRITE:   Memory write at id: 7; Data: 255->255 save count: 0
+02:40:04.940 > WRITE:   Memory write at id: 8; Data: 255->255 save count: 0
+02:40:04.944 > WRITE:   Memory write at id: 9; Data: 255->255 save count: 0
+02:40:04.948 > WRITE:   Memory write at id: 10; Data: 255->255 save count: 0
+02:40:04.952 > WRITE:   Memory write at id: 11; Data: 255->255 save count: 0
+02:40:04.960 > WRITE:   Memory write at id: 12; Data: 255->255 save count: 0
+02:40:04.965 > WRITE:   Memory write at id: 13; Data: 255->255 save count: 0
+02:40:04.969 > WRITE:   Memory write at id: 14; Data: 255->255 save count: 0
+02:40:04.977 > WRITE:   Memory write at id: 15; Data: 255->255 save count: 0
+02:40:04.981 > WRITE:   Memory write at id: 16; Data: 255->255 save count: 0
+02:40:04.985 > WRITE:   Memory write at id: 17; Data: 255->255 save count: 0
+02:40:04.993 > WRITE:   Memory write at id: 18; Data: 255->255 save count: 0
+02:40:04.997 > WRITE:   Memory write at id: 19; Data: 255->255 save count: 0
+02:40:05.001 > WRITE:   Memory write at id: 20; Data: 255->255 save count: 0
+02:40:05.010 > WRITE:   Memory write at id: 21; Data: 255->255 save count: 0
+02:40:05.014 > WRITE:   Memory write at id: 22; Data: 255->255 save count: 0
+02:40:05.018 > WRITE:   Memory write at id: 23; Data: 255->255 save count: 0
+02:40:05.022 > WRITE:   Memory write at id: 24; Data: 255->255 save count: 0
+02:40:05.030 > WRITE:   Memory write at id: 25; Data: 255->255 save count: 0
+02:40:05.034 > WRITE:   Memory write at id: 26; Data: 255->255 save count: 0
+02:40:05.038 > WRITE:   Memory write at id: 27; Data: 255->255 save count: 0
+02:40:05.047 > WRITE:   Memory write at id: 28; Data: 255->255 save count: 0
+02:40:05.051 > WRITE:   Memory write at id: 29; Data: 255->255 save count: 0
+02:40:05.055 > WRITE:   Memory write at id: 30; Data: 255->255 save count: 0
+02:40:05.063 > WRITE:   Memory write at id: 31; Data: 255->255 save count: 0
+02:40:05.067 > WRITE:   Memory write at id: 32; Data: 255->255 save count: 0
+02:40:05.071 > WRITE:   Memory write at id: 33; Data: 255->255 save count: 0
+02:40:05.079 > WRITE:   Memory write at id: 34; Data: 255->255 save count: 0
+02:40:05.083 > WRITE:   Memory write at id: 35; Data: 255->255 save count: 0
+02:40:05.087 > WRITE:   Memory write at id: 36; Data: 255->255 save count: 0
+02:40:05.092 > WRITE:   Memory write at id: 37; Data: 255->255 save count: 0
+02:40:05.100 > WRITE:   Memory write at id: 38; Data: 255->255 save count: 0
+02:40:05.104 > WRITE:   Memory write at id: 39; Data: 255->255 save count: 0
+02:40:05.108 > WRITE:   Memory write at id: 40; Data: 255->255 save count: 0
+02:40:05.116 > WRITE:   Memory write at id: 41; Data: 255->255 save count: 0
+02:40:05.120 > WRITE:   Memory write at id: 42; Data: 255->255 save count: 0
+02:40:05.124 > WRITE:   Memory write at id: 43; Data: 255->255 save count: 0
+02:40:05.132 > WRITE:   Memory write at id: 44; Data: 255->255 save count: 0
+02:40:05.137 > WRITE:   Memory write at id: 45; Data: 255->255 save count: 0
+02:40:05.141 > WRITE:   Memory write at id: 46; Data: 255->255 save count: 0
+02:40:05.149 > WRITE:   Memory write at id: 47; Data: 255->255 save count: 0
+02:40:05.153 > WRITE:   Memory write at id: 48; Data: 255->255 save count: 0
+02:40:05.157 > WRITE:   Memory write at id: 49; Data: 255->255 save count: 0
+02:40:05.161 > WRITE:   Memory write at id: 50; Data: 255->255 save count: 0
+02:40:05.169 > WRITE:   Memory write at id: 51; Data: 255->255 save count: 0
+02:40:05.173 > WRITE:   Memory write at id: 52; Data: 255->255 save count: 0
+02:40:05.177 > WRITE:   Memory write at id: 53; Data: 255->255 save count: 0
+02:40:05.186 > WRITE:   Memory write at id: 54; Data: 255->255 save count: 0
+02:40:05.190 > WRITE:   Memory write at id: 55; Data: 255->255 save count: 0
+02:40:05.194 > WRITE:   Memory write at id: 56; Data: 255->255 save count: 0
+02:40:05.202 > WRITE:   Memory write at id: 57; Data: 255->255 save count: 0
+02:40:05.206 > WRITE:   Memory write at id: 58; Data: 255->255 save count: 0
+02:40:05.210 > WRITE:   Memory write at id: 59; Data: 255->255 save count: 0
+02:40:05.218 > WRITE:   Memory write at id: 60; Data: 255->255 save count: 0
+02:40:05.223 > WRITE:   Memory write at id: 61; Data: 255->255 save count: 0
+02:40:05.227 > WRITE:   Memory write at id: 62; Data: 255->255 save count: 0
+02:40:05.231 > WRITE:   Memory write at id: 63; Data: 255->255 save count: 0
+02:40:05.239 > WRITE:   Memory write at id: 64; Data: 255->255 save count: 0
+02:40:05.243 > WRITE:   Memory write at id: 65; Data: 255->255 save count: 0
+02:40:05.247 > WRITE:   Memory write at id: 66; Data: 255->255 save count: 0
+02:40:05.255 > WRITE:   Memory write at id: 67; Data: 255->255 save count: 0
+02:40:05.260 > WRITE:   Memory write at id: 68; Data: 255->255 save count: 0
+02:40:05.264 > WRITE:   Memory write at id: 69; Data: 255->255 save count: 0
+02:40:05.272 > WRITE:   Memory write at id: 70; Data: 255->255 save count: 0
+02:40:05.276 > WRITE:   Memory write at id: 71; Data: 255->255 save count: 0
+02:40:05.280 > WRITE:   Memory write at id: 72; Data: 255->255 save count: 0
+02:40:05.288 > WRITE:   Memory write at id: 73; Data: 255->255 save count: 0
+02:40:05.292 > WRITE:   Memory write at id: 74; Data: 255->255 save count: 0
+02:40:05.296 > WRITE:   Memory write at id: 75; Data: 255->255 save count: 0
+02:40:05.304 > WRITE:   Memory write at id: 76; Data: 255->255 save count: 0
+02:40:05.309 > WRITE:   Memory write at id: 77; Data: 255->255 save count: 0
+02:40:05.313 > WRITE:   Memory write at id: 78; Data: 255->255 save count: 0
+02:40:05.317 > WRITE:   Memory write at id: 79; Data: 255->255 save count: 0
+02:40:05.325 > WRITE:   Memory write at id: 80; Data: 255->255 save count: 0
+02:40:05.329 > WRITE:   Memory write at id: 81; Data: 255->255 save count: 0
+02:40:05.333 > WRITE:   Memory write at id: 82; Data: 255->255 save count: 0
+02:40:05.341 > WRITE:   Memory write at id: 83; Data: 255->255 save count: 0
+02:40:05.345 > WRITE:   Memory write at id: 84; Data: 255->255 save count: 0
+02:40:05.350 > WRITE:   Memory write at id: 85; Data: 255->255 save count: 0
+02:40:05.358 > WRITE:   Memory write at id: 86; Data: 255->255 save count: 0
+02:40:05.362 > WRITE:   Memory write at id: 87; Data: 255->255 save count: 0
+02:40:05.366 > WRITE:   Memory write at id: 88; Data: 255->255 save count: 0
+02:40:05.374 > WRITE:   Memory write at id: 89; Data: 255->255 save count: 0
+02:40:05.378 > WRITE:   Memory write at id: 90; Data: 255->255 save count: 0
+02:40:05.382 > WRITE:   Memory write at id: 91; Data: 255->255 save count: 0
+02:40:05.386 > WRITE:   Memory write at id: 92; Data: 255->255 save count: 0
+02:40:05.395 > WRITE:   Memory write at id: 93; Data: 255->255 save count: 0
+02:40:05.399 > WRITE:   Memory write at id: 94; Data: 255->255 save count: 0
+02:40:05.403 > WRITE:   Memory write at id: 95; Data: 255->255 save count: 0
+02:40:05.411 > WRITE:   Memory write at id: 96; Data: 255->255 save count: 0
+02:40:05.415 > WRITE:   Memory write at id: 97; Data: 255->255 save count: 0
+02:40:05.419 > WRITE:   Memory write at id: 98; Data: 255->255 save count: 0
+02:40:05.427 > WRITE:   Memory write at id: 99; Data: 255->255 save count: 0
+02:40:05.431 > MEMORY:  Size: 100; Address: 0; Redundancy: 2; Data id: 75; Save count: 0
+02:40:08.483 > WRITE:   Memory write at id: 0; Data: 255->255 save count: 0
+02:40:08.488 > WRITE:   Memory write at id: 1; Data: 255->255 save count: 0
+02:40:08.491 > WRITE:   Memory write at id: 2; Data: 255->255 save count: 0
+02:40:08.495 > WRITE:   Memory write at id: 3; Data: 255->255 save count: 0
+02:40:08.503 > WRITE:   Memory write at id: 4; Data: 255->255 save count: 0
+02:40:08.507 > WRITE:   Memory write at id: 5; Data: 255->255 save count: 0
+02:40:08.511 > WRITE:   Memory write at id: 6; Data: 255->255 save count: 0
+02:40:08.520 > WRITE:   Memory write at id: 7; Data: 255->255 save count: 0
+02:40:08.524 > WRITE:   Memory write at id: 8; Data: 255->255 save count: 0
+02:40:08.528 > WRITE:   Memory write at id: 9; Data: 255->255 save count: 0
+02:40:08.532 > WRITE:   Memory write at id: 10; Data: 255->255 save count: 0
+02:40:08.540 > WRITE:   Memory write at id: 11; Data: 255->255 save count: 0
+02:40:08.544 > WRITE:   Memory write at id: 12; Data: 255->255 save count: 0
+02:40:08.548 > WRITE:   Memory write at id: 13; Data: 255->255 save count: 0
+02:40:08.556 > WRITE:   Memory write at id: 14; Data: 255->255 save count: 0
+02:40:08.561 > WRITE:   Memory write at id: 15; Data: 255->255 save count: 0
+02:40:08.564 > WRITE:   Memory write at id: 16; Data: 255->255 save count: 0
+02:40:08.573 > WRITE:   Memory write at id: 17; Data: 255->255 save count: 0
+02:40:08.578 > WRITE:   Memory write at id: 18; Data: 255->255 save count: 0
+02:40:08.582 > WRITE:   Memory write at id: 19; Data: 255->255 save count: 0
+02:40:08.590 > WRITE:   Memory write at id: 20; Data: 255->255 save count: 0
+02:40:08.594 > WRITE:   Memory write at id: 21; Data: 255->255 save count: 0
+02:40:08.598 > WRITE:   Memory write at id: 22; Data: 255->255 save count: 0
+02:40:08.602 > WRITE:   Memory write at id: 23; Data: 255->255 save count: 0
+02:40:08.611 > WRITE:   Memory write at id: 24; Data: 255->255 save count: 0
+02:40:08.615 > WRITE:   Memory write at id: 25; Data: 255->255 save count: 0
+02:40:08.619 > WRITE:   Memory write at id: 26; Data: 255->255 save count: 0
+02:40:08.627 > WRITE:   Memory write at id: 27; Data: 255->255 save count: 0
+02:40:08.631 > WRITE:   Memory write at id: 28; Data: 255->255 save count: 0
+02:40:08.635 > WRITE:   Memory write at id: 29; Data: 255->255 save count: 0
+02:40:08.643 > WRITE:   Memory write at id: 30; Data: 255->255 save count: 0
+02:40:08.647 > WRITE:   Memory write at id: 31; Data: 255->255 save count: 0
+02:40:08.651 > WRITE:   Memory write at id: 32; Data: 255->255 save count: 0
+02:40:08.659 > WRITE:   Memory write at id: 33; Data: 255->255 save count: 0
+02:40:08.663 > WRITE:   Memory write at id: 34; Data: 255->255 save count: 0
+02:40:08.667 > WRITE:   Memory write at id: 35; Data: 255->255 save count: 0
+02:40:08.671 > WRITE:   Memory write at id: 36; Data: 255->255 save count: 0
+02:40:08.680 > WRITE:   Memory write at id: 37; Data: 255->255 save count: 0
+02:40:08.684 > WRITE:   Memory write at id: 38; Data: 255->255 save count: 0
+02:40:08.688 > WRITE:   Memory write at id: 39; Data: 255->255 save count: 0
+02:40:08.696 > WRITE:   Memory write at id: 40; Data: 255->255 save count: 0
+02:40:08.700 > WRITE:   Memory write at id: 41; Data: 255->255 save count: 0
+02:40:08.704 > WRITE:   Memory write at id: 42; Data: 255->255 save count: 0
+02:40:08.712 > WRITE:   Memory write at id: 43; Data: 255->255 save count: 0
+02:40:08.716 > WRITE:   Memory write at id: 44; Data: 255->255 save count: 0
+02:40:08.721 > WRITE:   Memory write at id: 45; Data: 255->255 save count: 0
+02:40:08.729 > WRITE:   Memory write at id: 46; Data: 255->255 save count: 0
+02:40:08.733 > WRITE:   Memory write at id: 47; Data: 255->255 save count: 0
+02:40:08.737 > WRITE:   Memory write at id: 48; Data: 255->255 save count: 0
+02:40:08.741 > WRITE:   Memory write at id: 49; Data: 255->255 save count: 0
+02:40:08.749 > WRITE:   Memory write at id: 50; Data: 255->255 save count: 0
+02:40:08.753 > WRITE:   Memory write at id: 51; Data: 255->255 save count: 0
+02:40:08.757 > WRITE:   Memory write at id: 52; Data: 255->255 save count: 0
+02:40:08.766 > WRITE:   Memory write at id: 53; Data: 255->255 save count: 0
+02:40:08.770 > WRITE:   Memory write at id: 54; Data: 255->255 save count: 0
+02:40:08.774 > WRITE:   Memory write at id: 55; Data: 255->255 save count: 0
+02:40:08.782 > WRITE:   Memory write at id: 56; Data: 255->255 save count: 0
+02:40:08.786 > WRITE:   Memory write at id: 57; Data: 255->255 save count: 0
+02:40:08.790 > WRITE:   Memory write at id: 58; Data: 255->255 save count: 0
+02:40:08.798 > WRITE:   Memory write at id: 59; Data: 255->255 save count: 0
+02:40:08.802 > WRITE:   Memory write at id: 60; Data: 255->255 save count: 0
+02:40:08.807 > WRITE:   Memory write at id: 61; Data: 255->255 save count: 0
+02:40:08.811 > WRITE:   Memory write at id: 62; Data: 255->255 save count: 0
+02:40:08.819 > WRITE:   Memory write at id: 63; Data: 255->255 save count: 0
+02:40:08.823 > WRITE:   Memory write at id: 64; Data: 255->255 save count: 0
+02:40:08.827 > WRITE:   Memory write at id: 65; Data: 255->255 save count: 0
+02:40:08.835 > WRITE:   Memory write at id: 66; Data: 255->255 save count: 0
+02:40:08.839 > WRITE:   Memory write at id: 67; Data: 255->255 save count: 0
+02:40:08.843 > WRITE:   Memory write at id: 68; Data: 255->255 save count: 0
+02:40:08.852 > WRITE:   Memory write at id: 69; Data: 255->255 save count: 0
+02:40:08.856 > WRITE:   Memory write at id: 70; Data: 255->255 save count: 0
+02:40:08.860 > WRITE:   Memory write at id: 71; Data: 255->255 save count: 0
+02:40:08.868 > WRITE:   Memory write at id: 72; Data: 255->255 save count: 0
+02:40:08.872 > WRITE:   Memory write at id: 73; Data: 255->255 save count: 0
+02:40:08.876 > WRITE:   Memory write at id: 74; Data: 255->255 save count: 0
+02:40:08.884 > WRITE:   Memory write at id: 75; Data: 255->255 save count: 0
+02:40:08.889 > WRITE:   Memory write at id: 76; Data: 255->255 save count: 0
+02:40:08.893 > WRITE:   Memory write at id: 77; Data: 255->255 save count: 0
+02:40:08.897 > WRITE:   Memory write at id: 78; Data: 255->255 save count: 0
+02:40:08.905 > WRITE:   Memory write at id: 79; Data: 255->255 save count: 0
+02:40:08.909 > WRITE:   Memory write at id: 80; Data: 255->255 save count: 0
+02:40:08.913 > WRITE:   Memory write at id: 81; Data: 255->255 save count: 0
+02:40:08.921 > WRITE:   Memory write at id: 82; Data: 255->255 save count: 0
+02:40:08.925 > WRITE:   Memory write at id: 83; Data: 255->255 save count: 0
+02:40:08.929 > WRITE:   Memory write at id: 84; Data: 255->255 save count: 0
+02:40:08.938 > WRITE:   Memory write at id: 85; Data: 255->255 save count: 0
+02:40:08.942 > WRITE:   Memory write at id: 86; Data: 255->255 save count: 0
+02:40:08.946 > WRITE:   Memory write at id: 87; Data: 255->255 save count: 0
+02:40:08.954 > WRITE:   Memory write at id: 88; Data: 255->255 save count: 0
+02:40:08.958 > WRITE:   Memory write at id: 89; Data: 255->255 save count: 0
+02:40:08.962 > WRITE:   Memory write at id: 90; Data: 255->255 save count: 0
+02:40:08.967 > WRITE:   Memory write at id: 91; Data: 255->255 save count: 0
+02:40:08.975 > WRITE:   Memory write at id: 92; Data: 255->255 save count: 0
+02:40:08.979 > WRITE:   Memory write at id: 93; Data: 255->255 save count: 0
+02:40:08.983 > WRITE:   Memory write at id: 94; Data: 255->255 save count: 0
+02:40:08.991 > WRITE:   Memory write at id: 95; Data: 255->255 save count: 0
+02:40:08.995 > WRITE:   Memory write at id: 96; Data: 255->255 save count: 0
+02:40:08.999 > WRITE:   Memory write at id: 97; Data: 255->255 save count: 0
+02:40:09.008 > WRITE:   Memory write at id: 98; Data: 255->255 save count: 0
+02:40:09.012 > WRITE:   Memory write at id: 99; Data: 255->255 save count: 0
+02:40:09.016 > MEMORY:  Size: 100; Address: 0; Redundancy: 2; Data id: 63; Save count: 0
+02:40:11.563 > WRITE:   Memory write at id: 0; Data: 255->255 save count: 0
+02:40:11.567 > WRITE:   Memory write at id: 1; Data: 255->255 save count: 0
+02:40:11.571 > WRITE:   Memory write at id: 2; Data: 255->255 save count: 0
+02:40:11.579 > WRITE:   Memory write at id: 3; Data: 255->255 save count: 0
+02:40:11.584 > WRITE:   Memory write at id: 4; Data: 255->255 save count: 0
+02:40:11.588 > WRITE:   Memory write at id: 5; Data: 255->255 save count: 0
+02:40:11.596 > WRITE:   Memory write at id: 6; Data: 255->255 save count: 0
+02:40:11.600 > WRITE:   Memory write at id: 7; Data: 255->255 save count: 0
+02:40:11.604 > WRITE:   Memory write at id: 8; Data: 255->255 save count: 0
+02:40:11.608 > WRITE:   Memory write at id: 9; Data: 255->255 save count: 0
+02:40:11.616 > WRITE:   Memory write at id: 10; Data: 255->255 save count: 0
+02:40:11.620 > WRITE:   Memory write at id: 11; Data: 255->255 save count: 0
+02:40:11.624 > WRITE:   Memory write at id: 12; Data: 255->255 save count: 0
+02:40:11.632 > WRITE:   Memory write at id: 13; Data: 255->255 save count: 0
+02:40:11.637 > WRITE:   Memory write at id: 14; Data: 255->255 save count: 0
+02:40:11.641 > WRITE:   Memory write at id: 15; Data: 255->255 save count: 0
+02:40:11.649 > WRITE:   Memory write at id: 16; Data: 255->255 save count: 0
+02:40:11.653 > WRITE:   Memory write at id: 17; Data: 255->255 save count: 0
+02:40:11.657 > WRITE:   Memory write at id: 18; Data: 255->255 save count: 0
+02:40:11.665 > WRITE:   Memory write at id: 19; Data: 255->255 save count: 0
+02:40:11.669 > WRITE:   Memory write at id: 20; Data: 255->255 save count: 0
+02:40:11.673 > WRITE:   Memory write at id: 21; Data: 255->255 save count: 0
+02:40:11.678 > WRITE:   Memory write at id: 22; Data: 255->255 save count: 0
+02:40:11.686 > WRITE:   Memory write at id: 23; Data: 255->255 save count: 0
+02:40:11.690 > WRITE:   Memory write at id: 24; Data: 255->255 save count: 0
+02:40:11.694 > WRITE:   Memory write at id: 25; Data: 255->255 save count: 0
+02:40:11.702 > WRITE:   Memory write at id: 26; Data: 255->255 save count: 0
+02:40:11.706 > WRITE:   Memory write at id: 27; Data: 255->255 save count: 0
+02:40:11.710 > WRITE:   Memory write at id: 28; Data: 255->255 save count: 0
+02:40:11.719 > WRITE:   Memory write at id: 29; Data: 255->255 save count: 0
+02:40:11.723 > WRITE:   Memory write at id: 30; Data: 255->255 save count: 0
+02:40:11.727 > WRITE:   Memory write at id: 31; Data: 255->255 save count: 0
+02:40:11.735 > WRITE:   Memory write at id: 32; Data: 255->255 save count: 0
+02:40:11.739 > WRITE:   Memory write at id: 33; Data: 255->255 save count: 0
+02:40:11.743 > WRITE:   Memory write at id: 34; Data: 255->255 save count: 0
+02:40:11.747 > WRITE:   Memory write at id: 35; Data: 255->255 save count: 0
+02:40:11.756 > WRITE:   Memory write at id: 36; Data: 255->255 save count: 0
+02:40:11.759 > WRITE:   Memory write at id: 37; Data: 255->255 save count: 0
+02:40:11.764 > WRITE:   Memory write at id: 38; Data: 255->255 save count: 0
+02:40:11.772 > WRITE:   Memory write at id: 39; Data: 255->255 save count: 0
+02:40:11.776 > WRITE:   Memory write at id: 40; Data: 255->255 save count: 0
+02:40:11.780 > WRITE:   Memory write at id: 41; Data: 255->255 save count: 0
+02:40:11.789 > WRITE:   Memory write at id: 42; Data: 255->255 save count: 0
+02:40:11.793 > WRITE:   Memory write at id: 43; Data: 255->255 save count: 0
+02:40:11.797 > WRITE:   Memory write at id: 44; Data: 255->255 save count: 0
+02:40:11.805 > WRITE:   Memory write at id: 45; Data: 255->255 save count: 0
+02:40:11.809 > WRITE:   Memory write at id: 46; Data: 255->255 save count: 0
+02:40:11.813 > WRITE:   Memory write at id: 47; Data: 255->255 save count: 0
+02:40:11.817 > WRITE:   Memory write at id: 48; Data: 255->255 save count: 0
+02:40:11.826 > WRITE:   Memory write at id: 49; Data: 255->255 save count: 0
+02:40:11.830 > WRITE:   Memory write at id: 50; Data: 255->255 save count: 0
+02:40:11.834 > WRITE:   Memory write at id: 51; Data: 255->255 save count: 0
+02:40:11.842 > WRITE:   Memory write at id: 52; Data: 255->255 save count: 0
+02:40:11.846 > WRITE:   Memory write at id: 53; Data: 255->255 save count: 0
+02:40:11.850 > WRITE:   Memory write at id: 54; Data: 255->255 save count: 0
+02:40:11.858 > WRITE:   Memory write at id: 55; Data: 255->255 save count: 0
+02:40:11.862 > WRITE:   Memory write at id: 56; Data: 255->255 save count: 0
+02:40:11.866 > WRITE:   Memory write at id: 57; Data: 255->255 save count: 0
+02:40:11.875 > WRITE:   Memory write at id: 58; Data: 255->255 save count: 0
+02:40:11.879 > WRITE:   Memory write at id: 59; Data: 255->255 save count: 0
+02:40:11.883 > WRITE:   Memory write at id: 60; Data: 255->255 save count: 0
+02:40:11.891 > WRITE:   Memory write at id: 61; Data: 255->255 save count: 0
+02:40:11.895 > WRITE:   Memory write at id: 62; Data: 255->255 save count: 0
+02:40:11.899 > WRITE:   Memory write at id: 63; Data: 255->255 save count: 0
+02:40:11.903 > WRITE:   Memory write at id: 64; Data: 255->255 save count: 0
+02:40:11.911 > WRITE:   Memory write at id: 65; Data: 255->255 save count: 0
+02:40:11.916 > WRITE:   Memory write at id: 66; Data: 255->255 save count: 0
+02:40:11.920 > WRITE:   Memory write at id: 67; Data: 255->255 save count: 0
+02:40:11.928 > WRITE:   Memory write at id: 68; Data: 255->255 save count: 0
+02:40:11.932 > WRITE:   Memory write at id: 69; Data: 255->255 save count: 0
+02:40:11.936 > WRITE:   Memory write at id: 70; Data: 255->255 save count: 0
+02:40:11.944 > WRITE:   Memory write at id: 71; Data: 255->255 save count: 0
+02:40:11.948 > WRITE:   Memory write at id: 72; Data: 255->255 save count: 0
+02:40:11.952 > WRITE:   Memory write at id: 73; Data: 255->255 save count: 0
+02:40:11.960 > WRITE:   Memory write at id: 74; Data: 255->255 save count: 0
+02:40:11.965 > WRITE:   Memory write at id: 75; Data: 255->255 save count: 0
+02:40:11.969 > WRITE:   Memory write at id: 76; Data: 255->255 save count: 0
+02:40:11.973 > WRITE:   Memory write at id: 77; Data: 255->255 save count: 0
+02:40:11.981 > WRITE:   Memory write at id: 78; Data: 255->255 save count: 0
+02:40:11.985 > WRITE:   Memory write at id: 79; Data: 255->255 save count: 0
+02:40:11.989 > WRITE:   Memory write at id: 80; Data: 255->255 save count: 0
+02:40:11.997 > WRITE:   Memory write at id: 81; Data: 255->255 save count: 0
+02:40:12.001 > WRITE:   Memory write at id: 82; Data: 255->255 save count: 0
+02:40:12.006 > WRITE:   Memory write at id: 83; Data: 255->255 save count: 0
+02:40:12.014 > WRITE:   Memory write at id: 84; Data: 255->255 save count: 0
+02:40:12.018 > WRITE:   Memory write at id: 85; Data: 255->255 save count: 0
+02:40:12.022 > WRITE:   Memory write at id: 86; Data: 255->255 save count: 0
+02:40:12.030 > WRITE:   Memory write at id: 87; Data: 255->255 save count: 0
+02:40:12.034 > WRITE:   Memory write at id: 88; Data: 255->255 save count: 0
+02:40:12.039 > WRITE:   Memory write at id: 89; Data: 255->255 save count: 0
+02:40:12.043 > WRITE:   Memory write at id: 90; Data: 255->255 save count: 0
+02:40:12.051 > WRITE:   Memory write at id: 91; Data: 255->255 save count: 0
+02:40:12.055 > WRITE:   Memory write at id: 92; Data: 255->255 save count: 0
+02:40:12.059 > WRITE:   Memory write at id: 93; Data: 255->255 save count: 0
+02:40:12.067 > WRITE:   Memory write at id: 94; Data: 255->255 save count: 0
+02:40:12.071 > WRITE:   Memory write at id: 95; Data: 255->255 save count: 0
+02:40:12.075 > WRITE:   Memory write at id: 96; Data: 255->255 save count: 0
+02:40:12.084 > WRITE:   Memory write at id: 97; Data: 255->255 save count: 0
+02:40:12.088 > WRITE:   Memory write at id: 98; Data: 255->255 save count: 0
+02:40:12.092 > WRITE:   Memory write at id: 99; Data: 255->255 save count: 0
+02:40:12.100 > MEMORY:  Size: 100; Address: 0; Redundancy: 2; Data id: 72; Save count: 0
+02:40:14.479 > WRITE:   Memory write at id: 0; Data: 255->255 save count: 0
+02:40:14.488 > WRITE:   Memory write at id: 1; Data: 255->255 save count: 0
+02:40:14.492 > WRITE:   Memory write at id: 2; Data: 255->255 save count: 0
+02:40:14.496 > WRITE:   Memory write at id: 3; Data: 255->255 save count: 0
+02:40:14.504 > WRITE:   Memory write at id: 4; Data: 255->255 save count: 0
+02:40:14.508 > WRITE:   Memory write at id: 5; Data: 255->255 save count: 0
+02:40:14.512 > WRITE:   Memory write at id: 6; Data: 255->255 save count: 0
+02:40:14.517 > WRITE:   Memory write at id: 7; Data: 255->255 save count: 0
+02:40:14.525 > WRITE:   Memory write at id: 8; Data: 255->255 save count: 0
+02:40:14.529 > WRITE:   Memory write at id: 9; Data: 255->255 save count: 0
+02:40:14.533 > WRITE:   Memory write at id: 10; Data: 255->255 save count: 0
+02:40:14.541 > WRITE:   Memory write at id: 11; Data: 255->255 save count: 0
+02:40:14.545 > WRITE:   Memory write at id: 12; Data: 255->255 save count: 0
+02:40:14.549 > WRITE:   Memory write at id: 13; Data: 255->255 save count: 0
+02:40:14.557 > WRITE:   Memory write at id: 14; Data: 255->255 save count: 0
+02:40:14.562 > WRITE:   Memory write at id: 15; Data: 255->255 save count: 0
+02:40:14.566 > WRITE:   Memory write at id: 16; Data: 255->255 save count: 0
+02:40:14.574 > WRITE:   Memory write at id: 17; Data: 255->255 save count: 0
+02:40:14.578 > WRITE:   Memory write at id: 18; Data: 255->255 save count: 0
+02:40:14.582 > WRITE:   Memory write at id: 19; Data: 255->255 save count: 0
+02:40:14.586 > WRITE:   Memory write at id: 20; Data: 255->255 save count: 0
+02:40:14.594 > WRITE:   Memory write at id: 21; Data: 255->255 save count: 0
+02:40:14.598 > WRITE:   Memory write at id: 22; Data: 255->255 save count: 0
+02:40:14.603 > WRITE:   Memory write at id: 23; Data: 255->255 save count: 0
+02:40:14.611 > WRITE:   Memory write at id: 24; Data: 255->255 save count: 0
+02:40:14.615 > WRITE:   Memory write at id: 25; Data: 255->255 save count: 0
+02:40:14.619 > WRITE:   Memory write at id: 26; Data: 255->255 save count: 0
+02:40:14.627 > WRITE:   Memory write at id: 27; Data: 255->255 save count: 0
+02:40:14.631 > WRITE:   Memory write at id: 28; Data: 255->255 save count: 0
+02:40:14.635 > WRITE:   Memory write at id: 29; Data: 255->255 save count: 0
+02:40:14.643 > WRITE:   Memory write at id: 30; Data: 255->255 save count: 0
+02:40:14.647 > WRITE:   Memory write at id: 31; Data: 255->255 save count: 0
+02:40:14.651 > WRITE:   Memory write at id: 32; Data: 255->255 save count: 0
+02:40:14.655 > WRITE:   Memory write at id: 33; Data: 255->255 save count: 0
+02:40:14.663 > WRITE:   Memory write at id: 34; Data: 255->255 save count: 0
+02:40:14.667 > WRITE:   Memory write at id: 35; Data: 255->255 save count: 0
+02:40:14.672 > WRITE:   Memory write at id: 36; Data: 255->255 save count: 0
+02:40:14.680 > WRITE:   Memory write at id: 37; Data: 255->255 save count: 0
+02:40:14.684 > WRITE:   Memory write at id: 38; Data: 255->255 save count: 0
+02:40:14.688 > WRITE:   Memory write at id: 39; Data: 255->255 save count: 0
+02:40:14.696 > WRITE:   Memory write at id: 40; Data: 255->255 save count: 0
+02:40:14.700 > WRITE:   Memory write at id: 41; Data: 255->255 save count: 0
+02:40:14.704 > WRITE:   Memory write at id: 42; Data: 255->255 save count: 0
+02:40:14.713 > WRITE:   Memory write at id: 43; Data: 255->255 save count: 0
+02:40:14.716 > WRITE:   Memory write at id: 44; Data: 255->255 save count: 0
+02:40:14.721 > WRITE:   Memory write at id: 45; Data: 255->255 save count: 0
+02:40:14.725 > WRITE:   Memory write at id: 46; Data: 255->255 save count: 0
+02:40:14.733 > WRITE:   Memory write at id: 47; Data: 255->255 save count: 0
+02:40:14.737 > WRITE:   Memory write at id: 48; Data: 255->255 save count: 0
+02:40:14.741 > WRITE:   Memory write at id: 49; Data: 255->255 save count: 0
+02:40:14.749 > WRITE:   Memory write at id: 50; Data: 255->255 save count: 0
+02:40:14.753 > WRITE:   Memory write at id: 51; Data: 255->255 save count: 0
+02:40:14.757 > WRITE:   Memory write at id: 52; Data: 255->255 save count: 0
+02:40:14.766 > WRITE:   Memory write at id: 53; Data: 255->255 save count: 0
+02:40:14.770 > WRITE:   Memory write at id: 54; Data: 255->255 save count: 0
+02:40:14.774 > WRITE:   Memory write at id: 55; Data: 255->255 save count: 0
+02:40:14.782 > WRITE:   Memory write at id: 56; Data: 255->255 save count: 0
+02:40:14.786 > WRITE:   Memory write at id: 57; Data: 255->255 save count: 0
+02:40:14.790 > WRITE:   Memory write at id: 58; Data: 255->255 save count: 0
+02:40:14.794 > WRITE:   Memory write at id: 59; Data: 255->255 save count: 0
+02:40:14.803 > WRITE:   Memory write at id: 60; Data: 255->255 save count: 0
+02:40:14.807 > WRITE:   Memory write at id: 61; Data: 255->255 save count: 0
+02:40:14.811 > WRITE:   Memory write at id: 62; Data: 255->255 save count: 0
+02:40:14.819 > WRITE:   Memory write at id: 63; Data: 255->255 save count: 0
+02:40:14.823 > WRITE:   Memory write at id: 64; Data: 255->255 save count: 0
+02:40:14.827 > WRITE:   Memory write at id: 65; Data: 255->255 save count: 0
+02:40:14.835 > WRITE:   Memory write at id: 66; Data: 255->255 save count: 0
+02:40:14.839 > WRITE:   Memory write at id: 67; Data: 255->255 save count: 0
+02:40:14.844 > WRITE:   Memory write at id: 68; Data: 255->255 save count: 0
+02:40:14.852 > WRITE:   Memory write at id: 69; Data: 255->255 save count: 0
+02:40:14.856 > WRITE:   Memory write at id: 70; Data: 255->255 save count: 0
+02:40:14.860 > WRITE:   Memory write at id: 71; Data: 255->255 save count: 0
+02:40:14.864 > WRITE:   Memory write at id: 72; Data: 255->255 save count: 0
+02:40:14.872 > WRITE:   Memory write at id: 73; Data: 255->255 save count: 0
+02:40:14.876 > WRITE:   Memory write at id: 74; Data: 255->255 save count: 0
+02:40:14.880 > WRITE:   Memory write at id: 75; Data: 255->255 save count: 0
+02:40:14.889 > WRITE:   Memory write at id: 76; Data: 255->255 save count: 0
+02:40:14.893 > WRITE:   Memory write at id: 77; Data: 255->255 save count: 0
+02:40:14.897 > WRITE:   Memory write at id: 78; Data: 255->255 save count: 0
+02:40:14.905 > WRITE:   Memory write at id: 79; Data: 255->255 save count: 0
+02:40:14.909 > WRITE:   Memory write at id: 80; Data: 255->255 save count: 0
+02:40:14.913 > WRITE:   Memory write at id: 81; Data: 255->255 save count: 0
+02:40:14.921 > WRITE:   Memory write at id: 82; Data: 255->255 save count: 0
+02:40:14.925 > WRITE:   Memory write at id: 83; Data: 255->255 save count: 0
+02:40:14.930 > WRITE:   Memory write at id: 84; Data: 255->255 save count: 0
+02:40:14.934 > WRITE:   Memory write at id: 85; Data: 255->255 save count: 0
+02:40:14.942 > WRITE:   Memory write at id: 86; Data: 255->255 save count: 0
+02:40:14.946 > WRITE:   Memory write at id: 87; Data: 255->255 save count: 0
+02:40:14.950 > WRITE:   Memory write at id: 88; Data: 255->255 save count: 0
+02:40:14.958 > WRITE:   Memory write at id: 89; Data: 255->255 save count: 0
+02:40:14.962 > WRITE:   Memory write at id: 90; Data: 255->255 save count: 0
+02:40:14.966 > WRITE:   Memory write at id: 91; Data: 255->255 save count: 0
+02:40:14.975 > WRITE:   Memory write at id: 92; Data: 255->255 save count: 0
+02:40:14.979 > WRITE:   Memory write at id: 93; Data: 255->255 save count: 0
+02:40:14.983 > WRITE:   Memory write at id: 94; Data: 255->255 save count: 0
+02:40:14.991 > WRITE:   Memory write at id: 95; Data: 255->255 save count: 0
+02:40:14.995 > WRITE:   Memory write at id: 96; Data: 255->255 save count: 0
+02:40:14.999 > WRITE:   Memory write at id: 97; Data: 255->255 save count: 0
+02:40:15.007 > WRITE:   Memory write at id: 98; Data: 255->255 save count: 0
+02:40:15.011 > WRITE:   Memory write at id: 99; Data: 255->255 save count: 0
+02:40:15.016 > MEMORY:  Size: 100; Address: 0; Redundancy: 2; Data id: 8; Save count: 0
+02:40:36.625 > READ:    Memory read at id: 0; Data: 255
+02:40:36.626 > READ:    Memory read at id: 1; Data: 255
+02:40:36.629 > READ:    Memory read at id: 2; Data: 255
+02:40:36.633 > READ:    Memory read at id: 3; Data: 255
+02:40:36.638 > READ:    Memory read at id: 4; Data: 255
+02:40:36.642 > READ:    Memory read at id: 5; Data: 255
+02:40:36.646 > READ:    Memory read at id: 6; Data: 255
+02:40:36.650 > READ:    Memory read at id: 7; Data: 255
+02:40:36.650 > READ:    Memory read at id: 8; Data: 255
+02:40:36.654 > READ:    Memory read at id: 9; Data: 255
+02:40:36.658 > READ:    Memory read at id: 10; Data: 255
+02:40:36.662 > READ:    Memory read at id: 11; Data: 255
+02:40:36.666 > READ:    Memory read at id: 12; Data: 255
+02:40:36.670 > READ:    Memory read at id: 13; Data: 255
+02:40:36.674 > READ:    Memory read at id: 14; Data: 255
+02:40:36.678 > READ:    Memory read at id: 15; Data: 255
+02:40:36.683 > READ:    Memory read at id: 16; Data: 255
+02:40:36.683 > READ:    Memory read at id: 17; Data: 255
+02:40:36.686 > READ:    Memory read at id: 18; Data: 255
+02:40:36.691 > READ:    Memory read at id: 19; Data: 255
+02:40:36.695 > READ:    Memory read at id: 20; Data: 255
+02:40:36.699 > READ:    Memory read at id: 21; Data: 255
+02:40:36.703 > READ:    Memory read at id: 22; Data: 255
+02:40:36.707 > READ:    Memory read at id: 23; Data: 255
+02:40:36.711 > READ:    Memory read at id: 24; Data: 255
+02:40:36.715 > READ:    Memory read at id: 25; Data: 255
+02:40:36.720 > READ:    Memory read at id: 26; Data: 255
+02:40:36.720 > READ:    Memory read at id: 27; Data: 255
+02:40:36.723 > READ:    Memory read at id: 28; Data: 255
+02:40:36.728 > READ:    Memory read at id: 29; Data: 255
+02:40:36.732 > READ:    Memory read at id: 30; Data: 255
+02:40:36.736 > READ:    Memory read at id: 31; Data: 255
+02:40:36.740 > READ:    Memory read at id: 32; Data: 255
+02:40:36.744 > READ:    Memory read at id: 33; Data: 255
+02:40:36.748 > READ:    Memory read at id: 34; Data: 255
+02:40:36.752 > READ:    Memory read at id: 35; Data: 255
+02:40:36.752 > READ:    Memory read at id: 36; Data: 255
+02:40:36.756 > READ:    Memory read at id: 37; Data: 255
+02:40:36.760 > READ:    Memory read at id: 38; Data: 255
+02:40:36.764 > READ:    Memory read at id: 39; Data: 255
+02:40:36.769 > READ:    Memory read at id: 40; Data: 255
+02:40:36.773 > READ:    Memory read at id: 41; Data: 255
+02:40:36.777 > READ:    Memory read at id: 42; Data: 255
+02:40:36.781 > READ:    Memory read at id: 43; Data: 255
+02:40:36.785 > READ:    Memory read at id: 44; Data: 255
+02:40:36.789 > READ:    Memory read at id: 45; Data: 255
+02:40:36.789 > READ:    Memory read at id: 46; Data: 255
+02:40:36.793 > READ:    Memory read at id: 47; Data: 255
+02:40:36.797 > READ:    Memory read at id: 48; Data: 255
+02:40:36.801 > READ:    Memory read at id: 49; Data: 255
+02:40:36.805 > READ:    Memory read at id: 50; Data: 255
+02:40:36.809 > READ:    Memory read at id: 51; Data: 255
+02:40:36.814 > READ:    Memory read at id: 52; Data: 255
+02:40:36.818 > READ:    Memory read at id: 53; Data: 255
+02:40:36.822 > READ:    Memory read at id: 54; Data: 255
+02:40:36.822 > READ:    Memory read at id: 55; Data: 255
+02:40:36.826 > READ:    Memory read at id: 56; Data: 255
+02:40:36.830 > READ:    Memory read at id: 57; Data: 255
+02:40:36.834 > READ:    Memory read at id: 58; Data: 255
+02:40:36.838 > READ:    Memory read at id: 59; Data: 255
+02:40:36.842 > READ:    Memory read at id: 60; Data: 255
+02:40:36.846 > READ:    Memory read at id: 61; Data: 255
+02:40:36.850 > READ:    Memory read at id: 62; Data: 255
+02:40:36.855 > READ:    Memory read at id: 63; Data: 255
+02:40:36.855 > READ:    Memory read at id: 64; Data: 255
+02:40:36.859 > READ:    Memory read at id: 65; Data: 255
+02:40:36.863 > READ:    Memory read at id: 66; Data: 255
+02:40:36.867 > READ:    Memory read at id: 67; Data: 255
+02:40:36.871 > READ:    Memory read at id: 68; Data: 255
+02:40:36.875 > READ:    Memory read at id: 69; Data: 255
+02:40:36.879 > READ:    Memory read at id: 70; Data: 255
+02:40:36.883 > READ:    Memory read at id: 71; Data: 255
+02:40:36.887 > READ:    Memory read at id: 72; Data: 255
+02:40:36.891 > READ:    Memory read at id: 73; Data: 255
+02:40:36.891 > READ:    Memory read at id: 74; Data: 255
+02:40:36.895 > READ:    Memory read at id: 75; Data: 255
+02:40:36.899 > READ:    Memory read at id: 76; Data: 255
+02:40:36.903 > READ:    Memory read at id: 77; Data: 255
+02:40:36.908 > READ:    Memory read at id: 78; Data: 255
+02:40:36.912 > READ:    Memory read at id: 79; Data: 255
+02:40:36.916 > READ:    Memory read at id: 80; Data: 255
+02:40:36.920 > READ:    Memory read at id: 81; Data: 255
+02:40:36.924 > READ:    Memory read at id: 82; Data: 255
+02:40:36.924 > READ:    Memory read at id: 83; Data: 255
+02:40:36.928 > READ:    Memory read at id: 84; Data: 255
+02:40:36.932 > READ:    Memory read at id: 85; Data: 255
+02:40:36.936 > READ:    Memory read at id: 86; Data: 255
+02:40:36.940 > READ:    Memory read at id: 87; Data: 255
+02:40:36.944 > READ:    Memory read at id: 88; Data: 255
+02:40:36.949 > READ:    Memory read at id: 89; Data: 255
+02:40:36.953 > READ:    Memory read at id: 90; Data: 255
+02:40:36.957 > READ:    Memory read at id: 91; Data: 255
+02:40:36.957 > READ:    Memory read at id: 92; Data: 255
+02:40:36.961 > READ:    Memory read at id: 93; Data: 255
+02:40:36.965 > READ:    Memory read at id: 94; Data: 255
+02:40:36.969 > READ:    Memory read at id: 95; Data: 255
+02:40:36.973 > READ:    Memory read at id: 96; Data: 255
+02:40:36.977 > READ:    Memory read at id: 97; Data: 255
+02:40:36.981 > READ:    Memory read at id: 98; Data: 255
+02:40:36.985 > READ:    Memory read at id: 99; Data: 255
+02:40:36.990 > WRITE:   Memory write at id: 0; Data: 255->255 save count: 0
+02:40:36.994 > WRITE:   Memory write at id: 1; Data: 255->255 save count: 0
+02:40:36.998 > WRITE:   Memory write at id: 2; Data: 255->255 save count: 0
+02:40:37.002 > WRITE:   Memory write at id: 3; Data: 255->255 save count: 0
+02:40:37.010 > WRITE:   Memory write at id: 4; Data: 255->255 save count: 0
+02:40:37.014 > WRITE:   Memory write at id: 5; Data: 255->255 save count: 0
+02:40:37.018 > WRITE:   Memory write at id: 6; Data: 255->255 save count: 0
+02:40:37.027 > WRITE:   Memory write at id: 7; Data: 255->255 save count: 0
+02:40:37.031 > WRITE:   Memory write at id: 8; Data: 255->255 save count: 0
+02:40:37.035 > WRITE:   Memory write at id: 9; Data: 255->255 save count: 0
+02:40:37.043 > WRITE:   Memory write at id: 10; Data: 255->255 save count: 0
+02:40:37.047 > WRITE:   Memory write at id: 11; Data: 255->255 save count: 0
+02:40:37.051 > WRITE:   Memory write at id: 12; Data: 255->255 save count: 0
+02:40:37.055 > WRITE:   Memory write at id: 13; Data: 255->255 save count: 0
+02:40:37.063 > WRITE:   Memory write at id: 14; Data: 255->255 save count: 0
+02:40:37.067 > WRITE:   Memory write at id: 15; Data: 255->255 save count: 0
+02:40:37.071 > WRITE:   Memory write at id: 16; Data: 255->255 save count: 0
+02:40:37.080 > WRITE:   Memory write at id: 17; Data: 255->255 save count: 0
+02:40:37.084 > WRITE:   Memory write at id: 18; Data: 255->255 save count: 0
+02:40:37.088 > WRITE:   Memory write at id: 19; Data: 255->255 save count: 0
+02:40:37.096 > WRITE:   Memory write at id: 20; Data: 255->255 save count: 0
+02:40:37.100 > WRITE:   Memory write at id: 21; Data: 255->255 save count: 0
+02:40:37.104 > WRITE:   Memory write at id: 22; Data: 255->255 save count: 0
+02:40:37.112 > WRITE:   Memory write at id: 23; Data: 255->255 save count: 0
+02:40:37.116 > WRITE:   Memory write at id: 24; Data: 255->255 save count: 0
+02:40:37.121 > WRITE:   Memory write at id: 25; Data: 255->255 save count: 0
+02:40:37.125 > WRITE:   Memory write at id: 26; Data: 255->255 save count: 0
+02:40:37.133 > WRITE:   Memory write at id: 27; Data: 255->255 save count: 0
+02:40:37.137 > WRITE:   Memory write at id: 28; Data: 255->255 save count: 0
+02:40:37.141 > WRITE:   Memory write at id: 29; Data: 255->255 save count: 0
+02:40:37.149 > WRITE:   Memory write at id: 30; Data: 255->255 save count: 0
+02:40:37.153 > WRITE:   Memory write at id: 31; Data: 255->255 save count: 0
+02:40:37.157 > WRITE:   Memory write at id: 32; Data: 255->255 save count: 0
+02:40:37.166 > WRITE:   Memory write at id: 33; Data: 255->255 save count: 0
+02:40:37.170 > WRITE:   Memory write at id: 34; Data: 255->255 save count: 0
+02:40:37.174 > WRITE:   Memory write at id: 35; Data: 255->255 save count: 0
+02:40:37.182 > WRITE:   Memory write at id: 36; Data: 255->255 save count: 0
+02:40:37.186 > WRITE:   Memory write at id: 37; Data: 255->255 save count: 0
+02:40:37.190 > WRITE:   Memory write at id: 38; Data: 255->255 save count: 0
+02:40:37.194 > WRITE:   Memory write at id: 39; Data: 255->255 save count: 0
+02:40:37.202 > WRITE:   Memory write at id: 40; Data: 255->255 save count: 0
+02:40:37.207 > WRITE:   Memory write at id: 41; Data: 255->255 save count: 0
+02:40:37.211 > WRITE:   Memory write at id: 42; Data: 255->255 save count: 0
+02:40:37.219 > WRITE:   Memory write at id: 43; Data: 255->255 save count: 0
+02:40:37.223 > WRITE:   Memory write at id: 44; Data: 255->255 save count: 0
+02:40:37.227 > WRITE:   Memory write at id: 45; Data: 255->255 save count: 0
+02:40:37.235 > WRITE:   Memory write at id: 46; Data: 255->255 save count: 0
+02:40:37.240 > WRITE:   Memory write at id: 47; Data: 255->255 save count: 0
+02:40:37.244 > WRITE:   Memory write at id: 48; Data: 255->255 save count: 0
+02:40:37.252 > WRITE:   Memory write at id: 49; Data: 255->255 save count: 0
+02:40:37.256 > WRITE:   Memory write at id: 50; Data: 255->255 save count: 0
+02:40:37.260 > WRITE:   Memory write at id: 51; Data: 255->255 save count: 0
+02:40:37.264 > WRITE:   Memory write at id: 52; Data: 255->255 save count: 0
+02:40:37.272 > WRITE:   Memory write at id: 53; Data: 255->255 save count: 0
+02:40:37.276 > WRITE:   Memory write at id: 54; Data: 255->255 save count: 0
+02:40:37.280 > WRITE:   Memory write at id: 55; Data: 255->255 save count: 0
+02:40:37.288 > WRITE:   Memory write at id: 56; Data: 255->255 save count: 0
+02:40:37.293 > WRITE:   Memory write at id: 57; Data: 255->255 save count: 0
+02:40:37.297 > WRITE:   Memory write at id: 58; Data: 255->255 save count: 0
+02:40:37.305 > WRITE:   Memory write at id: 59; Data: 255->255 save count: 0
+02:40:37.309 > WRITE:   Memory write at id: 60; Data: 255->255 save count: 0
+02:40:37.313 > WRITE:   Memory write at id: 61; Data: 255->255 save count: 0
+02:40:37.321 > WRITE:   Memory write at id: 62; Data: 255->255 save count: 0
+02:40:37.325 > WRITE:   Memory write at id: 63; Data: 255->255 save count: 0
+02:40:37.329 > WRITE:   Memory write at id: 64; Data: 255->255 save count: 0
+02:40:37.334 > WRITE:   Memory write at id: 65; Data: 255->255 save count: 0
+02:40:37.342 > WRITE:   Memory write at id: 66; Data: 255->255 save count: 0
+02:40:37.346 > WRITE:   Memory write at id: 67; Data: 255->255 save count: 0
+02:40:37.350 > WRITE:   Memory write at id: 68; Data: 255->255 save count: 0
+02:40:37.358 > WRITE:   Memory write at id: 69; Data: 255->255 save count: 0
+02:40:37.362 > WRITE:   Memory write at id: 70; Data: 255->255 save count: 0
+02:40:37.366 > WRITE:   Memory write at id: 71; Data: 255->255 save count: 0
+02:40:37.374 > WRITE:   Memory write at id: 72; Data: 255->255 save count: 0
+02:40:37.379 > WRITE:   Memory write at id: 73; Data: 255->255 save count: 0
+02:40:37.383 > WRITE:   Memory write at id: 74; Data: 255->255 save count: 0
+02:40:37.391 > WRITE:   Memory write at id: 75; Data: 255->255 save count: 0
+02:40:37.395 > WRITE:   Memory write at id: 76; Data: 255->255 save count: 0
+02:40:37.399 > WRITE:   Memory write at id: 77; Data: 255->255 save count: 0
+02:40:37.407 > WRITE:   Memory write at id: 78; Data: 255->255 save count: 0
+02:40:37.411 > WRITE:   Memory write at id: 79; Data: 255->255 save count: 0
+02:40:37.415 > WRITE:   Memory write at id: 80; Data: 255->255 save count: 0
+02:40:37.420 > WRITE:   Memory write at id: 81; Data: 255->255 save count: 0
+02:40:37.428 > WRITE:   Memory write at id: 82; Data: 255->255 save count: 0
+02:40:37.432 > WRITE:   Memory write at id: 83; Data: 255->255 save count: 0
+02:40:37.436 > WRITE:   Memory write at id: 84; Data: 255->255 save count: 0
+02:40:37.444 > WRITE:   Memory write at id: 85; Data: 255->255 save count: 0
+02:40:37.448 > WRITE:   Memory write at id: 86; Data: 255->255 save count: 0
+02:40:37.452 > WRITE:   Memory write at id: 87; Data: 255->255 save count: 0
+02:40:37.461 > WRITE:   Memory write at id: 88; Data: 255->255 save count: 0
+02:40:37.465 > WRITE:   Memory write at id: 89; Data: 255->255 save count: 0
+02:40:37.469 > WRITE:   Memory write at id: 90; Data: 255->255 save count: 0
+02:40:37.477 > WRITE:   Memory write at id: 91; Data: 255->255 save count: 0
+02:40:37.481 > WRITE:   Memory write at id: 92; Data: 255->255 save count: 0
+02:40:37.485 > WRITE:   Memory write at id: 93; Data: 255->255 save count: 0
+02:40:37.489 > WRITE:   Memory write at id: 94; Data: 255->255 save count: 0
+02:40:37.497 > WRITE:   Memory write at id: 95; Data: 255->255 save count: 0
+02:40:37.501 > WRITE:   Memory write at id: 96; Data: 255->255 save count: 0
+02:40:37.506 > WRITE:   Memory write at id: 97; Data: 255->255 save count: 0
+02:40:37.514 > WRITE:   Memory write at id: 98; Data: 255->255 save count: 0
+02:40:37.518 > WRITE:   Memory write at id: 99; Data: 255->255 save count: 0
+02:40:37.522 > MEMORY:  Size: 100; Address: 0; Redundancy: 2; Data id: 78; Save count: 0
