@@ -21,7 +21,7 @@ class Memory {
   Memory(uint16_t size, uint16_t address, uint8_t redundancy, uint8_t random);
   ~Memory();
 
-  bool init(unsigned long seed, bool first = false);
+  bool init(bool first = false);
   int8_t read(bool &error);
   void write(int8_t data);
 

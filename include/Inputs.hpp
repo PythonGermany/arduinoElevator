@@ -18,7 +18,7 @@ class Inputs {
   ~Inputs();
 
   void init();
-  int8_t update(bool lastPressed = false);
+  int8_t update(bool last = false);
   bool error();
   void setLast(int8_t last);
   int8_t last() const;

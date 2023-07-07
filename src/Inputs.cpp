@@ -14,14 +14,14 @@ void Inputs::init() {
   }
 }
 
-int8_t Inputs::update(bool lastPressed) {
+int8_t Inputs::update(bool last) {
   for (uint8_t i = 0; i < inputCount_; i++) {
     if (digitalRead(startPin_ + i) == invert_) {
       last_ = i;
       return i;
     }
   }
-  return lastPressed ? last_ : NONE;
+  return last ? last_ : NONE;
 }
 
 bool Inputs::error() {

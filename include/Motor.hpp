@@ -23,7 +23,7 @@ class Motor {
   void init();
   void down();
   void up();
-  int8_t stop(uint16_t delayTime);
+  int8_t stop(int16_t delayTime = -1);
   int8_t state() const;
 };
 
