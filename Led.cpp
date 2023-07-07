@@ -1,12 +1,10 @@
 #include "Led.hpp"
 
-Led::Led(byte pin) {
-  pin_ = pin;
+Led::Led(byte pin) : pin_(pin) {
   interval_ = 1000;
   init();
 }
-Led::Led(byte pin, uint16_t interval) {
-  pin_ = pin;
+Led::Led(byte pin, uint16_t interval) : pin_(pin) {
   interval_ = interval;
   init();
 }

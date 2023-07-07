@@ -1,13 +1,3 @@
-// For the floor sensors in case of malfunction they
-// should be seen as activated when there is no connection. The request sensors
-// should be activated when the circuit is closed so there is no request in case
-// of malfunction.
-
-// So for the floor sensors no connection always means the sensor is being
-// triggered. It will cause the floor sensors to activate when there's a
-// malfunction and the program will check the validity of activated sensors,
-// (<=1 sensors triggered at one point in time is valid)
-
 #include "Led.hpp"
 #include "Motor.hpp"
 
@@ -24,12 +14,12 @@
 #define INITFLOOR 2
 
 // In and out pins
-const int manualP = 12;  // Pins = manualP (down) and manualP + 1 (up)
 const int requestStartP = 2;
 const int sensorStartP = 8;
 Motor motor(6, 7);
-Led onboard(LED_BUILTIN, 2500);
-Led ledStrip(14);
+Led ledStrip(12);
+Led onboard(LED_BUILTIN, 250);
+const int manualP = 14;  // Pins = manualP (down) and manualP + 1 (up)
 
 // Runtime state variables
 int locNow = DEFAULT;
@@ -119,9 +109,6 @@ void processManualRequest() {
       }
     }
     motor.stop();
-#ifdef DEBUG
-    printDebug(DEFAULT);
-#endif
   }
 }
 

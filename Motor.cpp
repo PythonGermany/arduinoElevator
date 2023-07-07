@@ -1,8 +1,6 @@
 #include "Motor.hpp"
 
-Motor::Motor(byte pinDown, byte pinUp) {
-  pinDown_ = pinDown;
-  pinUp_ = pinUp;
+Motor::Motor(byte pinDown, byte pinUp) : pinDown_(pinDown), pinUp_(pinUp) {
   init();
 }
 
