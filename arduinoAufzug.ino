@@ -14,12 +14,12 @@
 
 const int floorCount = 4;
 const int requestStartP = 2;
-const int powerP = 6;  // Pins = powerP and powerP + 1
+const int powerP = 6;  // Pins = powerP (down) and powerP + 1 (up)
 const int sensorStartP = 8;
 const int sensorDoor = 12;
 
-int locNow = 0;
-int locStop = 0;
+int locNow = -1;
+int locStop;
 bool active = false;
 bool ledState = false;
 bool error = false;
@@ -27,9 +27,6 @@ bool error = false;
 // #define DEBUG
 
 void setup() {
-#ifdef DEBUG
-  Serial.begin(115200);
-#endif
   pinMode(LED_BUILTIN, OUTPUT);
   for (int i = requestStartP; i < requestStartP + floorCount; i++)
     pinMode(i, INPUT_PULLUP);
@@ -38,12 +35,18 @@ void setup() {
   pinMode(sensorDoor, INPUT_PULLUP);
   pinMode(powerP, OUTPUT);
   pinMode(powerP + 1, OUTPUT);
+#ifdef DEBUG
+  Serial.begin(115200);
+  while (Serial.available() <= 0) continue;
+#endif
+  locNow = updateState(sensorStartP, floorCount, locNow);
+  locStop = locNow;
 }
 
 void loop() {
 #ifdef DEBUG
   printSimState(locNow, locStop, active, error);
-  if (!error) {
+  if (!error && locNow >= 0) {
     if (!active)
       while (Serial.available() <= 0) continue;
     else
@@ -52,17 +55,18 @@ void loop() {
   }
 #endif
   if (!error) {
-    if (!active) locStop = updateState(requestStartP, floorCount, locStop);
-    error = sensor_error(sensorStartP, floorCount);
-    locNow = updateState(sensorStartP, floorCount, locNow);
+    if (!active)
+      locStop = updateState(requestStartP, floorCount, locStop);
+    else
+      locNow = updateState(sensorStartP, floorCount, locNow);
+    error = locNow == -1 || sensor_error(sensorStartP, floorCount);
   }
-  if (active && (locStop == locNow || error || digitalRead(sensorDoor))) {
+  if (active && (locStop == locNow || error)) {
     digitalWrite(powerP, LOW);
     digitalWrite(powerP + 1, LOW);
     active = false;
     locStop = locNow;
-  } else if (!active && locStop != locNow && !error &&
-             !digitalRead(sensorDoor)) {
+  } else if (!active && locStop != locNow && !error) {
     digitalWrite(powerP + (locStop > locNow), HIGH);
     active = true;
   }
@@ -72,33 +76,31 @@ void loop() {
   }
 }
 
-bool sensor_error(int start, int floors) {
-#ifdef DEBUG
-  if (Serial.readString() == "Error") return true;
-  return false;
-#endif
 #ifndef DEBUG
+bool sensor_error(int start, int floors) {
   int activated = 0;
   for (int i = start; i < start + floors; i++)
     if (!digitalRead(i)) activated++;
   return (activated > 1);
-#endif
 }
 
 int updateState(int start, int floors, int prev) {
-#ifdef DEBUG
-  int input = Serial.read() - '0';
-  if (input >= 0 && input < floorCount) return input;
-  return prev;
-#endif
-#ifndef DEBUG
   for (int i = start; i < start + floors; i++)
     if (!digitalRead(i)) return (i - start);
   return (prev);
-#endif
 }
+#endif
 
 #ifdef DEBUG
+bool sensor_error(int start, int floors) {
+  return (Serial.readString() == "Error");
+}
+
+int updateState(int start, int floors, int prev) {
+  int input = Serial.read() - '0';
+  return input >= 0 && input < floorCount ? input : prev;
+}
+
 void printSimState(int now, int stop, bool active, bool error) {
   for (int i = floorCount - 1; i >= 0; i--) {
     Serial.print(i == now ? "N " : ". ");
