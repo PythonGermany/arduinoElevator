@@ -11,7 +11,8 @@ class Led;
 class Motor;
 
 void printDebug(Motor &motor, Led &ledStrip, int8_t &locNow, int8_t &locStop,
-                Inputs &manual, bool &error, Inputs &sensor, Inputs &request);
+                Inputs &manual, bool &error, Inputs &sensor, Inputs &request,
+                Inputs &motion, Inputs &emergency);
 
 #include "Inputs.hpp"
 #include "Led.hpp"

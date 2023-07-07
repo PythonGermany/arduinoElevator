@@ -28,8 +28,8 @@ void Motor::up() {
   state_ = UP;
 }
 
-int8_t Motor::stop(int16_t delayTime, bool instant = false) {
-  if (instant == false) delay(delayTime);
+int8_t Motor::stop(uint16_t delayTime) {
+  if (delayTime > 0) delay(delayTime);
   if (led_ != NULL) led_->delay(true);
   digitalWrite(pinDown_, LOW);
   digitalWrite(pinUp_, LOW);

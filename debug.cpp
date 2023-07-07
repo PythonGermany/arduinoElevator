@@ -2,7 +2,8 @@
 
 #ifdef DEBUG
 void printDebug(Motor &motor, Led &ledStrip, int8_t &locNow, int8_t &locStop,
-                Inputs &manual, bool &error, Inputs &sensor, Inputs &request) {
+                Inputs &manual, bool &error, Inputs &sensor, Inputs &request,
+                Inputs &motion, Inputs &emergency) {
   static unsigned long prev;
   if (millis() - prev <= DEBUGINTERVAL) return;
   prev = millis();
@@ -29,6 +30,10 @@ void printDebug(Motor &motor, Led &ledStrip, int8_t &locNow, int8_t &locStop,
   Serial.print(testLocNow > NONE ? String(testLocNow) + "   " : "None");
   Serial.print("; TestLocStop: ");
   int8_t testLocStop = request.update();
-  Serial.println(testLocStop > NONE ? String(testLocStop) + "   " : "None");
+  Serial.print(testLocStop > NONE ? String(testLocStop) + "   " : "None");
+  Serial.print("; Motion: ");
+  Serial.print(motion.update() > NONE ? "Yes" : "No ");
+  Serial.print("; Emergency: ");
+  Serial.println(emergency.update() > NONE ? "Yes" : "No ");
 }
 #endif
