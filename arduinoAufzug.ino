@@ -38,7 +38,7 @@ void setup() {
 void loop() {
     checkLoc();
     if (locStop > 0 && locNow > 0 && dirLock) {
-        if (locStop == locNow || (((locStop >= floorD && locNow < floorD) || (locStop <= floorD && locNow > floorD)) && digitalRead(sD))) {
+        if (locStop == locNow) {
             Serial.println("Stop floor reached");
             digitalWrite(rUp, LOW);
             digitalWrite(rDown, LOW);
@@ -63,8 +63,7 @@ void loop() {
     }
     else checkRequest();
     Serial.print(locNow); Serial.print(locStop); Serial.print(dirLock); Serial.println(active);
-
-    delay(1000);
+    //delay(1000);
 }
 
 void checkLoc() {
@@ -83,20 +82,23 @@ void checkLoc() {
 }
 
 void checkRequest() {
-    if (!digitalRead(nP1)) {
-        locStop = 1;
-        dirLock = true;
-    }
-    else if (!digitalRead(nP2)) {
-        locStop = 2;
-        dirLock = true;
-    }
-    else if (!digitalRead(nP3)) {
-        locStop = 3;
-        dirLock = true;
-    }
-    else if (!digitalRead(nP4)) {
-        locStop = 4;
-        dirLock = true;
+    if (!digitalRead(sD))
+    {
+        if (!digitalRead(nP1)) {
+            locStop = 1;
+            dirLock = true;
+        }
+        else if (!digitalRead(nP2)) {
+            locStop = 2;
+            dirLock = true;
+        }
+        else if (!digitalRead(nP3)) {
+            locStop = 3;
+            dirLock = true;
+        }
+        else if (!digitalRead(nP4)) {
+            locStop = 4;
+            dirLock = true;
+        }
     }
 }
