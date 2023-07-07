@@ -1,6 +1,6 @@
 #include "Motor.hpp"
 
-Motor::Motor(uint8_t pinDown, uint8_t pinUp, Led *led = NULL)
+Motor::Motor(uint8_t pinDown, uint8_t pinUp, Led *led)
     : pinDown_(pinDown), pinUp_(pinUp), led_(led) {
   init();
 }

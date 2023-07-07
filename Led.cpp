@@ -1,6 +1,6 @@
 #include "Led.hpp"
 
-Led::Led(uint8_t pin, unsigned long delay = 0) : pin_(pin), delay_(delay) {
+Led::Led(uint8_t pin, unsigned long delay) : pin_(pin), delay_(delay) {
   init();
 }
 
@@ -22,7 +22,7 @@ void Led::off() {
   state_ = OFF;
 }
 
-void Led::blink(uint16_t interval = 1000) {
+void Led::blink(uint16_t interval) {
   if (millis() - start_ >= interval) {
     state() ? off() : on();
     start_ = millis();
@@ -31,7 +31,7 @@ void Led::blink(uint16_t interval = 1000) {
 
 void Led::setDelay(unsigned long delay) { delay_ = delay; }
 
-void Led::delay(bool set = false) {
+void Led::delay(bool set) {
   if (set == true) {
     start_ = millis();
     on();

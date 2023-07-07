@@ -12,7 +12,7 @@ Memory::Memory(uint16_t size, uint16_t currAddress, uint8_t redundancy,
 
 Memory::~Memory() {}
 
-bool Memory::init(unsigned long seed, bool first = false) {
+bool Memory::init(unsigned long seed, bool first) {
   if (first) {
     randomSeed(seed);
     uint16_t rand = random(size_);
@@ -26,7 +26,7 @@ bool Memory::init(unsigned long seed, bool first = false) {
   } else
     for (uint8_t i = 0; i < 2; i++)
       id_ += EEPROM.read(address_ + i * redundancy_) << (8 * i);
-  return true;
+  return false;
 }
 
 int8_t Memory::read(bool &error) {
