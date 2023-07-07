@@ -109,12 +109,8 @@ void setup() {
   Serial.begin(115200);
 #endif
   randomSeed(generateSeed(UNCONNECTED));
-  bool resetMem = reset.update() != NONE;
-  bool error = memory.init(resetMem);
-  if (error == true) memory.init(true);
-  int8_t curr = NONE;
-  if (!error && !resetMem) curr = memory.read(error);
-  sensor.setLast(curr);
+  memory.init(reset.update() != NONE);
+  sensor.setLast(memory.read());
 #ifdef DEBUG
   memory.debug();
 #endif
