@@ -16,7 +16,6 @@ const int floorCount = 4;
 const int requestStartP = 2;
 const int powerP = 6;  // Pins = powerP (down) and powerP + 1 (up)
 const int sensorStartP = 8;
-const int sensorDoor = 12;
 
 int locNow = -1;
 int locStop;
