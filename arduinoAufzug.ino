@@ -27,7 +27,7 @@ Inputs manual(14, 2);
 Inputs emergency(16, 1);  // DEV: Invert back for real sensor
 
 // Runtime state variables
-int8_t locNow = NONE;
+int8_t locNow;
 int8_t locStop = STOP;
 bool error = false;
 
@@ -35,9 +35,21 @@ void setup() {
 #ifdef DEBUG
   Serial.begin(115200);
 #endif
-  sensor.setSaveAddress(SAVESLOTADDRESS);
+  // sensor.setSaveAddress(SAVESLOTADDRESS); // DEV: Is it worth it?
   locNow = sensor.update(true);
-  // DEV: Define behavior for first start
+  if (locNow < FLOORBOTTOM || locNow > FlOORTOP) {
+    while (request.update() == NONE) {
+      error = sensor.error() || emergency.update() != NONE;
+      ledStrip.blink();
+    }
+    if (!error) motor.up();
+    while (locNow != FlOORTOP && !error) {
+      locNow = sensor.update(true);
+      error = sensor.error() || emergency.update() != NONE;
+    }
+    motor.stop();
+    locStop = error ? NONE : INITFLOOR;
+  }
 }
 
 void loop() {
