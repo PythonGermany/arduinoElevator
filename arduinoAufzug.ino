@@ -26,6 +26,9 @@ Led errorLed(LED_BUILTIN, ERRORLEDINTERVAL);
 Inputs manual(14, 2);
 Inputs emergency(16, 1);  // DEV: Invert back for real sensor
 
+// Motor stop delay variables
+int16_t stopDelay[] = {1500, 1000, 500, 0};
+
 // Runtime state variables
 int8_t locNow;
 int8_t locStop = STOP;
@@ -44,7 +47,7 @@ void setup() {
     }
     if (!error) motor.up();
     while (locNow != FlOORTOP && !error) updateLoopStates();
-    motor.stop();
+    motor.stop(stopDelay[locNow], error);
     locStop = error ? NONE : INITFLOOR;
   }
 }
@@ -63,14 +66,15 @@ void loop() {
     ledStrip.blink();
   }
   if (motor.state() != STOP && (locStop == locNow || error))
-    locStop = motor.stop();
-  else if (motor.state() == STOP && locStop != STOP && !error)
-    locStop > locNow ? motor.up() : motor.down();
+    locStop = motor.stop(stopDelay[locNow], error);
+  else if (motor.state() == STOP && locStop != STOP && !error) {
+    if (locStop != locNow) locStop > locNow ? motor.up() : motor.down();
+  }
 }
 
 void processManualRequest() {
   int8_t manualRequest = manual.update();
-  if (manualRequest != NONE) locStop = motor.stop();
+  if (manualRequest != NONE) locStop = motor.stop(0);
   if (manualRequest == DOWN && locNow != FLOORBOTTOM) {
     motor.down();
     while (manual.update() == DOWN && locNow != FLOORBOTTOM && !error)
@@ -80,7 +84,7 @@ void processManualRequest() {
     while (manual.update() == UP && locNow != FlOORTOP && !error)
       updateLoopStates();
   }
-  if (manualRequest != NONE) locStop = locNow;
+  if (manualRequest != NONE) locStop = motor.stop(stopDelay[locNow], error);
 }
 
 void updateLoopStates() {
