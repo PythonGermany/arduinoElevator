@@ -7,15 +7,15 @@
 #include "debug.hpp"
 
 #define ERROR -1
-#define HEADERSIZE 2
+#define EMPTY -1
 
 class Memory {
  private:
-  uint16_t size_;
+  int16_t size_;
   uint16_t address_;
   uint8_t redundancy_;
-  uint16_t id_;
-  uint16_t saveCount_;
+  int16_t id_;
+  int16_t saveCount_;
 
  public:
   Memory(uint16_t size, uint16_t address, uint8_t redundancy = 1);
