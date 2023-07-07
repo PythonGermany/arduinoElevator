@@ -64,7 +64,6 @@ void loop() {
     digitalWrite(powerP, LOW);
     digitalWrite(powerP + 1, LOW);
     active = false;
-    locStop = locNow;
   } else if (!active && locStop != locNow && !error) {
     digitalWrite(powerP + (locStop > locNow), HIGH);
     active = true;
