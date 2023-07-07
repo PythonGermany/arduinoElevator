@@ -1,60 +1,46 @@
+
+#include "Inputs.hpp"
 #include "Led.hpp"
 #include "Motor.hpp"
 
 // Debug macros
 #define DEBUG
-#ifdef DEBUG
 #define DEBUGINTERVAL 2500
-#endif
+
+// Led timing macros
+#define ERRORLEDINTERVAL 250
+#define LEDSTRIPINTERVAL 6000
+#define LEDSTRIPTIMER 60000
 
 // Floor data macros
 #define FLOORCOUNT 4
-#define STOPUP FLOORCOUNT - 1
-#define STOPDOWN 0
+#define FlOORTOP FLOORCOUNT - 1
+#define FLOORBOTTOM 0
 #define INITFLOOR 2
 
-// In and out pins
-const int requestStartP = 2;
-const int sensorStartP = 8;
-Motor motor(6, 7);
-Led ledStrip(12);
-Led onboard(LED_BUILTIN, 250);
-const int manualP = 14;  // Pins = manualP (down) and manualP + 1 (up)
+// Sensor save address location
+#define SAVESLOTADDRESS 0
+
+// In and out components
+Inputs request(2, FLOORCOUNT);
+Inputs sensor(8, FLOORCOUNT);  // DEV: Invert back for real sensor
+Led ledStrip(12, LEDSTRIPINTERVAL);
+Motor motor(6, 7, &ledStrip);
+Led errorLed(LED_BUILTIN, ERRORLEDINTERVAL);
+Inputs manual(14, 2);
 
 // Runtime state variables
-int locNow = DEFAULT;
-int locStop = DEFAULT;
+int8_t locNow = NONE;
+int8_t locStop = NONE;
 bool error = false;
 
 void setup() {
-  for (int i = requestStartP; i < requestStartP + FLOORCOUNT; i++)
-    pinMode(i, INPUT_PULLUP);
-  for (int i = sensorStartP; i < sensorStartP + FLOORCOUNT; i++)
-    pinMode(i, INPUT_PULLUP);
-  pinMode(manualP + DOWN, INPUT_PULLUP);
-  pinMode(manualP + UP, INPUT_PULLUP);
 #ifdef DEBUG
   Serial.begin(115200);
 #endif
-  locNow = updateState(sensorStartP, FLOORCOUNT, locNow, true);
-#ifdef DEBUG
-  printDebug(DEFAULT);
-#endif
-  if (locNow == DEFAULT) {
-    while (locStop == DEFAULT)
-      locStop = updateState(requestStartP, FLOORCOUNT, DEFAULT, false);
-#ifdef DEBUG
-    printDebug(UP);
-#endif
-    motor.up();
-    while (locNow != STOPUP)
-      locNow = updateState(sensorStartP, FLOORCOUNT, locNow, true);
-    motor.stop();
-    locStop = INITFLOOR;
-#ifdef DEBUG
-    printDebug(DEFAULT);
-#endif
-  }
+  ledStrip.updateTimer(false, LEDSTRIPTIMER);
+  sensor.setSaveAddress(SAVESLOTADDRESS);
+  locNow = sensor.update(true);
 }
 
 void loop() {
@@ -62,94 +48,77 @@ void loop() {
   static unsigned long prev;
   if (millis() - prev >= DEBUGINTERVAL) {
     prev = millis();
-    printDebug(motor.state());
+    printDebug();
   }
 #endif
   if (!error) {
+    if (ledStrip.state() == ON && motor.state() == STOP) ledStrip.updateTimer();
     processManualRequest();
-    if (ledStrip.state() == ON) ledStrip.updateTimer();
-    if (locStop == DEFAULT)
-      locStop = updateState(requestStartP, FLOORCOUNT, DEFAULT, false);
-    locNow = updateState(sensorStartP, FLOORCOUNT, locNow, true);
-    error = sensor_error(sensorStartP, FLOORCOUNT);
-  } else
-    onboard.blink();
-  if (locStop == locNow || error)
-    locStop = motor.stop();
-  else if (motor.state() == DEFAULT && locStop != DEFAULT && !error) {
-    locStop > locNow ? motor.up() : motor.down();
-    ledStrip.updateTimer(600000);
+    if (locStop == NONE) locStop = request.update();
+    locNow = sensor.update(true);
+    error = sensor.error();
+  } else {
+    errorLed.blink();
+    ledStrip.blink();
   }
+  if (motor.state() != STOP && (locStop == locNow || error))
+    locStop = motor.stop();
+  else if (motor.state() == STOP && locStop != NONE && !error)
+    locStop > locNow ? motor.up() : motor.down();
 }
 
 void processManualRequest() {
-  int manualRequest = updateState(manualP, 2, DEFAULT, false);
-  if (manualRequest != DEFAULT) {
+  int8_t manualRequest = manual.update();
+  if (manualRequest != NONE) {
     locStop = motor.stop();
-    ledStrip.updateTimer(600000);
-    if (manualRequest == DOWN && locNow != STOPDOWN) {
+    if (manualRequest == DOWN && locNow != FLOORBOTTOM) {
       motor.down();
 #ifdef DEBUG
-      printDebug(DOWN);
+      printDebug();
 #endif
-      while (manualRequest == DOWN && locNow != STOPDOWN && !error) {
-        manualRequest = updateState(manualP, 2, DEFAULT, false);
-        locNow = updateState(sensorStartP, FLOORCOUNT, locNow, true);
-        error = sensor_error(sensorStartP, FLOORCOUNT);
+      while (manual.update() == DOWN && locNow != FLOORBOTTOM && !error) {
+        locNow = sensor.update(true);
+        error = sensor.error();
       }
-    } else if (manualRequest == UP && locNow != STOPUP) {
+    } else if (manualRequest == UP && locNow != FlOORTOP) {
       motor.up();
 #ifdef DEBUG
-      printDebug(UP);
+      printDebug();
 #endif
-      while (manualRequest == UP && locNow != STOPUP && !error) {
-        manualRequest = updateState(manualP, 2, DEFAULT, false);
-        locNow = updateState(sensorStartP, FLOORCOUNT, locNow, true);
-        error = sensor_error(sensorStartP, FLOORCOUNT);
+      while (manual.update() == UP && locNow != FlOORTOP && !error) {
+        locNow = sensor.update(true);
+        error = sensor.error();
       }
     }
     motor.stop();
   }
 }
 
-bool sensor_error(int start, int length) {
-  int activated = 0;
-  for (int i = start; i < start + length; i++)
-    if (digitalRead(i)) activated++;
-  return (activated > 1);
-}
-
-int updateState(int start, int length, int prev, bool invert) {
-  for (int i = start; i < start + length; i++)
-    if (digitalRead(i) == invert) return (i - start);
-  return (prev);
-}
-
 #ifdef DEBUG
-void printDebug(int state) {
+void printDebug() {
   Serial.print("Motor state: ");
-  Serial.print(state > DEFAULT ? state > DOWN ? "Up;      " : "Down;    "
-                               : "Stopped; ");
-  Serial.print("LocNow: ");
-  Serial.print(locNow);
-  Serial.print("; LocRequest: ");
-  Serial.print(locStop);
+  Serial.print(motor.state() > STOP
+                   ? motor.state() > DOWN ? "Up     " : "Down   "
+                   : "Stopped");
+  Serial.print("; LedStrip: ");
+  Serial.print(ledStrip.state() == ON ? "On " : "Off");
+  Serial.print("; Goal: ");
+  Serial.print(locNow == NONE ? "None" : "   " + String(locNow));
+  Serial.print("->");
+  Serial.print(locStop == NONE ? "None" : String(locStop) + "   ");
+  Serial.print("; Manual: ");
+  int8_t manualRequest = manual.update();
+  Serial.print(manualRequest > NONE ? manualRequest > DOWN ? "Up  " : "Down"
+                                    : "None");
   Serial.print("; Error: ");
-  Serial.print(error);
-  Serial.print("; TestLocNow: ");
-  Serial.print(digitalRead(8));
-  Serial.print(digitalRead(9));
-  Serial.print(digitalRead(10));
-  Serial.print(digitalRead(11));
-  Serial.print("; TestLocStop: ");
-  Serial.print(!digitalRead(2));
-  Serial.print(!digitalRead(3));
-  Serial.print(!digitalRead(4));
-  Serial.print(!digitalRead(5));
-  Serial.print("; ManualRequest: ");
-  Serial.print(!digitalRead(manualP));
-  Serial.print(!digitalRead(manualP + 1));
+  Serial.print(error ? "Yes" : "No ");
   Serial.print("; Current Error: ");
-  Serial.println(sensor_error(sensorStartP, FLOORCOUNT));
+  Serial.print(sensor.error() ? "Yes" : "No ");
+  Serial.print("; TestLocNow: ");
+  int8_t testLocNow = sensor.update();
+  Serial.print(testLocNow > NONE ? String(testLocNow) + "   " : "None");
+  Serial.print("; TestLocStop: ");
+  int8_t testLocStop = request.update();
+  Serial.println(testLocStop > NONE ? String(testLocStop) + "   " : "None");
 }
 #endif
