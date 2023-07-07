@@ -1,6 +1,6 @@
 #include "Led.hpp"
 
-Led::Led(byte pin, uint16_t interval = 1000, unsigned long delay = 0)
+Led::Led(uint8_t pin, uint16_t interval = 1000, unsigned long delay = 0)
     : pin_(pin), interval_(interval), delay_(delay) {
   init();
 }

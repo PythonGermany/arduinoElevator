@@ -11,23 +11,23 @@
 
 class Inputs {
  private:
-  const byte startPin_;
-  const byte inputCount_;
+  const uint8_t startPin_;
+  const uint8_t inputCount_;
   const bool invert_;
   int8_t last_;
-  int16_t saveAddress_;
-  int16_t save_;
-  int16_t saveCount_;
+  uint16_t saveAddress_;
+  uint16_t save_;
+  uint16_t saveCount_;
 
  public:
-  Inputs(byte startPin, byte inputCount, bool invert = false);
+  Inputs(uint8_t startPin, uint8_t inputCount, bool invert = false);
   ~Inputs();
 
   void init();
   int8_t update(bool lastPressed = false);
   bool error();
   int8_t last() const;
-  void setSaveAddress(int16_t saveAddress);
+  void setSaveAddress(uint16_t saveAddress);
 };
 
 #endif

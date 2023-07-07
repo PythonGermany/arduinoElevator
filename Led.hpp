@@ -8,14 +8,14 @@
 
 class Led {
  private:
-  const byte pin_;
+  const uint8_t pin_;
   bool state_;
   uint16_t interval_;
   unsigned long delay_;
   unsigned long start_;
 
  public:
-  Led(byte pin, uint16_t interval = 1000, unsigned long delay = 0);
+  Led(uint8_t pin, uint16_t interval = 1000, unsigned long delay = 0);
   ~Led();
 
   void init();
