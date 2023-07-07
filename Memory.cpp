@@ -12,9 +12,10 @@ Memory::Memory(uint16_t size, uint16_t currAddress, uint8_t redundancy,
 
 Memory::~Memory() {}
 
-bool Memory::init(bool first = false) {
-  uint16_t rand = random(size_);
+bool Memory::init(unsigned long seed, bool first = false) {
   if (first) {
+    randomSeed(seed);
+    uint16_t rand = random(size_);
     id_ = rand;
     for (uint8_t i = 0; i < 2; i++)
       for (uint8_t j = 0; j < redundancy_; j++)
@@ -35,7 +36,10 @@ int8_t Memory::read(bool &error) {
     uint8_t count = 1;
     for (uint8_t j = i + 1; j < redundancy_; j++)
       if (data == EEPROM.read(currAddress + j)) count++;
-    if (count >= redundancy_ / 2 + 1) return data;
+    if (count >= redundancy_ / 2 + 1) {
+      error = false;
+      return data;
+    }
   }
   error = true;
   return ERROR;
