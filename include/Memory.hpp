@@ -26,8 +26,8 @@ class Memory {
   void write(int8_t data);
 
  private:
-  int8_t readAt(int16_t address, bool &error);
-  void writeAt(int16_t address, int8_t data);
+  uint8_t readAt(int16_t address, bool &error);
+  void writeAt(int16_t address, uint8_t data);
 #ifdef DEBUG
  public:
   void debug();

@@ -29,16 +29,16 @@ void Memory::write(int8_t data) {
   if (++saveCount_ > size_ - HEADERSIZE) {
     saveCount_ = 1;
     id_ + 1 >= size_ ? id_ = HEADERSIZE : id_++;
-    writeAt(-2, id_ & 0xFF);
-    writeAt(-1, (id_ >> 8) & 0xFF);
+    writeAt(0, id_ & 0xFF);
+    writeAt(1, (id_ >> 8) & 0xFF);
   }
   writeAt(id_, data);
 }
 
-int8_t Memory::readAt(int16_t id, bool &error) {
+uint8_t Memory::readAt(int16_t id, bool &error) {
 #ifdef DEBUG
   Serial.print("READ:    ");
-  Serial.println("Memory read at id: " + String(id));
+  Serial.print("Memory read at id: " + String(id));
 #endif
   uint16_t currAddress = address_ + id * redundancy_;
   for (uint8_t i = 0; i < redundancy_ - 1; i++) {
@@ -46,26 +46,31 @@ int8_t Memory::readAt(int16_t id, bool &error) {
     uint8_t count = 1;
     for (uint8_t j = i + 1; j < redundancy_; j++)
       if (data == EEPROM.read(currAddress + j)) count++;
-    if (count >= redundancy_ / 2 + 1) return data;
+    if (count >= redundancy_ / 2 + 1) {
+#ifdef DEBUG
+      Serial.println("; Data: " + String(data));
+#endif
+      return data;
+    }
   }
   error = true;
 #ifdef DEBUG
-  Serial.print("READ:    ");
-  Serial.println("Memory read error");
+  Serial.println("ERROR");
 #endif
   return ERROR;
 }
 
-void Memory::writeAt(int16_t id, int8_t data) {
+void Memory::writeAt(int16_t id, uint8_t data) {
   uint16_t currAddress = address_ + id * redundancy_;
-  for (uint8_t i = 0; i < redundancy_; i++)
-    EEPROM.update(currAddress + i, data);
 #ifdef DEBUG
   Serial.print("WRITE:   ");
   Serial.print("Memory write at id: " + String(id));
-  Serial.print(" with data: " + String(data));
+  Serial.print("; Data: " + String(EEPROM.read(currAddress)) + "->" +
+               String(data));
   Serial.println(" save count: " + String(saveCount_));
 #endif
+  for (uint8_t i = 0; i < redundancy_; i++)
+    EEPROM.update(currAddress + i, data);
 }
 
 #ifdef DEBUG

@@ -34,7 +34,7 @@ void Led::setDelay(unsigned long delay) { delay_ = delay; }
 void Led::delay(bool set) {
   if (set == true) {
     start_ = millis();
-    on();
+    if (state() != ON) on();
   } else if (millis() - start_ >= delay_)
     off();
 }
