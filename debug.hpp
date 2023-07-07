@@ -4,7 +4,7 @@
 #include <Arduino.h>
 
 #define DEBUG
-#define DEBUGINTERVAL 2500
+#define DEBUGINTERVAL 2000
 
 class Inputs;
 class Led;

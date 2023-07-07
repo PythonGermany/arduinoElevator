@@ -7,7 +7,8 @@ void printDebug(Motor &motor, Led &ledStrip, int8_t &locNow, int8_t &locStop,
   static unsigned long prev;
   if (millis() - prev <= DEBUGINTERVAL) return;
   prev = millis();
-  Serial.print("Motor state: ");
+  Serial.print("LOG:     ");
+  Serial.print("Motor: ");
   Serial.print(motor.state() > STOP
                    ? motor.state() > DOWN ? "Up     " : "Down   "
                    : "Stopped");
@@ -21,10 +22,10 @@ void printDebug(Motor &motor, Led &ledStrip, int8_t &locNow, int8_t &locStop,
   int8_t manualRequest = manual.update();
   Serial.print(manualRequest > NONE ? manualRequest > DOWN ? "Up  " : "Down"
                                     : "None");
-  Serial.print("; TestLocNow: ");
+  Serial.print("; LocNow: ");
   int8_t testLocNow = sensor.update();
   Serial.print(testLocNow > NONE ? String(testLocNow) + "   " : "None");
-  Serial.print("; TestLocStop: ");
+  Serial.print("; LocStop: ");
   int8_t testLocStop = request.update();
   Serial.print(testLocStop > NONE ? String(testLocStop) + "   " : "None");
   Serial.print("; Motion: ");
