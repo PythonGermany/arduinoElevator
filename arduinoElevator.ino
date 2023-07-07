@@ -8,7 +8,6 @@
 #define INITINTERVAL 2000
 #define SENSORINTERVAL 4000
 #define EMERGENCYINTERVAL 8000
-#define MEMORYINTERVAL 16000
 #define LEDSTRIPDELAY 600000
 
 // Floor data macros
@@ -33,7 +32,7 @@ Inputs emergency(17, 1);     // DEV: Invert back for real sensor
 Inputs reset(18, 1);
 
 // Location memory
-Memory memory((EEPROM.length() - SAVESLOT) / 3, SAVESLOT, 3, UNCONNECTED);
+Memory memory((EEPROM.length() - SAVESLOT) / 2, SAVESLOT, 2, UNCONNECTED);
 
 // Motor stop delay variables
 int16_t stopDelay[] = {1500, 1000, 500, 0};
@@ -44,16 +43,16 @@ int8_t locStop = STOP;
 
 void setup() {
   unsigned long seed = 0;
-  for (uint8_t i = 0; i < 32; i++) seed = seed | ((analogRead(A0) & 0x01) << i);
+  for (uint8_t i = 0; i < 32; i++)
+    seed |= (analogRead(UNCONNECTED) & 0x01) << i;
   randomSeed(seed);
-  memory.init(reset.update() != NONE);
+  bool error = memory.init(reset.update() != NONE);
 #ifdef DEBUG
   Serial.begin(115200);
   memory.debug();
 #endif
-  bool error = false;
-  sensor.setLast(memory.read(error));
-  if (error) errorState(MEMORYINTERVAL);
+  int8_t curr = memory.read(error);
+  error ? sensor.setLast(NONE) : sensor.setLast(curr);
   locNow = sensor.update(true);
   if (locNow < FLOORBOTTOM || locNow > FlOORTOP) {
     while (request.update() == NONE) {
