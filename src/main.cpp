@@ -157,10 +157,7 @@ void loop() {
     motor.stop(stopDelay[locNow]);
     locStop = NONE;
   } else if (motor.state() == STOP && locStop != NONE) {
-    if (locNow != blockingFloor)
-      locStop > locNow ? motor.up() : motor.down();
-    else
-      locStop = NONE;
+    locStop > locNow ? motor.up() : motor.down();
   }
   verifyMotorState();
   processManualRequest();
