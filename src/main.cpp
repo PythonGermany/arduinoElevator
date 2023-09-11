@@ -43,8 +43,9 @@ Inputs reset(18, 1);
 // Memory size of 100 means at least 100 * 100 000 writes = 10 000 000 writes so
 // for 600 (100 times up and down every day) changes a day that would be ~45y
 // years worst in the worst case.
-uint16_t maxMemorySize = (EEPROM.length() - SAVESLOT) / 2;
-Memory memory(min(100, maxMemorySize), SAVESLOT, 2);
+const redundancy = 2;
+const uint16_t maxMemorySize = (EEPROM.length() - SAVESLOT) / redundancy;
+Memory memory(min(100, maxMemorySize), SAVESLOT, redundancy);
 
 // Motor stop delay for each floor
 int16_t stopDelay[] = {1500, 1000, 500, 0};
