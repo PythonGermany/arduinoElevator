@@ -1,0 +1,968 @@
+22:39:58.006 > ad at id: 1READ:    Memory read at id: 0; Data: 255
+22:39:59.590 > READ:    Memory read at id: 1; Data: 255
+22:39:59.594 > READ:    Memory read at id: 2; Data: 255
+22:39:59.598 > READ:    Memory read at id: 3; Data: 255
+22:39:59.598 > READ:    Memory read at id: 4; Data: 255
+22:39:59.603 > READ:    Memory read at id: 5; Data: 255
+22:39:59.607 > READ:    Memory read at id: 6; Data: 255
+22:39:59.611 > READ:    Memory read at id: 7; Data: 255
+22:39:59.615 > READ:    Memory read at id: 8; Data: 255
+22:39:59.619 > READ:    Memory read at id: 9; Data: 255
+22:39:59.623 > READ:    Memory read at id: 10; Data: 255
+22:39:59.627 > READ:    Memory read at id: 11; Data: 255
+22:39:59.627 > READ:    Memory read at id: 12; Data: 255
+22:39:59.631 > READ:    Memory read at id: 13; Data: 255
+22:39:59.635 > READ:    Memory read at id: 14; Data: 255
+22:39:59.639 > READ:    Memory read at id: 15; Data: 255
+22:39:59.644 > READ:    Memory read at id: 16; Data: 255
+22:39:59.647 > READ:    Memory read at id: 17; Data: 2
+22:39:59.652 > READ:    Memory read at id: 17; Data: 2
+22:39:59.656 > READ:    Memory read at id: 17; Data: 2
+22:39:59.660 > MEMORY:  Size: 100; Address: 0; Redundancy: 2; Data id: 17; Save count: 0
+22:40:01.585 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:40:03.587 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:40:05.590 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:40:07.597 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:40:09.600 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:40:11.603 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:40:13.606 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:40:16.911 > UPDATE:  Memory write at id: 0; Data: 255->255 save count: 0
+22:40:16.915 > UPDATE:  Memory write at id: 1; Data: 255->255 save count: 0
+22:40:16.918 > UPDATE:  Memory write at id: 2; Data: 255->255 save count: 0
+22:40:16.923 > UPDATE:  Memory write at id: 3; Data: 255->255 save count: 0
+22:40:16.931 > UPDATE:  Memory write at id: 4; Data: 255->255 save count: 0
+22:40:16.936 > UPDATE:  Memory write at id: 5; Data: 255->255 save count: 0
+22:40:16.940 > UPDATE:  Memory write at id: 6; Data: 255->255 save count: 0
+22:40:16.948 > UPDATE:  Memory write at id: 7; Data: 255->255 save count: 0
+22:40:16.952 > UPDATE:  Memory write at id: 8; Data: 255->255 save count: 0
+22:40:16.956 > UPDATE:  Memory write at id: 9; Data: 255->255 save count: 0
+22:40:16.964 > UPDATE:  Memory write at id: 10; Data: 255->255 save count: 0
+22:40:16.969 > UPDATE:  Memory write at id: 11; Data: 255->255 save count: 0
+22:40:16.973 > UPDATE:  Memory write at id: 12; Data: 255->255 save count: 0
+22:40:16.977 > UPDATE:  Memory write at id: 13; Data: 255->255 save count: 0
+22:40:16.985 > UPDATE:  Memory write at id: 14; Data: 255->255 save count: 0
+22:40:16.989 > UPDATE:  Memory write at id: 15; Data: 255->255 save count: 0
+22:40:16.993 > UPDATE:  Memory write at id: 16; Data: 255->255 save count: 0
+22:40:17.001 > UPDATE:  Memory write at id: 17; Data: 2->255 save count: 0
+22:40:17.005 > UPDATE:  Memory write at id: 18; Data: 255->255 save count: 0
+22:40:17.010 > UPDATE:  Memory write at id: 19; Data: 255->255 save count: 0
+22:40:17.017 > UPDATE:  Memory write at id: 20; Data: 255->255 save count: 0
+22:40:17.021 > UPDATE:  Memory write at id: 21; Data: 255->255 save count: 0
+22:40:17.026 > UPDATE:  Memory write at id: 22; Data: 255->255 save count: 0
+22:40:17.030 > UPDATE:  Memory write at id: 23; Data: 255->255 save count: 0
+22:40:17.038 > UPDATE:  Memory write at id: 24; Data: 255->255 save count: 0
+22:40:17.042 > UPDATE:  Memory write at id: 25; Data: 255->255 save count: 0
+22:40:17.046 > UPDATE:  Memory write at id: 26; Data: 255->255 save count: 0
+22:40:17.055 > UPDATE:  Memory write at id: 27; Data: 255->255 save count: 0
+22:40:17.058 > UPDATE:  Memory write at id: 28; Data: 255->255 save count: 0
+22:40:17.063 > UPDATE:  Memory write at id: 29; Data: 255->255 save count: 0
+22:40:17.071 > UPDATE:  Memory write at id: 30; Data: 255->255 save count: 0
+22:40:17.075 > UPDATE:  Memory write at id: 31; Data: 255->255 save count: 0
+22:40:17.079 > UPDATE:  Memory write at id: 32; Data: 255->255 save count: 0
+22:40:17.087 > UPDATE:  Memory write at id: 33; Data: 255->255 save count: 0
+22:40:17.090 > UPDATE:  Memory write at id: 34; Data: 255->255 save count: 0
+22:40:17.095 > UPDATE:  Memory write at id: 35; Data: 255->255 save count: 0
+22:40:17.104 > UPDATE:  Memory write at id: 36; Data: 255->255 save count: 0
+22:40:17.108 > UPDATE:  Memory write at id: 37; Data: 255->255 save count: 0
+22:40:17.112 > UPDATE:  Memory write at id: 38; Data: 255->255 save count: 0
+22:40:17.116 > UPDATE:  Memory write at id: 39; Data: 255->255 save count: 0
+22:40:17.123 > UPDATE:  Memory write at id: 40; Data: 255->255 save count: 0
+22:40:17.128 > UPDATE:  Memory write at id: 41; Data: 255->255 save count: 0
+22:40:17.132 > UPDATE:  Memory write at id: 42; Data: 255->255 save count: 0
+22:40:17.140 > UPDATE:  Memory write at id: 43; Data: 255->255 save count: 0
+22:40:17.145 > UPDATE:  Memory write at id: 44; Data: 255->255 save count: 0
+22:40:17.149 > UPDATE:  Memory write at id: 45; Data: 255->255 save count: 0
+22:40:17.156 > UPDATE:  Memory write at id: 46; Data: 255->255 save count: 0
+22:40:17.161 > UPDATE:  Memory write at id: 47; Data: 255->255 save count: 0
+22:40:17.165 > UPDATE:  Memory write at id: 48; Data: 255->255 save count: 0
+22:40:17.173 > UPDATE:  Memory write at id: 49; Data: 255->255 save count: 0
+22:40:17.177 > UPDATE:  Memory write at id: 50; Data: 255->255 save count: 0
+22:40:17.182 > UPDATE:  Memory write at id: 51; Data: 255->255 save count: 0
+22:40:17.185 > UPDATE:  Memory write at id: 52; Data: 255->255 save count: 0
+22:40:17.193 > UPDATE:  Memory write at id: 53; Data: 255->255 save count: 0
+22:40:17.198 > UPDATE:  Memory write at id: 54; Data: 255->255 save count: 0
+22:40:17.201 > UPDATE:  Memory write at id: 55; Data: 255->255 save count: 0
+22:40:17.210 > UPDATE:  Memory write at id: 56; Data: 255->255 save count: 0
+22:40:17.214 > UPDATE:  Memory write at id: 57; Data: 255->255 save count: 0
+22:40:17.218 > UPDATE:  Memory write at id: 58; Data: 255->255 save count: 0
+22:40:17.226 > UPDATE:  Memory write at id: 59; Data: 255->255 save count: 0
+22:40:17.230 > UPDATE:  Memory write at id: 60; Data: 255->255 save count: 0
+22:40:17.235 > UPDATE:  Memory write at id: 61; Data: 255->255 save count: 0
+22:40:17.243 > UPDATE:  Memory write at id: 62; Data: 255->255 save count: 0
+22:40:17.247 > UPDATE:  Memory write at id: 63; Data: 255->255 save count: 0
+22:40:17.250 > UPDATE:  Memory write at id: 64; Data: 255->255 save count: 0
+22:40:17.255 > UPDATE:  Memory write at id: 65; Data: 255->255 save count: 0
+22:40:17.263 > UPDATE:  Memory write at id: 66; Data: 255->255 save count: 0
+22:40:17.268 > UPDATE:  Memory write at id: 67; Data: 255->255 save count: 0
+22:40:17.272 > UPDATE:  Memory write at id: 68; Data: 255->255 save count: 0
+22:40:17.280 > UPDATE:  Memory write at id: 69; Data: 255->255 save count: 0
+22:40:17.284 > UPDATE:  Memory write at id: 70; Data: 255->255 save count: 0
+22:40:17.287 > UPDATE:  Memory write at id: 71; Data: 255->255 save count: 0
+22:40:17.296 > UPDATE:  Memory write at id: 72; Data: 255->255 save count: 0
+22:40:17.300 > UPDATE:  Memory write at id: 73; Data: 255->255 save count: 0
+22:40:17.304 > UPDATE:  Memory write at id: 74; Data: 255->255 save count: 0
+22:40:17.313 > UPDATE:  Memory write at id: 75; Data: 255->255 save count: 0
+22:40:17.316 > UPDATE:  Memory write at id: 76; Data: 255->255 save count: 0
+22:40:17.321 > UPDATE:  Memory write at id: 77; Data: 255->255 save count: 0
+22:40:17.325 > UPDATE:  Memory write at id: 78; Data: 255->255 save count: 0
+22:40:17.333 > UPDATE:  Memory write at id: 79; Data: 255->255 save count: 0
+22:40:17.337 > UPDATE:  Memory write at id: 80; Data: 255->255 save count: 0
+22:40:17.341 > UPDATE:  Memory write at id: 81; Data: 255->255 save count: 0
+22:40:17.349 > UPDATE:  Memory write at id: 82; Data: 255->255 save count: 0
+22:40:17.354 > UPDATE:  Memory write at id: 83; Data: 255->255 save count: 0
+22:40:17.358 > UPDATE:  Memory write at id: 84; Data: 255->255 save count: 0
+22:40:17.366 > UPDATE:  Memory write at id: 85; Data: 255->255 save count: 0
+22:40:17.369 > UPDATE:  Memory write at id: 86; Data: 255->255 save count: 0
+22:40:17.373 > UPDATE:  Memory write at id: 87; Data: 255->255 save count: 0
+22:40:17.382 > UPDATE:  Memory write at id: 88; Data: 255->255 save count: 0
+22:40:17.386 > UPDATE:  Memory write at id: 89; Data: 255->255 save count: 0
+22:40:17.390 > UPDATE:  Memory write at id: 90; Data: 255->255 save count: 0
+22:40:17.394 > UPDATE:  Memory write at id: 91; Data: 255->255 save count: 0
+22:40:17.403 > UPDATE:  Memory write at id: 92; Data: 255->255 save count: 0
+22:40:17.407 > UPDATE:  Memory write at id: 93; Data: 255->255 save count: 0
+22:40:17.410 > UPDATE:  Memory write at id: 94; Data: 255->255 save count: 0
+22:40:17.419 > UPDATE:  Memory write at id: 95; Data: 255->255 save count: 0
+22:40:17.423 > UPDATE:  Memory write at id: 96; Data: 255->255 save count: 0
+22:40:17.427 > UPDATE:  Memory write at id: 97; Data: 255->255 save count: 0
+22:40:17.435 > UPDATE:  Memory write at id: 98; Data: 255->255 save count: 0
+22:40:17.440 > UPDATE:  Memory write at id: 99; Data: 255->255 save count: 0
+22:40:17.444 > READ:    Memory read at id: 7; Data: 255
+22:40:17.448 > READ:    Memory read at id: 7; Data: 255
+22:40:17.452 > MEMORY:  Size: 100; Address: 0; Redundancy: 2; Data id: 7; Save count: 0
+22:40:52.159 > UPDATE:  Memory write at id: 7; Data: 255->3 save count: 1
+22:40:52.163 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    3->2   ; Manual: None; LocNow: 3   ; LocStop: None
+22:40:54.166 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    3->2   ; Manual: None; LocNow: None; LocStop: None
+22:40:56.169 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    3->2   ; Manual: None; LocNow: None; LocStop: None
+22:40:58.170 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    3->2   ; Manual: None; LocNow: None; LocStop: None
+22:41:00.174 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    3->2   ; Manual: None; LocNow: None; LocStop: None
+22:41:02.180 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    3->2   ; Manual: None; LocNow: None; LocStop: None
+22:41:04.184 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    3->2   ; Manual: None; LocNow: None; LocStop: None
+22:41:05.253 > UPDATE:  Memory write at id: 7; Data: 3->2 save count: 2
+22:41:06.187 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: 2   ; LocStop: None
+22:41:08.190 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:10.192 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:12.195 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:14.198 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:16.201 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:18.208 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:20.211 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:22.213 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:24.216 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:26.219 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:28.222 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:30.225 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:32.228 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:34.230 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:36.233 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:38.239 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:40.243 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:42.246 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:44.248 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:46.250 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:48.254 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:50.260 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:52.264 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:54.267 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:56.269 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:41:58.273 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:42:00.275 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:42:02.282 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:42:04.285 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:42:06.288 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:42:08.291 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:42:10.294 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:42:12.296 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:42:14.299 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:42:16.302 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:42:18.305 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:42:20.308 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:42:22.310 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    2->1   ; Manual: None; LocNow: None; LocStop: 1   
+22:42:24.318 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    2->1   ; Manual: None; LocNow: None; LocStop: None
+22:42:26.320 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    2->1   ; Manual: None; LocNow: None; LocStop: None
+22:42:28.323 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    2->1   ; Manual: None; LocNow: None; LocStop: None
+22:42:30.326 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    2->1   ; Manual: None; LocNow: None; LocStop: None
+22:42:32.329 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    2->1   ; Manual: None; LocNow: None; LocStop: None
+22:42:34.332 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    2->1   ; Manual: None; LocNow: None; LocStop: None
+22:42:36.334 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    2->1   ; Manual: None; LocNow: None; LocStop: None
+22:42:38.259 > UPDATE:  Memory write at id: 7; Data: 2->0 save count: 3
+22:42:38.268 > UPDATE:  Memory write at id: 7; Data: 0->255 save count: 4
+22:42:38.272 > ERROR:   Error state!
+22:43:38.958 > READ:    Memory read at id: 0; Data: 255
+22:43:38.963 > READ:    Memory read at id: 1; Data: 255
+22:43:38.966 > READ:    Memory read at id: 2; Data: 255
+22:43:38.971 > READ:    Memory read at id: 3; Data: 255
+22:43:38.976 > READ:    Memory read at id: 4; Data: 255
+22:43:38.979 > READ:    Memory read at id: 5; Data: 255
+22:43:38.983 > READ:    Memory read at id: 6; Data: 255
+22:43:38.987 > READ:    Memory read at id: 7; Data: 255
+22:43:38.987 > READ:    Memory read at id: 8; Data: 255
+22:43:38.991 > READ:    Memory read at id: 9; Data: 255
+22:43:38.995 > READ:    Memory read at id: 10; Data: 255
+22:43:38.999 > READ:    Memory read at id: 11; Data: 255
+22:43:39.004 > READ:    Memory read at id: 12; Data: 255
+22:43:39.008 > READ:    Memory read at id: 13; Data: 255
+22:43:39.012 > READ:    Memory read at id: 14; Data: 255
+22:43:39.016 > READ:    Memory read at id: 15; Data: 255
+22:43:39.020 > READ:    Memory read at id: 16; Data: 255
+22:43:39.020 > READ:    Memory read at id: 17; Data: 255
+22:43:39.024 > READ:    Memory read at id: 18; Data: 255
+22:43:39.028 > READ:    Memory read at id: 19; Data: 255
+22:43:39.032 > READ:    Memory read at id: 20; Data: 255
+22:43:39.036 > READ:    Memory read at id: 21; Data: 255
+22:43:39.040 > READ:    Memory read at id: 22; Data: 255
+22:43:39.044 > READ:    Memory read at id: 23; Data: 255
+22:43:39.049 > READ:    Memory read at id: 24; Data: 255
+22:43:39.053 > READ:    Memory read at id: 25; Data: 255
+22:43:39.053 > READ:    Memory read at id: 26; Data: 255
+22:43:39.058 > READ:    Memory read at id: 27; Data: 255
+22:43:39.061 > READ:    Memory read at id: 28; Data: 255
+22:43:39.065 > READ:    Memory read at id: 29; Data: 255
+22:43:39.069 > READ:    Memory read at id: 30; Data: 255
+22:43:39.073 > READ:    Memory read at id: 31; Data: 255
+22:43:39.078 > READ:    Memory read at id: 32; Data: 255
+22:43:39.081 > READ:    Memory read at id: 33; Data: 255
+22:43:39.085 > READ:    Memory read at id: 34; Data: 255
+22:43:39.090 > READ:    Memory read at id: 35; Data: 255
+22:43:39.090 > READ:    Memory read at id: 36; Data: 255
+22:43:39.095 > READ:    Memory read at id: 37; Data: 255
+22:43:39.099 > READ:    Memory read at id: 38; Data: 255
+22:43:39.103 > READ:    Memory read at id: 39; Data: 255
+22:43:39.106 > READ:    Memory read at id: 40; Data: 255
+22:43:39.110 > READ:    Memory read at id: 41; Data: 255
+22:43:39.114 > READ:    Memory read at id: 42; Data: 255
+22:43:39.118 > READ:    Memory read at id: 43; Data: 255
+22:43:39.122 > READ:    Memory read at id: 44; Data: 255
+22:43:39.122 > READ:    Memory read at id: 45; Data: 255
+22:43:39.126 > READ:    Memory read at id: 46; Data: 255
+22:43:39.130 > READ:    Memory read at id: 47; Data: 255
+22:43:39.136 > READ:    Memory read at id: 48; Data: 255
+22:43:39.140 > READ:    Memory read at id: 49; Data: 255
+22:43:39.144 > READ:    Memory read at id: 50; Data: 255
+22:43:39.147 > READ:    Memory read at id: 51; Data: 255
+22:43:39.151 > READ:    Memory read at id: 52; Data: 255
+22:43:39.156 > READ:    Memory read at id: 53; Data: 255
+22:43:39.156 > READ:    Memory read at id: 54; Data: 255
+22:43:39.160 > READ:    Memory read at id: 55; Data: 255
+22:43:39.163 > READ:    Memory read at id: 56; Data: 255
+22:43:39.167 > READ:    Memory read at id: 57; Data: 255
+22:43:39.171 > READ:    Memory read at id: 58; Data: 255
+22:43:39.175 > READ:    Memory read at id: 59; Data: 255
+22:43:39.180 > READ:    Memory read at id: 60; Data: 255
+22:43:39.184 > READ:    Memory read at id: 61; Data: 255
+22:43:39.188 > READ:    Memory read at id: 62; Data: 255
+22:43:39.192 > READ:    Memory read at id: 63; Data: 255
+22:43:39.192 > READ:    Memory read at id: 64; Data: 255
+22:43:39.196 > READ:    Memory read at id: 65; Data: 255
+22:43:39.200 > READ:    Memory read at id: 66; Data: 255
+22:43:39.204 > READ:    Memory read at id: 67; Data: 255
+22:43:39.208 > READ:    Memory read at id: 68; Data: 255
+22:43:39.212 > READ:    Memory read at id: 69; Data: 255
+22:43:39.217 > READ:    Memory read at id: 70; Data: 255
+22:43:39.221 > READ:    Memory read at id: 71; Data: 255
+22:43:39.226 > READ:    Memory read at id: 72; Data: 255
+22:43:39.226 > READ:    Memory read at id: 73; Data: 255
+22:43:39.229 > READ:    Memory read at id: 74; Data: 255
+22:43:39.233 > READ:    Memory read at id: 75; Data: 255
+22:43:39.238 > READ:    Memory read at id: 76; Data: 255
+22:43:39.242 > READ:    Memory read at id: 77; Data: 255
+22:43:39.245 > READ:    Memory read at id: 78; Data: 255
+22:43:39.249 > READ:    Memory read at id: 79; Data: 255
+22:43:39.253 > READ:    Memory read at id: 80; Data: 255
+22:43:39.257 > READ:    Memory read at id: 81; Data: 255
+22:43:39.262 > READ:    Memory read at id: 82; Data: 255
+22:43:39.262 > READ:    Memory read at id: 83; Data: 255
+22:43:39.266 > READ:    Memory read at id: 84; Data: 255
+22:43:39.270 > READ:    Memory read at id: 85; Data: 255
+22:43:39.274 > READ:    Memory read at id: 86; Data: 255
+22:43:39.278 > READ:    Memory read at id: 87; Data: 255
+22:43:39.282 > READ:    Memory read at id: 88; Data: 255
+22:43:39.287 > READ:    Memory read at id: 89; Data: 255
+22:43:39.291 > READ:    Memory read at id: 90; Data: 255
+22:43:39.295 > READ:    Memory read at id: 91; Data: 255
+22:43:39.295 > READ:    Memory read at id: 92; Data: 255
+22:43:39.298 > READ:    Memory read at id: 93; Data: 255
+22:43:39.302 > READ:    Memory read at id: 94; Data: 255
+22:43:39.307 > READ:    Memory read at id: 95; Data: 255
+22:43:39.311 > READ:    Memory read at id: 96; Data: 255
+22:43:39.315 > READ:    Memory read at id: 97; Data: 255
+22:43:39.319 > READ:    Memory read at id: 98; Data: 255
+22:43:39.323 > READ:    Memory read at id: 99; Data: 255
+22:43:39.327 > UPDATE:  Memory write at id: 0; Data: 255->255 save count: 0
+22:43:39.331 > UPDATE:  Memory write at id: 1; Data: 255->255 save count: 0
+22:43:39.335 > UPDATE:  Memory write at id: 2; Data: 255->255 save count: 0
+22:43:39.339 > UPDATE:  Memory write at id: 3; Data: 255->255 save count: 0
+22:43:39.348 > UPDATE:  Memory write at id: 4; Data: 255->255 save count: 0
+22:43:39.352 > UPDATE:  Memory write at id: 5; Data: 255->255 save count: 0
+22:43:39.357 > UPDATE:  Memory write at id: 6; Data: 255->255 save count: 0
+22:43:39.364 > UPDATE:  Memory write at id: 7; Data: 255->255 save count: 0
+22:43:39.368 > UPDATE:  Memory write at id: 8; Data: 255->255 save count: 0
+22:43:39.372 > UPDATE:  Memory write at id: 9; Data: 255->255 save count: 0
+22:43:39.377 > UPDATE:  Memory write at id: 10; Data: 255->255 save count: 0
+22:43:39.385 > UPDATE:  Memory write at id: 11; Data: 255->255 save count: 0
+22:43:39.389 > UPDATE:  Memory write at id: 12; Data: 255->255 save count: 0
+22:43:39.393 > UPDATE:  Memory write at id: 13; Data: 255->255 save count: 0
+22:43:39.402 > UPDATE:  Memory write at id: 14; Data: 255->255 save count: 0
+22:43:39.406 > UPDATE:  Memory write at id: 15; Data: 255->255 save count: 0
+22:43:39.410 > UPDATE:  Memory write at id: 16; Data: 255->255 save count: 0
+22:43:39.417 > UPDATE:  Memory write at id: 17; Data: 255->255 save count: 0
+22:43:39.421 > UPDATE:  Memory write at id: 18; Data: 255->255 save count: 0
+22:43:39.425 > UPDATE:  Memory write at id: 19; Data: 255->255 save count: 0
+22:43:39.434 > UPDATE:  Memory write at id: 20; Data: 255->255 save count: 0
+22:43:39.438 > UPDATE:  Memory write at id: 21; Data: 255->255 save count: 0
+22:43:39.442 > UPDATE:  Memory write at id: 22; Data: 255->255 save count: 0
+22:43:39.446 > UPDATE:  Memory write at id: 23; Data: 255->255 save count: 0
+22:43:39.455 > UPDATE:  Memory write at id: 24; Data: 255->255 save count: 0
+22:43:39.459 > UPDATE:  Memory write at id: 25; Data: 255->255 save count: 0
+22:43:39.463 > UPDATE:  Memory write at id: 26; Data: 255->255 save count: 0
+22:43:39.470 > UPDATE:  Memory write at id: 27; Data: 255->255 save count: 0
+22:43:39.475 > UPDATE:  Memory write at id: 28; Data: 255->255 save count: 0
+22:43:39.479 > UPDATE:  Memory write at id: 29; Data: 255->255 save count: 0
+22:43:39.487 > UPDATE:  Memory write at id: 30; Data: 255->255 save count: 0
+22:43:39.491 > UPDATE:  Memory write at id: 31; Data: 255->255 save count: 0
+22:43:39.495 > UPDATE:  Memory write at id: 32; Data: 255->255 save count: 0
+22:43:39.503 > UPDATE:  Memory write at id: 33; Data: 255->255 save count: 0
+22:43:39.507 > UPDATE:  Memory write at id: 34; Data: 255->255 save count: 0
+22:43:39.511 > UPDATE:  Memory write at id: 35; Data: 255->255 save count: 0
+22:43:39.520 > UPDATE:  Memory write at id: 36; Data: 255->255 save count: 0
+22:43:39.524 > UPDATE:  Memory write at id: 37; Data: 255->255 save count: 0
+22:43:39.528 > UPDATE:  Memory write at id: 38; Data: 255->255 save count: 0
+22:43:39.532 > UPDATE:  Memory write at id: 39; Data: 255->255 save count: 0
+22:43:39.540 > UPDATE:  Memory write at id: 40; Data: 255->255 save count: 0
+22:43:39.544 > UPDATE:  Memory write at id: 41; Data: 255->255 save count: 0
+22:43:39.548 > UPDATE:  Memory write at id: 42; Data: 255->255 save count: 0
+22:43:39.557 > UPDATE:  Memory write at id: 43; Data: 255->255 save count: 0
+22:43:39.562 > UPDATE:  Memory write at id: 44; Data: 255->255 save count: 0
+22:43:39.565 > UPDATE:  Memory write at id: 45; Data: 255->255 save count: 0
+22:43:39.573 > UPDATE:  Memory write at id: 46; Data: 255->255 save count: 0
+22:43:39.577 > UPDATE:  Memory write at id: 47; Data: 255->255 save count: 0
+22:43:39.581 > UPDATE:  Memory write at id: 48; Data: 255->255 save count: 0
+22:43:39.589 > UPDATE:  Memory write at id: 49; Data: 255->255 save count: 0
+22:43:39.593 > UPDATE:  Memory write at id: 50; Data: 255->255 save count: 0
+22:43:39.597 > UPDATE:  Memory write at id: 51; Data: 255->255 save count: 0
+22:43:39.601 > UPDATE:  Memory write at id: 52; Data: 255->255 save count: 0
+22:43:39.611 > UPDATE:  Memory write at id: 53; Data: 255->255 save count: 0
+22:43:39.615 > UPDATE:  Memory write at id: 54; Data: 255->255 save count: 0
+22:43:39.618 > UPDATE:  Memory write at id: 55; Data: 255->255 save count: 0
+22:43:39.626 > UPDATE:  Memory write at id: 56; Data: 255->255 save count: 0
+22:43:39.630 > UPDATE:  Memory write at id: 57; Data: 255->255 save count: 0
+22:43:39.634 > UPDATE:  Memory write at id: 58; Data: 255->255 save count: 0
+22:43:39.642 > UPDATE:  Memory write at id: 59; Data: 255->255 save count: 0
+22:43:39.647 > UPDATE:  Memory write at id: 60; Data: 255->255 save count: 0
+22:43:39.652 > UPDATE:  Memory write at id: 61; Data: 255->255 save count: 0
+22:43:39.660 > UPDATE:  Memory write at id: 62; Data: 255->255 save count: 0
+22:43:39.663 > UPDATE:  Memory write at id: 63; Data: 255->255 save count: 0
+22:43:39.668 > UPDATE:  Memory write at id: 64; Data: 255->255 save count: 0
+22:43:39.671 > UPDATE:  Memory write at id: 65; Data: 255->255 save count: 0
+22:43:39.679 > UPDATE:  Memory write at id: 66; Data: 255->255 save count: 0
+22:43:39.683 > UPDATE:  Memory write at id: 67; Data: 255->255 save count: 0
+22:43:39.688 > UPDATE:  Memory write at id: 68; Data: 255->255 save count: 0
+22:43:39.695 > UPDATE:  Memory write at id: 69; Data: 255->255 save count: 0
+22:43:39.700 > UPDATE:  Memory write at id: 70; Data: 255->255 save count: 0
+22:43:39.705 > UPDATE:  Memory write at id: 71; Data: 255->255 save count: 0
+22:43:39.712 > UPDATE:  Memory write at id: 72; Data: 255->255 save count: 0
+22:43:39.716 > UPDATE:  Memory write at id: 73; Data: 255->255 save count: 0
+22:43:39.720 > UPDATE:  Memory write at id: 74; Data: 255->255 save count: 0
+22:43:39.729 > UPDATE:  Memory write at id: 75; Data: 255->255 save count: 0
+22:43:39.734 > UPDATE:  Memory write at id: 76; Data: 255->255 save count: 0
+22:43:39.737 > UPDATE:  Memory write at id: 77; Data: 255->255 save count: 0
+22:43:39.742 > UPDATE:  Memory write at id: 78; Data: 255->255 save count: 0
+22:43:39.750 > UPDATE:  Memory write at id: 79; Data: 255->255 save count: 0
+22:43:39.754 > UPDATE:  Memory write at id: 80; Data: 255->255 save count: 0
+22:43:39.757 > UPDATE:  Memory write at id: 81; Data: 255->255 save count: 0
+22:43:39.765 > UPDATE:  Memory write at id: 82; Data: 255->255 save count: 0
+22:43:39.769 > UPDATE:  Memory write at id: 83; Data: 255->255 save count: 0
+22:43:39.774 > UPDATE:  Memory write at id: 84; Data: 255->255 save count: 0
+22:43:39.782 > UPDATE:  Memory write at id: 85; Data: 255->255 save count: 0
+22:43:39.786 > UPDATE:  Memory write at id: 86; Data: 255->255 save count: 0
+22:43:39.790 > UPDATE:  Memory write at id: 87; Data: 255->255 save count: 0
+22:43:39.798 > UPDATE:  Memory write at id: 88; Data: 255->255 save count: 0
+22:43:39.802 > UPDATE:  Memory write at id: 89; Data: 255->255 save count: 0
+22:43:39.807 > UPDATE:  Memory write at id: 90; Data: 255->255 save count: 0
+22:43:39.810 > UPDATE:  Memory write at id: 91; Data: 255->255 save count: 0
+22:43:39.820 > UPDATE:  Memory write at id: 92; Data: 255->255 save count: 0
+22:43:39.824 > UPDATE:  Memory write at id: 93; Data: 255->255 save count: 0
+22:43:39.828 > UPDATE:  Memory write at id: 94; Data: 255->255 save count: 0
+22:43:39.835 > UPDATE:  Memory write at id: 95; Data: 255->255 save count: 0
+22:43:39.839 > UPDATE:  Memory write at id: 96; Data: 255->255 save count: 0
+22:43:39.843 > UPDATE:  Memory write at id: 97; Data: 255->255 save count: 0
+22:43:39.851 > UPDATE:  Memory write at id: 98; Data: 255->255 save count: 0
+22:43:39.855 > UPDATE:  Memory write at id: 99; Data: 255->255 save count: 0
+22:43:39.860 > READ:    Memory read at id: 31; Data: 255
+22:43:39.864 > READ:    Memory read at id: 31; Data: 255
+22:43:39.869 > MEMORY:  Size: 100; Address: 0; Redundancy: 2; Data id: 31; Save count: 0
+22:44:05.613 > UPDATE:  Memory write at id: 31; Data: 255->3 save count: 1
+22:44:05.619 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    3->2   ; Manual: None; LocNow: 3   ; LocStop: None
+22:44:06.568 > UPDATE:  Memory write at id: 31; Data: 3->2 save count: 2
+22:44:07.620 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:09.623 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:11.626 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:13.629 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:15.636 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:17.639 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:19.641 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:21.644 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:23.647 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:25.650 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:27.653 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:29.655 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:31.658 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:33.665 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:35.668 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:37.671 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:39.675 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:41.676 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:43.679 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:45.682 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:47.685 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:49.688 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:51.690 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:53.698 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:55.700 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:57.703 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:44:59.707 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:01.710 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:03.712 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:05.715 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:07.717 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:09.720 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:11.724 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:13.731 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:15.734 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:17.736 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:19.739 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:21.742 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:23.745 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:25.747 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:27.751 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:29.752 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:31.756 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:33.758 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:35.762 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:37.768 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:39.771 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:41.774 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:43.777 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:45.779 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:47.783 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:49.786 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:51.788 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:53.790 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:55.797 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:57.800 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:45:59.804 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:01.807 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:03.809 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:05.812 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:07.814 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:09.817 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:11.820 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:13.828 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:15.831 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:17.833 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:19.836 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:21.839 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:23.841 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:25.844 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:27.847 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:29.849 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:31.853 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:33.856 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:35.859 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:37.861 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:39.869 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:41.871 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:43.874 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:45.877 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:47.879 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:49.882 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:51.885 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:53.888 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:55.890 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:57.897 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:46:59.900 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:01.904 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:03.906 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:05.908 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:07.911 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:09.915 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:11.916 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:13.920 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:15.927 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:17.930 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:19.933 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:21.935 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:23.938 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:25.942 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:27.943 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:29.947 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:31.950 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:33.953 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:35.955 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:37.957 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:39.961 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:41.964 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:43.970 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:45.974 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:47.976 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:49.978 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:51.982 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:53.985 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:55.988 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:57.990 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:47:59.993 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:02.001 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:04.003 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:06.006 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:08.009 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:10.012 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:12.014 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:14.017 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:16.020 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:18.022 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:20.026 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:22.033 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:24.036 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:26.038 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:28.041 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:30.044 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:32.047 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:34.050 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:36.052 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:38.055 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:40.058 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:42.061 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:44.064 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:46.066 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:48.074 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:50.076 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:52.079 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:54.082 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:56.085 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:48:58.087 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:00.090 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:02.093 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:04.096 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:06.099 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:08.106 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:10.109 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:12.111 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:14.114 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:16.117 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:18.120 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:20.123 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:22.125 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:24.128 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:26.131 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:28.138 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:30.141 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:32.144 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:34.146 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:36.149 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:38.152 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:40.155 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:42.158 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:42.526 > SPECIAL: Emergency state!
+22:49:47.798 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:49.801 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:51.803 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:53.806 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:55.809 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:57.812 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:49:59.815 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:01.818 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:03.821 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:05.823 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:07.826 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:09.833 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:11.836 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:13.838 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:15.841 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:17.844 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:19.847 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:21.851 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:23.853 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:25.855 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:27.859 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:29.861 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:31.868 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:33.872 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:35.874 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:37.876 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:39.879 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:41.882 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:43.886 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:45.888 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:47.891 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:49.893 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:51.897 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:53.903 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:55.906 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:57.910 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:50:59.911 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:01.915 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:03.917 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:05.920 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:07.923 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:09.925 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:11.928 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:13.935 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:15.938 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:17.941 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:19.945 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:21.947 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:23.950 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:25.953 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:27.956 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:29.959 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:31.961 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:33.969 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:35.971 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:37.973 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:39.977 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:41.980 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:43.983 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:45.985 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:47.988 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:49.991 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:51:51.993 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    2->1   ; Manual: None; LocNow: None; LocStop: 1   
+22:51:54.001 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    2->1   ; Manual: None; LocNow: None; LocStop: None
+22:51:56.003 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    2->1   ; Manual: None; LocNow: None; LocStop: None
+22:51:57.404 > UPDATE:  Memory write at id: 31; Data: 2->1 save count: 3
+22:51:58.412 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    1->None; Manual: None; LocNow: None; LocStop: None
+22:52:00.415 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    1->None; Manual: None; LocNow: None; LocStop: None
+22:52:02.417 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    1->None; Manual: None; LocNow: None; LocStop: None
+22:52:04.419 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    1->None; Manual: None; LocNow: None; LocStop: None
+22:52:06.422 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    1->None; Manual: None; LocNow: None; LocStop: None
+22:52:09.864 > READ:    Memory read at id: 0; Data: 255
+22:52:09.868 > READ:    Memory read at id: 1; Data: 255
+22:52:09.868 > READ:    Memory read at id: 2; Data: 255
+22:52:09.872 > READ:    Memory read at id: 3; Data: 255
+22:52:09.876 > READ:    Memory read at id: 4; Data: 255
+22:52:09.879 > READ:    Memory read at id: 5; Data: 255
+22:52:09.883 > READ:    Memory read at id: 6; Data: 255
+22:52:09.888 > READ:    Memory read at id: 7; Data: 255
+22:52:09.892 > READ:    Memory read at id: 8; Data: 255
+22:52:09.896 > READ:    Memory read at id: 9; Data: 255
+22:52:09.896 > READ:    Memory read at id: 10; Data: 255
+22:52:09.901 > READ:    Memory read at id: 11; Data: 255
+22:52:09.905 > READ:    Memory read at id: 12; Data: 255
+22:52:09.909 > READ:    Memory read at id: 13; Data: 255
+22:52:09.913 > READ:    Memory read at id: 14; Data: 255
+22:52:09.917 > READ:    Memory read at id: 15; Data: 255
+22:52:09.921 > READ:    Memory read at id: 16; Data: 255
+22:52:09.925 > READ:    Memory read at id: 17; Data: 255
+22:52:09.929 > READ:    Memory read at id: 18; Data: 255
+22:52:09.929 > READ:    Memory read at id: 19; Data: 255
+22:52:09.933 > READ:    Memory read at id: 20; Data: 255
+22:52:09.938 > READ:    Memory read at id: 21; Data: 255
+22:52:09.942 > READ:    Memory read at id: 22; Data: 255
+22:52:09.946 > READ:    Memory read at id: 23; Data: 255
+22:52:09.950 > READ:    Memory read at id: 24; Data: 255
+22:52:09.954 > READ:    Memory read at id: 25; Data: 255
+22:52:09.958 > READ:    Memory read at id: 26; Data: 255
+22:52:09.962 > READ:    Memory read at id: 27; Data: 255
+22:52:09.962 > READ:    Memory read at id: 28; Data: 255
+22:52:09.966 > READ:    Memory read at id: 29; Data: 255
+22:52:09.970 > READ:    Memory read at id: 30; Data: 255
+22:52:09.973 > READ:    Memory read at id: 31; Data: 1
+22:52:09.977 > READ:    Memory read at id: 31; Data: 1
+22:52:09.983 > READ:    Memory read at id: 31; Data: 1
+22:52:09.987 > MEMORY:  Size: 100; Address: 0; Redundancy: 2; Data id: 31; Save count: 0
+22:52:11.862 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    1->None; Manual: None; LocNow: None; LocStop: None
+22:52:13.865 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    1->None; Manual: None; LocNow: None; LocStop: None
+22:52:15.868 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    1->None; Manual: None; LocNow: None; LocStop: None
+22:52:17.870 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    1->None; Manual: None; LocNow: None; LocStop: None
+22:52:19.873 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    1->None; Manual: None; LocNow: None; LocStop: None
+22:52:21.876 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    1->None; Manual: None; LocNow: None; LocStop: None
+22:52:23.879 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    1->0   ; Manual: None; LocNow: None; LocStop: None
+22:52:24.468 > UPDATE:  Memory write at id: 31; Data: 1->0 save count: 1
+22:52:25.976 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:52:27.978 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:52:29.982 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:52:31.985 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:52:33.987 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:52:35.990 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:52:37.993 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:52:39.996 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:52:42.002 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:52:44.006 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:52:46.009 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:52:48.011 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:52:50.013 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:52:52.017 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:52:54.020 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:52:56.023 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:52:58.025 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:53:00.028 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    0->None; Manual: None; LocNow: None; LocStop: None
+22:53:02.035 > LOG:     Motor: Up     ; LedStrip: On ; Goal:    0->3   ; Manual: None; LocNow: None; LocStop: None
+22:53:02.465 > UPDATE:  Memory write at id: 31; Data: 0->3 save count: 2
+22:53:04.038 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    3->None; Manual: None; LocNow: None; LocStop: None
+22:53:06.041 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    3->None; Manual: None; LocNow: None; LocStop: None
+22:53:08.043 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    3->2   ; Manual: None; LocNow: None; LocStop: None
+22:53:08.593 > UPDATE:  Memory write at id: 31; Data: 3->2 save count: 3
+22:53:10.046 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:53:12.049 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:53:14.052 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:53:16.058 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:53:18.062 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:53:20.065 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:53:23.534 > READ:    Memory read at id: 0; Data: 255
+22:53:23.538 > READ:    Memory read at id: 1; Data: 255
+22:53:23.542 > READ:    Memory read at id: 2; Data: 255
+22:53:23.546 > READ:    Memory read at id: 3; Data: 255
+22:53:23.550 > READ:    Memory read at id: 4; Data: 255
+22:53:23.554 > READ:    Memory read at id: 5; Data: 255
+22:53:23.559 > READ:    Memory read at id: 6; Data: 255
+22:53:23.563 > READ:    Memory read at id: 7; Data: 255
+22:53:23.563 > READ:    Memory read at id: 8; Data: 255
+22:53:23.567 > READ:    Memory read at id: 9; Data: 255
+22:53:23.571 > READ:    Memory read at id: 10; Data: 255
+22:53:23.575 > READ:    Memory read at id: 11; Data: 255
+22:53:23.579 > READ:    Memory read at id: 12; Data: 255
+22:53:23.583 > READ:    Memory read at id: 13; Data: 255
+22:53:23.587 > READ:    Memory read at id: 14; Data: 255
+22:53:23.591 > READ:    Memory read at id: 15; Data: 255
+22:53:23.595 > READ:    Memory read at id: 16; Data: 255
+22:53:23.595 > READ:    Memory read at id: 17; Data: 255
+22:53:23.600 > READ:    Memory read at id: 18; Data: 255
+22:53:23.604 > READ:    Memory read at id: 19; Data: 255
+22:53:23.608 > READ:    Memory read at id: 20; Data: 255
+22:53:23.612 > READ:    Memory read at id: 21; Data: 255
+22:53:23.616 > READ:    Memory read at id: 22; Data: 255
+22:53:23.620 > READ:    Memory read at id: 23; Data: 255
+22:53:23.624 > READ:    Memory read at id: 24; Data: 255
+22:53:23.628 > READ:    Memory read at id: 25; Data: 255
+22:53:23.632 > READ:    Memory read at id: 26; Data: 255
+22:53:23.632 > READ:    Memory read at id: 27; Data: 255
+22:53:23.636 > READ:    Memory read at id: 28; Data: 255
+22:53:23.640 > READ:    Memory read at id: 29; Data: 255
+22:53:23.645 > READ:    Memory read at id: 30; Data: 255
+22:53:23.649 > READ:    Memory read at id: 31; Data: 2
+22:53:23.653 > READ:    Memory read at id: 31; Data: 2
+22:53:23.657 > READ:    Memory read at id: 31; Data: 2
+22:53:23.661 > MEMORY:  Size: 100; Address: 0; Redundancy: 2; Data id: 31; Save count: 0
+22:53:25.536 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:53:27.538 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:53:29.542 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:53:31.545 > LOG:     Motor: Stopped; LedStrip: Off; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:53:33.547 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    2->1   ; Manual: None; LocNow: None; LocStop: None
+22:53:35.550 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    2->1   ; Manual: None; LocNow: None; LocStop: None
+22:53:37.553 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    2->1   ; Manual: None; LocNow: None; LocStop: None
+22:53:38.995 > UPDATE:  Memory write at id: 31; Data: 2->0 save count: 1
+22:53:39.000 > UPDATE:  Memory write at id: 31; Data: 0->255 save count: 2
+22:53:39.007 > ERROR:   Error state!
+22:54:17.003 > READ:    Memory read at id: 0; Data: 255
+22:54:17.008 > READ:    Memory read at id: 1; Data: 255
+22:54:17.012 > READ:    Memory read at id: 2; Data: 255
+22:54:17.016 > READ:    Memory read at id: 3; Data: 255
+22:54:17.020 > READ:    Memory read at id: 4; Data: 255
+22:54:17.020 > READ:    Memory read at id: 5; Data: 255
+22:54:17.024 > READ:    Memory read at id: 6; Data: 255
+22:54:17.029 > READ:    Memory read at id: 7; Data: 255
+22:54:17.033 > READ:    Memory read at id: 8; Data: 255
+22:54:17.037 > READ:    Memory read at id: 9; Data: 255
+22:54:17.041 > READ:    Memory read at id: 10; Data: 255
+22:54:17.045 > READ:    Memory read at id: 11; Data: 255
+22:54:17.049 > READ:    Memory read at id: 12; Data: 255
+22:54:17.049 > READ:    Memory read at id: 13; Data: 255
+22:54:17.053 > READ:    Memory read at id: 14; Data: 255
+22:54:17.057 > READ:    Memory read at id: 15; Data: 255
+22:54:17.061 > READ:    Memory read at id: 16; Data: 255
+22:54:17.065 > READ:    Memory read at id: 17; Data: 255
+22:54:17.069 > READ:    Memory read at id: 18; Data: 255
+22:54:17.074 > READ:    Memory read at id: 19; Data: 255
+22:54:17.078 > READ:    Memory read at id: 20; Data: 255
+22:54:17.082 > READ:    Memory read at id: 21; Data: 255
+22:54:17.085 > READ:    Memory read at id: 22; Data: 255
+22:54:17.086 > READ:    Memory read at id: 23; Data: 255
+22:54:17.090 > READ:    Memory read at id: 24; Data: 255
+22:54:17.094 > READ:    Memory read at id: 25; Data: 255
+22:54:17.098 > READ:    Memory read at id: 26; Data: 255
+22:54:17.102 > READ:    Memory read at id: 27; Data: 255
+22:54:17.106 > READ:    Memory read at id: 28; Data: 255
+22:54:17.110 > READ:    Memory read at id: 29; Data: 255
+22:54:17.115 > READ:    Memory read at id: 30; Data: 255
+22:54:17.119 > READ:    Memory read at id: 31; Data: 255
+22:54:17.119 > READ:    Memory read at id: 32; Data: 255
+22:54:17.123 > READ:    Memory read at id: 33; Data: 255
+22:54:17.127 > READ:    Memory read at id: 34; Data: 255
+22:54:17.131 > READ:    Memory read at id: 35; Data: 255
+22:54:17.135 > READ:    Memory read at id: 36; Data: 255
+22:54:17.139 > READ:    Memory read at id: 37; Data: 255
+22:54:17.143 > READ:    Memory read at id: 38; Data: 255
+22:54:17.147 > READ:    Memory read at id: 39; Data: 255
+22:54:17.151 > READ:    Memory read at id: 40; Data: 255
+22:54:17.151 > READ:    Memory read at id: 41; Data: 255
+22:54:17.155 > READ:    Memory read at id: 42; Data: 255
+22:54:17.160 > READ:    Memory read at id: 43; Data: 255
+22:54:17.164 > READ:    Memory read at id: 44; Data: 255
+22:54:17.168 > READ:    Memory read at id: 45; Data: 255
+22:54:17.172 > READ:    Memory read at id: 46; Data: 255
+22:54:17.176 > READ:    Memory read at id: 47; Data: 255
+22:54:17.180 > READ:    Memory read at id: 48; Data: 255
+22:54:17.184 > READ:    Memory read at id: 49; Data: 255
+22:54:17.188 > READ:    Memory read at id: 50; Data: 255
+22:54:17.188 > READ:    Memory read at id: 51; Data: 255
+22:54:17.192 > READ:    Memory read at id: 52; Data: 255
+22:54:17.196 > READ:    Memory read at id: 53; Data: 255
+22:54:17.201 > READ:    Memory read at id: 54; Data: 255
+22:54:17.205 > READ:    Memory read at id: 55; Data: 255
+22:54:17.209 > READ:    Memory read at id: 56; Data: 255
+22:54:17.213 > READ:    Memory read at id: 57; Data: 255
+22:54:17.217 > READ:    Memory read at id: 58; Data: 255
+22:54:17.221 > READ:    Memory read at id: 59; Data: 255
+22:54:17.221 > READ:    Memory read at id: 60; Data: 255
+22:54:17.225 > READ:    Memory read at id: 61; Data: 255
+22:54:17.228 > READ:    Memory read at id: 62; Data: 255
+22:54:17.233 > READ:    Memory read at id: 63; Data: 255
+22:54:17.237 > READ:    Memory read at id: 64; Data: 255
+22:54:17.241 > READ:    Memory read at id: 65; Data: 255
+22:54:17.245 > READ:    Memory read at id: 66; Data: 255
+22:54:17.250 > READ:    Memory read at id: 67; Data: 255
+22:54:17.253 > READ:    Memory read at id: 68; Data: 255
+22:54:17.257 > READ:    Memory read at id: 69; Data: 255
+22:54:17.258 > READ:    Memory read at id: 70; Data: 255
+22:54:17.262 > READ:    Memory read at id: 71; Data: 255
+22:54:17.266 > READ:    Memory read at id: 72; Data: 255
+22:54:17.270 > READ:    Memory read at id: 73; Data: 255
+22:54:17.274 > READ:    Memory read at id: 74; Data: 255
+22:54:17.278 > READ:    Memory read at id: 75; Data: 255
+22:54:17.282 > READ:    Memory read at id: 76; Data: 255
+22:54:17.286 > READ:    Memory read at id: 77; Data: 255
+22:54:17.290 > READ:    Memory read at id: 78; Data: 255
+22:54:17.290 > READ:    Memory read at id: 79; Data: 255
+22:54:17.295 > READ:    Memory read at id: 80; Data: 255
+22:54:17.299 > READ:    Memory read at id: 81; Data: 255
+22:54:17.303 > READ:    Memory read at id: 82; Data: 255
+22:54:17.307 > READ:    Memory read at id: 83; Data: 255
+22:54:17.311 > READ:    Memory read at id: 84; Data: 255
+22:54:17.315 > READ:    Memory read at id: 85; Data: 255
+22:54:17.319 > READ:    Memory read at id: 86; Data: 255
+22:54:17.323 > READ:    Memory read at id: 87; Data: 255
+22:54:17.323 > READ:    Memory read at id: 88; Data: 255
+22:54:17.327 > READ:    Memory read at id: 89; Data: 255
+22:54:17.332 > READ:    Memory read at id: 90; Data: 255
+22:54:17.336 > READ:    Memory read at id: 91; Data: 255
+22:54:17.340 > READ:    Memory read at id: 92; Data: 255
+22:54:17.344 > READ:    Memory read at id: 93; Data: 255
+22:54:17.348 > READ:    Memory read at id: 94; Data: 255
+22:54:17.352 > READ:    Memory read at id: 95; Data: 255
+22:54:17.356 > READ:    Memory read at id: 96; Data: 255
+22:54:17.360 > READ:    Memory read at id: 97; Data: 255
+22:54:17.360 > READ:    Memory read at id: 98; Data: 255
+22:54:17.364 > READ:    Memory read at id: 99; Data: 255
+22:54:17.368 > UPDATE:  Memory write at id: 0; Data: 255->255 save count: 0
+22:54:17.373 > UPDATE:  Memory write at id: 1; Data: 255->255 save count: 0
+22:54:17.381 > UPDATE:  Memory write at id: 2; Data: 255->255 save count: 0
+22:54:17.385 > UPDATE:  Memory write at id: 3; Data: 255->255 save count: 0
+22:54:17.389 > UPDATE:  Memory write at id: 4; Data: 255->255 save count: 0
+22:54:17.397 > UPDATE:  Memory write at id: 5; Data: 255->255 save count: 0
+22:54:17.401 > UPDATE:  Memory write at id: 6; Data: 255->255 save count: 0
+22:54:17.405 > UPDATE:  Memory write at id: 7; Data: 255->255 save count: 0
+22:54:17.414 > UPDATE:  Memory write at id: 8; Data: 255->255 save count: 0
+22:54:17.418 > UPDATE:  Memory write at id: 9; Data: 255->255 save count: 0
+22:54:17.422 > UPDATE:  Memory write at id: 10; Data: 255->255 save count: 0
+22:54:17.426 > UPDATE:  Memory write at id: 11; Data: 255->255 save count: 0
+22:54:17.434 > UPDATE:  Memory write at id: 12; Data: 255->255 save count: 0
+22:54:17.438 > UPDATE:  Memory write at id: 13; Data: 255->255 save count: 0
+22:54:17.442 > UPDATE:  Memory write at id: 14; Data: 255->255 save count: 0
+22:54:17.450 > UPDATE:  Memory write at id: 15; Data: 255->255 save count: 0
+22:54:17.454 > UPDATE:  Memory write at id: 16; Data: 255->255 save count: 0
+22:54:17.459 > UPDATE:  Memory write at id: 17; Data: 255->255 save count: 0
+22:54:17.467 > UPDATE:  Memory write at id: 18; Data: 255->255 save count: 0
+22:54:17.471 > UPDATE:  Memory write at id: 19; Data: 255->255 save count: 0
+22:54:17.475 > UPDATE:  Memory write at id: 20; Data: 255->255 save count: 0
+22:54:17.479 > UPDATE:  Memory write at id: 21; Data: 255->255 save count: 0
+22:54:17.487 > UPDATE:  Memory write at id: 22; Data: 255->255 save count: 0
+22:54:17.491 > UPDATE:  Memory write at id: 23; Data: 255->255 save count: 0
+22:54:17.495 > UPDATE:  Memory write at id: 24; Data: 255->255 save count: 0
+22:54:17.504 > UPDATE:  Memory write at id: 25; Data: 255->255 save count: 0
+22:54:17.508 > UPDATE:  Memory write at id: 26; Data: 255->255 save count: 0
+22:54:17.512 > UPDATE:  Memory write at id: 27; Data: 255->255 save count: 0
+22:54:17.520 > UPDATE:  Memory write at id: 28; Data: 255->255 save count: 0
+22:54:17.524 > UPDATE:  Memory write at id: 29; Data: 255->255 save count: 0
+22:54:17.528 > UPDATE:  Memory write at id: 30; Data: 255->255 save count: 0
+22:54:17.536 > UPDATE:  Memory write at id: 31; Data: 255->255 save count: 0
+22:54:17.540 > UPDATE:  Memory write at id: 32; Data: 255->255 save count: 0
+22:54:17.545 > UPDATE:  Memory write at id: 33; Data: 255->255 save count: 0
+22:54:17.549 > UPDATE:  Memory write at id: 34; Data: 255->255 save count: 0
+22:54:17.557 > UPDATE:  Memory write at id: 35; Data: 255->255 save count: 0
+22:54:17.561 > UPDATE:  Memory write at id: 36; Data: 255->255 save count: 0
+22:54:17.565 > UPDATE:  Memory write at id: 37; Data: 255->255 save count: 0
+22:54:17.573 > UPDATE:  Memory write at id: 38; Data: 255->255 save count: 0
+22:54:17.577 > UPDATE:  Memory write at id: 39; Data: 255->255 save count: 0
+22:54:17.581 > UPDATE:  Memory write at id: 40; Data: 255->255 save count: 0
+22:54:17.590 > UPDATE:  Memory write at id: 41; Data: 255->255 save count: 0
+22:54:17.594 > UPDATE:  Memory write at id: 42; Data: 255->255 save count: 0
+22:54:17.598 > UPDATE:  Memory write at id: 43; Data: 255->255 save count: 0
+22:54:17.606 > UPDATE:  Memory write at id: 44; Data: 255->255 save count: 0
+22:54:17.610 > UPDATE:  Memory write at id: 45; Data: 255->255 save count: 0
+22:54:17.614 > UPDATE:  Memory write at id: 46; Data: 255->255 save count: 0
+22:54:17.622 > UPDATE:  Memory write at id: 47; Data: 255->255 save count: 0
+22:54:17.626 > UPDATE:  Memory write at id: 48; Data: 255->255 save count: 0
+22:54:17.631 > UPDATE:  Memory write at id: 49; Data: 255->255 save count: 0
+22:54:17.635 > UPDATE:  Memory write at id: 50; Data: 255->255 save count: 0
+22:54:17.643 > UPDATE:  Memory write at id: 51; Data: 255->255 save count: 0
+22:54:17.647 > UPDATE:  Memory write at id: 52; Data: 255->255 save count: 0
+22:54:17.651 > UPDATE:  Memory write at id: 53; Data: 255->255 save count: 0
+22:54:17.659 > UPDATE:  Memory write at id: 54; Data: 255->255 save count: 0
+22:54:17.663 > UPDATE:  Memory write at id: 55; Data: 255->255 save count: 0
+22:54:17.667 > UPDATE:  Memory write at id: 56; Data: 255->255 save count: 0
+22:54:17.676 > UPDATE:  Memory write at id: 57; Data: 255->255 save count: 0
+22:54:17.679 > UPDATE:  Memory write at id: 58; Data: 255->255 save count: 0
+22:54:17.683 > UPDATE:  Memory write at id: 59; Data: 255->255 save count: 0
+22:54:17.692 > UPDATE:  Memory write at id: 60; Data: 255->255 save count: 0
+22:54:17.696 > UPDATE:  Memory write at id: 61; Data: 255->255 save count: 0
+22:54:17.700 > UPDATE:  Memory write at id: 62; Data: 255->255 save count: 0
+22:54:17.704 > UPDATE:  Memory write at id: 63; Data: 255->255 save count: 0
+22:54:17.713 > UPDATE:  Memory write at id: 64; Data: 255->255 save count: 0
+22:54:17.716 > UPDATE:  Memory write at id: 65; Data: 255->255 save count: 0
+22:54:17.721 > UPDATE:  Memory write at id: 66; Data: 255->255 save count: 0
+22:54:17.729 > UPDATE:  Memory write at id: 67; Data: 255->255 save count: 0
+22:54:17.733 > UPDATE:  Memory write at id: 68; Data: 255->255 save count: 0
+22:54:17.737 > UPDATE:  Memory write at id: 69; Data: 255->255 save count: 0
+22:54:17.745 > UPDATE:  Memory write at id: 70; Data: 255->255 save count: 0
+22:54:17.749 > UPDATE:  Memory write at id: 71; Data: 255->255 save count: 0
+22:54:17.753 > UPDATE:  Memory write at id: 72; Data: 255->255 save count: 0
+22:54:17.762 > UPDATE:  Memory write at id: 73; Data: 255->255 save count: 0
+22:54:17.766 > UPDATE:  Memory write at id: 74; Data: 255->255 save count: 0
+22:54:17.770 > UPDATE:  Memory write at id: 75; Data: 255->255 save count: 0
+22:54:17.774 > UPDATE:  Memory write at id: 76; Data: 255->255 save count: 0
+22:54:17.782 > UPDATE:  Memory write at id: 77; Data: 255->255 save count: 0
+22:54:17.786 > UPDATE:  Memory write at id: 78; Data: 255->255 save count: 0
+22:54:17.790 > UPDATE:  Memory write at id: 79; Data: 255->255 save count: 0
+22:54:17.799 > UPDATE:  Memory write at id: 80; Data: 255->255 save count: 0
+22:54:17.803 > UPDATE:  Memory write at id: 81; Data: 255->255 save count: 0
+22:54:17.807 > UPDATE:  Memory write at id: 82; Data: 255->255 save count: 0
+22:54:17.815 > UPDATE:  Memory write at id: 83; Data: 255->255 save count: 0
+22:54:17.819 > UPDATE:  Memory write at id: 84; Data: 255->255 save count: 0
+22:54:17.823 > UPDATE:  Memory write at id: 85; Data: 255->255 save count: 0
+22:54:17.831 > UPDATE:  Memory write at id: 86; Data: 255->255 save count: 0
+22:54:17.835 > UPDATE:  Memory write at id: 87; Data: 255->255 save count: 0
+22:54:17.840 > UPDATE:  Memory write at id: 88; Data: 255->255 save count: 0
+22:54:17.844 > UPDATE:  Memory write at id: 89; Data: 255->255 save count: 0
+22:54:17.852 > UPDATE:  Memory write at id: 90; Data: 255->255 save count: 0
+22:54:17.856 > UPDATE:  Memory write at id: 91; Data: 255->255 save count: 0
+22:54:17.860 > UPDATE:  Memory write at id: 92; Data: 255->255 save count: 0
+22:54:17.868 > UPDATE:  Memory write at id: 93; Data: 255->255 save count: 0
+22:54:17.872 > UPDATE:  Memory write at id: 94; Data: 255->255 save count: 0
+22:54:17.876 > UPDATE:  Memory write at id: 95; Data: 255->255 save count: 0
+22:54:17.885 > UPDATE:  Memory write at id: 96; Data: 255->255 save count: 0
+22:54:17.889 > UPDATE:  Memory write at id: 97; Data: 255->255 save count: 0
+22:54:17.893 > UPDATE:  Memory write at id: 98; Data: 255->255 save count: 0
+22:54:17.901 > UPDATE:  Memory write at id: 99; Data: 255->255 save count: 0
+22:54:17.905 > READ:    Memory read at id: 23; Data: 255
+22:54:17.909 > READ:    Memory read at id: 23; Data: 255
+22:54:17.913 > MEMORY:  Size: 100; Address: 0; Redundancy: 2; Data id: 23; Save count: 0
+22:54:30.016 > UPDATE:  Memory write at id: 23; Data: 255->3 save count: 1
+22:54:30.024 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    3->2   ; Manual: None; LocNow: 3   ; LocStop: None
+22:54:31.425 > UPDATE:  Memory write at id: 23; Data: 3->2 save count: 2
+22:54:32.023 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:54:34.026 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:54:36.033 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:54:38.035 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:54:40.038 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:54:42.041 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:54:44.044 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:54:46.047 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None
+22:54:48.049 > LOG:     Motor: Stopped; LedStrip: On ; Goal:    2->None; Manual: None; LocNow: None; LocStop: None

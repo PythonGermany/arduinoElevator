@@ -115,7 +115,8 @@ void processManualRequest() {
     request == UP ? motor.up() : motor.down();
     while (manual.update() == request && locNow != blockingFloor)
       updateLocation();
-    locStop = motor.stop(0);
+    motor.stop(0);
+    locStop = NONE;
   }
 }
 
@@ -139,16 +140,18 @@ void setup() {
     motor.up();
     while (locNow != FlOORTOP) updateLocation();
     motor.stop(stopDelay[locNow]);
+    motor.down();
     locStop = INITFLOOR;
   }
 }
 
 void loop() {
 #ifdef DEBUG
-  printDebug(motor, ledStrip, locNow, locStop, manual, sensor, request, motion);
+  printDebug(motor, ledStrip, locNow, locStop, manual, sensor, request);
 #endif
-  if (motor.state() == STOP && ledStrip.state() == ON) ledStrip.delay();
   updateLocation();
+  verifyMotorState();
+  if (motor.state() == STOP && ledStrip.state() == ON) ledStrip.delay();
   if (locStop == NONE) {
     locStop = request.update();
     if (locStop == locNow) locStop = NONE;
@@ -158,6 +161,5 @@ void loop() {
     motor.stop(stopDelay[locNow]);
     locStop = NONE;
   }
-  verifyMotorState();
   processManualRequest();
 }

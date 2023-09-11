@@ -6,6 +6,7 @@
 
 #include "debug.hpp"
 
+#define ERROR 254
 #define EMPTY 255
 
 class Memory {

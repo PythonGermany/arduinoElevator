@@ -14,11 +14,10 @@ void Memory::init(bool first) {
     id_ = random(size_);
     for (int16_t i = 0; i < size_; i++) writeAt(i, EMPTY);
   } else {
-    bool error = false;
     id_ = EMPTY;
     for (int16_t i = 0; i < size_ && id_ == EMPTY; i++)
       if (readAt(i) != EMPTY) id_ = i;
-    if (error || id_ == EMPTY) init(true);
+    if (id_ == ERROR || id_ == EMPTY) init(true);
   }
 }
 
@@ -54,7 +53,7 @@ uint8_t Memory::readAt(int16_t id) {
 #ifdef DEBUG
   Serial.println("ERROR");
 #endif
-  return EMPTY;
+  return ERROR;
 }
 
 void Memory::writeAt(int16_t id, uint8_t data) {
