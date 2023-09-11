@@ -152,12 +152,6 @@ void loop() {
   if (locStop == NONE) {
     locStop = request.update();
     if (locStop == locNow) locStop = NONE;
-  } else {
-    int8_t blockingFloor = motor.state() == UP ? FlOORTOP : FLOORBOTTOM;
-    if (locStop == blockingFloor) {
-      if (motor.state() != STOP) motor.stop(stopDelay[locNow]);
-      locStop = NONE;
-    }
   }
   if (motor.state() != STOP && locStop == locNow) {
     motor.stop(stopDelay[locNow]);
