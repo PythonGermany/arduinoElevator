@@ -66,7 +66,7 @@ unsigned long generateSeed(uint8_t pin) {
 void errorState() {
   motor.stop(0);
   locStop = NONE;
-  memory.write(NONE);
+  memory.write(EMPTY);
 #ifdef DEBUG
   Serial.println("ERROR:   Error state!");
 #endif
