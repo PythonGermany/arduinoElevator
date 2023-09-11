@@ -60,7 +60,7 @@ uint8_t Memory::readAt(int16_t id) {
 void Memory::writeAt(int16_t id, uint8_t data) {
   uint16_t currAddress = address_ + id * redundancy_;
 #ifdef DEBUG
-  Serial.print("WRITE:   ");
+  Serial.print("UPDATE:  ");
   Serial.print("Memory write at id: " + String(id));
   Serial.print("; Data: " + String(EEPROM.read(currAddress)) + "->" +
                String(data));

@@ -9,9 +9,8 @@ Inputs::~Inputs() {}
 
 void Inputs::init() {
   last_ = NONE;
-  for (uint8_t i = 0; i < inputCount_; i++) {
+  for (uint8_t i = 0; i < inputCount_; i++)
     pinMode(startPin_ + i, INPUT_PULLUP);
-  }
 }
 
 int8_t Inputs::update(bool last) {

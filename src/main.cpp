@@ -6,20 +6,27 @@
 #include "Motor.hpp"
 #include "debug.hpp"
 
-// Led timing macros
+// Interval for waiting for sensor to update
 #define INITINTERVAL 2000
+// Interval for error state
 #define SENSORINTERVAL 4000
+// Interval for emergency state
 #define EMERGENCYINTERVAL 8000
+// Interval for led strip delay
 #define LEDSTRIPDELAY 60000
 
-// Floor data macros
+// Number of floors
 #define FLOORCOUNT 4
+// Index of first floor
 #define FLOORBOTTOM 0
+// Index of last floor
 #define FlOORTOP FLOORCOUNT - 1
+// Index of initial floor (if elevator is not initialized)
 #define INITFLOOR 2
 
-// Memory macros
+// Memory location for location memory block
 #define SAVESLOT 0
+// Memory value for unconnected pin (for random seed)
 #define UNCONNECTED 19
 
 // In and out components
@@ -29,8 +36,7 @@ Led ledStrip(12, LEDSTRIPDELAY);
 Motor motor(6, 7, &ledStrip);
 Led errorLed(LED_BUILTIN);
 Inputs manual(14, 2);
-Inputs motion(16, 1, true);  // DEV: Optional!
-Inputs emergency(17, 1);     // DEV: Invert back for real sensor
+Inputs emergency(17, 1);  // DEV: Invert back for real sensor
 Inputs reset(18, 1);
 
 // Location memory
@@ -40,12 +46,13 @@ Inputs reset(18, 1);
 uint16_t maxMemorySize = (EEPROM.length() - SAVESLOT) / 2;
 Memory memory(min(100, maxMemorySize), SAVESLOT, 2);
 
-// Motor stop delay variables
+// Motor stop delay for each floor
 int16_t stopDelay[] = {1500, 1000, 500, 0};
 
-// Runtime elevator state variables
+// Elevator location
 int8_t locNow;
-int8_t locStop = STOP;
+// Elevator stop location
+int8_t locStop = NONE;
 
 // Generate based on value from unconnected pin
 unsigned long generateSeed(uint8_t pin) {
@@ -82,12 +89,21 @@ void emergencyState() {
 }
 
 // Update input states and write to memory if current location changed
-void updateInputStates() {
+void updateLocation() {
   int8_t last = sensor.last();
   locNow = sensor.update(true);
   if (locNow != last) memory.write(locNow);
   if (sensor.error()) errorState();
   if (emergency.update() != NONE) emergencyState();
+}
+
+// Verify that motor state is valid
+void verifyMotorState() {
+  if ((motor.state() == UP && locNow > locStop) ||
+      (motor.state() == DOWN && locNow < locStop)) {
+    motor.stop(0);
+    errorState();
+  }
 }
 
 // Process manual request if there is one
@@ -97,31 +113,31 @@ void processManualRequest() {
   if (request != NONE && locNow != blockingFloor) {
     request == UP ? motor.up() : motor.down();
     while (manual.update() == request && locNow != blockingFloor)
-      updateInputStates();
+      updateLocation();
+    locStop = motor.stop(0);
   }
-  if (request != NONE) locStop = motor.stop(0);
+  // if (request != NONE) locStop = motor.stop(0); // DEV: Why?
 }
 
-// Load location from memory or intialize elevator by moving to FLOORTOP and
-// back to INITFLOOR
+// Load location from memory or intialize elevator using initsequence
 void setup() {
 #ifdef DEBUG
   Serial.begin(115200);
 #endif
   randomSeed(generateSeed(UNCONNECTED));
   memory.init(reset.update() != NONE);
-  sensor.setLast(memory.read());
+  memory.read() != EMPTY ? sensor.setLast(memory.read()) : sensor.setLast(NONE);
 #ifdef DEBUG
   memory.debug();
 #endif
   locNow = sensor.update(true);
-  if (locNow < FLOORBOTTOM || locNow > FlOORTOP) {
+  if (locNow == NONE || locNow < FLOORBOTTOM || locNow > FlOORTOP) {
     while (request.update() == NONE) {
-      updateInputStates();
+      updateLocation();
       ledStrip.blink(INITINTERVAL);
     }
     motor.up();
-    while (locNow != FlOORTOP) updateInputStates();
+    while (locNow != FlOORTOP) updateLocation();
     motor.stop(stopDelay[locNow]);
     locStop = INITFLOOR;
   }
@@ -131,18 +147,27 @@ void loop() {
 #ifdef DEBUG
   printDebug(motor, ledStrip, locNow, locStop, manual, sensor, request, motion);
 #endif
-  if (motor.state() == STOP) {
-    if (ledStrip.state() == ON) ledStrip.delay();
-    if (motion.update() != NONE) ledStrip.delay(true);
-  }
-  updateInputStates();
-  if (locStop == STOP) {
+  if (motor.state() == STOP && ledStrip.state() == ON) ledStrip.delay();
+  updateLocation();
+  if (locStop == NONE) {
     locStop = request.update();
-    if (locStop == locNow) locStop = STOP;
+    if (locStop == locNow) locStop = NONE;
+  } else {
+    int8_t blockingFloor = motor.state() == UP ? FlOORTOP : FLOORBOTTOM;
+    if (locStop == blockingFloor) {
+      if (motor.state() != STOP) motor.stop(stopDelay[locNow]);
+      locStop = NONE;
+    }
   }
-  if (motor.state() != STOP && locStop == locNow)
-    locStop = motor.stop(stopDelay[locNow]);
-  else if (motor.state() == STOP && locStop != STOP)
-    locStop > locNow ? motor.up() : motor.down();
+  if (motor.state() != STOP && locStop == locNow) {
+    motor.stop(stopDelay[locNow]);
+    locStop = NONE;
+  } else if (motor.state() == STOP && locStop != NONE) {
+    if (locNow != blockingFloor)
+      locStop > locNow ? motor.up() : motor.down();
+    else
+      locStop = NONE;
+  }
+  verifyMotorState();
   processManualRequest();
 }

@@ -28,13 +28,12 @@ void Motor::up() {
   state_ = UP;
 }
 
-int8_t Motor::stop(int16_t delayTime) {
+void Motor::stop(int16_t delayTime) {
   if (delayTime > 0) delay(delayTime);
   if (delayTime >= 0 && led_ != NULL) led_->delay(true);
   digitalWrite(pinDown_, LOW);
   digitalWrite(pinUp_, LOW);
   state_ = STOP;
-  return (state_);
 }
 
 int8_t Motor::state() const { return (state_); }
