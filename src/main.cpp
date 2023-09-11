@@ -152,12 +152,12 @@ void loop() {
   if (locStop == NONE) {
     locStop = request.update();
     if (locStop == locNow) locStop = NONE;
+    if (locStop != NONE) locStop > locNow ? motor.up() : motor.down();
   }
   if (motor.state() != STOP && locStop == locNow) {
     motor.stop(stopDelay[locNow]);
     locStop = NONE;
-  } else if (motor.state() == STOP && locStop != NONE)
-    locStop > locNow ? motor.up() : motor.down();
+  }
   verifyMotorState();
   processManualRequest();
 }
