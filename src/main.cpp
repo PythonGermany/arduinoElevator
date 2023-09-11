@@ -63,7 +63,8 @@ unsigned long generateSeed(uint8_t pin) {
 
 // Infinite loop due to unsolvable error
 void errorState() {
-  locStop = motor.stop(0);
+  motor.stop(0);
+  locStop = NONE;
   memory.write(NONE);
 #ifdef DEBUG
   Serial.println("ERROR:   Error state!");
@@ -76,7 +77,8 @@ void errorState() {
 
 // Loop while emergency button is pressed
 void emergencyState() {
-  locStop = motor.stop(0);
+  motor.stop(0);
+  locStop = NONE;
 #ifdef DEBUG
   Serial.println("SPECIAL: Emergency state!");
 #endif
@@ -100,10 +102,8 @@ void updateLocation() {
 // Verify that motor state is valid
 void verifyMotorState() {
   if ((motor.state() == UP && locNow > locStop) ||
-      (motor.state() == DOWN && locNow < locStop)) {
-    motor.stop(0);
+      (motor.state() == DOWN && locNow < locStop))
     errorState();
-  }
 }
 
 // Process manual request if there is one
@@ -116,7 +116,6 @@ void processManualRequest() {
       updateLocation();
     locStop = motor.stop(0);
   }
-  // if (request != NONE) locStop = motor.stop(0); // DEV: Why?
 }
 
 // Load location from memory or intialize elevator using initsequence
@@ -156,9 +155,8 @@ void loop() {
   if (motor.state() != STOP && locStop == locNow) {
     motor.stop(stopDelay[locNow]);
     locStop = NONE;
-  } else if (motor.state() == STOP && locStop != NONE) {
+  } else if (motor.state() == STOP && locStop != NONE)
     locStop > locNow ? motor.up() : motor.down();
-  }
   verifyMotorState();
   processManualRequest();
 }
