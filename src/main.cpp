@@ -100,10 +100,10 @@ void updateLocation() {
   if (emergency.update() != NONE) emergencyState();
 }
 
-// Verify that motor state is valid
-void verifyMotorState() {
-  if ((motor.state() == UP && locNow > locStop) ||
-      (motor.state() == DOWN && locNow < locStop))
+// Validate motor state for current request and location
+void validateMotorState() {
+  if ((motor.state() == UP && (locNow > locStop || locNow == FlOORTOP)) ||
+      (motor.state() == DOWN && (locNow < locStop || locNow == FLOORBOTTOM)))
     errorState();
 }
 
@@ -150,16 +150,15 @@ void loop() {
   printDebug(motor, ledStrip, locNow, locStop, manual, sensor, request);
 #endif
   updateLocation();
-  verifyMotorState();
   if (motor.state() == STOP && ledStrip.state() == ON) ledStrip.delay();
   if (locStop == NONE) {
     locStop = request.update();
     if (locStop == locNow) locStop = NONE;
     if (locStop != NONE) locStop > locNow ? motor.up() : motor.down();
-  }
-  if (motor.state() != STOP && locStop == locNow) {
+  } else if (motor.state() != STOP && locStop == locNow) {
     motor.stop(stopDelay[locNow]);
     locStop = NONE;
   }
+  validateMotorState();
   processManualRequest();
 }
