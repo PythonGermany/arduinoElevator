@@ -6,7 +6,7 @@
 #include "Motor.hpp"
 #include "debug.hpp"
 
-// Blocked state interval
+// Interval for waiting state
 #define WAITINGINTERVAL 1000
 // Interval for error state
 #define ERRORINTERVAL 2000
@@ -51,7 +51,7 @@ Memory memory(min(100, maxMemorySize), SAVESLOT, redundancy);
 int16_t stopDelay[] = {1500, 1000, 500, 0};
 
 // Elevator location
-int8_t locNow;
+int8_t locNow = NONE;
 // Elevator stop location
 int8_t locStop = NONE;
 
