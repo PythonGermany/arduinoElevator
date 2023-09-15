@@ -126,12 +126,16 @@ void updateMotorState() {
 
 // Process manual request if there is one
 void processManualRequest() {
-  int8_t request = manual.update();
-  int8_t blockingFloor = request == UP ? FlOORTOP : FLOORBOTTOM;
-  if (request != NONE && locNow != blockingFloor) {
-    request == UP ? motor.up() : motor.down();
-    while (manual.update() == request && locNow != blockingFloor)
+  int8_t manualRequest = manual.update();
+  int8_t blockingFloor = manualRequest == UP ? FlOORTOP : FLOORBOTTOM;
+  if (manualRequest != NONE && locNow != blockingFloor) {
+    manualRequest == UP ? motor.up() : motor.down();
+    while (manual.update() == manualRequest && locNow != blockingFloor) {
       updateLocation();
+#ifdef DEBUG
+      printDebug(motor, ledStrip, locNow, locStop, manual, sensor, request);
+#endif
+    }
     motor.stop(0);
     locStop = NONE;
   }
