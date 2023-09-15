@@ -111,6 +111,18 @@ void validateMotorState() {
     errorState();
 }
 
+// Check for new request and update motor state if there is one
+void updateMotorState() {
+  if (locStop == NONE) {
+    locStop = request.update();
+    if (locStop == locNow) locStop = NONE;
+    if (locStop != NONE) locStop > locNow ? motor.up() : motor.down();
+  } else if (motor.state() != STOP && locStop == locNow) {
+    motor.stop(stopDelay[locNow]);
+    locStop = NONE;
+  }
+}
+
 // Process manual request if there is one
 void processManualRequest() {
   int8_t request = manual.update();
@@ -151,16 +163,9 @@ void loop() {
 #ifdef DEBUG
   printDebug(motor, ledStrip, locNow, locStop, manual, sensor, request);
 #endif
-  updateLocation();
   if (motor.state() == STOP && ledStrip.state() == ON) ledStrip.delay();
-  if (locStop == NONE) {
-    locStop = request.update();
-    if (locStop == locNow) locStop = NONE;
-    if (locStop != NONE) locStop > locNow ? motor.up() : motor.down();
-  } else if (motor.state() != STOP && locStop == locNow) {
-    motor.stop(stopDelay[locNow]);
-    locStop = NONE;
-  }
+  updateLocation();
+  updateMotorState();
   validateMotorState();
   processManualRequest();
 }
