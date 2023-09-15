@@ -6,7 +6,7 @@ void printDebug(Motor &motor, Led &ledStrip, int8_t &locNow, int8_t &locStop,
   static unsigned long prev;
   if (millis() - prev <= DEBUGINTERVAL) return;
   prev = millis();
-  Serial.print("LOG:     ");
+  Serial.print(String(GREEN) + "LOG:     " + String(RESET));
   Serial.print("Motor: ");
   Serial.print(motor.state() > STOP
                    ? motor.state() > DOWN ? "Up     " : "Down   "

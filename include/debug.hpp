@@ -3,6 +3,8 @@
 
 #include <Arduino.h>
 
+#include "colors.hpp"
+
 #define DEBUG
 #define DEBUGINTERVAL 2000
 

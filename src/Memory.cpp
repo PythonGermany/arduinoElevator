@@ -34,7 +34,7 @@ void Memory::write(int8_t data) {
 
 uint8_t Memory::readAt(int16_t id) {
 #ifdef DEBUG
-  Serial.print("READ:    ");
+  Serial.print(String(GREEN) + "READ:    " + String(RESET));
   Serial.print("Memory read at id: " + String(id));
 #endif
   int32_t currAddress = address_ + id * redundancy_;
@@ -51,7 +51,7 @@ uint8_t Memory::readAt(int16_t id) {
     }
   }
 #ifdef DEBUG
-  Serial.println("ERROR");
+  Serial.println(String(RED) + "ERROR" + String(RESET));
 #endif
   return ERROR;
 }
@@ -59,7 +59,7 @@ uint8_t Memory::readAt(int16_t id) {
 void Memory::writeAt(int16_t id, uint8_t data) {
   uint16_t currAddress = address_ + id * redundancy_;
 #ifdef DEBUG
-  Serial.print("UPDATE:  ");
+  Serial.print(String(GREEN) + "UPDATE:  " + String(RESET));
   Serial.print("Memory write at id: " + String(id));
   Serial.print("; Data: " + String(EEPROM.read(currAddress)) + "->" +
                String(data));
@@ -71,7 +71,7 @@ void Memory::writeAt(int16_t id, uint8_t data) {
 
 #ifdef DEBUG
 void Memory::debug() {
-  Serial.print("MEMORY:  ");
+  Serial.print(String(GREEN) + "MEMORY:  " + String(RESET));
   Serial.print("Size: " + String(size_));
   Serial.print("; Address: " + String(address_));
   Serial.print("; Redundancy: " + String(redundancy_));

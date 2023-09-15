@@ -43,7 +43,7 @@ Inputs reset(18, 1);
 // Memory size of 100 means at least 100 * 100 000 writes = 10 000 000 writes so
 // for 600 (100 times up and down every day) changes a day that would be ~45y
 // years worst in the worst case.
-const uint8_t redundancy = 2;
+const uint8_t redundancy = 3;
 const uint16_t maxMemorySize = (EEPROM.length() - SAVESLOT) / redundancy;
 Memory memory(min(100, maxMemorySize), SAVESLOT, redundancy);
 
@@ -68,7 +68,7 @@ void errorState() {
   locStop = NONE;
   memory.write(EMPTY);
 #ifdef DEBUG
-  Serial.println("ERROR:   Error state!");
+  Serial.println(String(RED) + "ERROR:" + String(RESET) + "   Error state!");
 #endif
   while (true) {
     errorLed.blink(ERRORINTERVAL);
@@ -81,7 +81,8 @@ void emergencyState() {
   int8_t state = motor.state();
   motor.stop(0);
 #ifdef DEBUG
-  Serial.println("SPECIAL: Emergency state!");
+  Serial.println(String(YELLOW) + "SPECIAL:" + String(RESET) +
+                 " Emergency state!");
 #endif
   while (emergency.update() != NONE) {
     errorLed.blink(EMERGENCYINTERVAL);
