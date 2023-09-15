@@ -1,0 +1,214 @@
+22:51:25.843 >  d: 4; Data: 255
+22:51:25.843 > READ:�READ:    Memory read at id: 0; Data: 255
+22:51:27.428 > READ:    Memory read at id: 1; Data: 255
+22:51:27.432 > READ:    Memory read at id: 2; Data: 255
+22:51:27.436 > READ:    Memory read at id: 3; Data: 255
+22:51:27.436 > READ:    Memory read at id: 4; Data: 255
+22:51:27.440 > READ:    Memory read at id: 5; Data: 255
+22:51:27.444 > READ:    Memory read at id: 6; Data: 255
+22:51:27.448 > READ:    Memory read at id: 7; Data: 255
+22:51:27.452 > READ:    Memory read at id: 8; Data: 255
+22:51:27.457 > READ:    Memory read at id: 9; Data: 255
+22:51:27.461 > READ:    Memory read at id: 10; Data: 255
+22:51:27.465 > READ:    Memory read at id: 11; Data: 255
+22:51:27.465 > READ:    Memory read at id: 12; Data: 255
+22:51:27.469 > READ:    Memory read at id: 13; Data: 255
+22:51:27.473 > READ:    Memory read at id: 14; Data: 255
+22:51:27.477 > READ:    Memory read at id: 15; Data: 255
+22:51:27.481 > READ:    Memory read at id: 16; Data: 255
+22:51:27.485 > READ:    Memory read at id: 17; Data: 255
+22:51:27.489 > READ:    Memory read at id: 18; Data: 255
+22:51:27.493 > READ:    Memory read at id: 19; Data: 255
+22:51:27.498 > READ:    Memory read at id: 20; Data: 255
+22:51:27.498 > READ:    Memory read at id: 21; Data: 255
+22:51:27.502 > READ:    Memory read at id: 22; Data: 255
+22:51:27.506 > READ:    Memory read at id: 23; Data: 255
+22:51:27.510 > READ:    Memory read at id: 24; Data: 255
+22:51:27.514 > READ:    Memory read at id: 25; Data: 255
+22:51:27.518 > READ:    Memory read at id: 26; Data: 255
+22:51:27.522 > READ:    Memory read at id: 27; Data: 255
+22:51:27.526 > READ:    Memory read at id: 28; Data: 255
+22:51:27.530 > READ:    Memory read at id: 29; Data: 255
+22:51:27.530 > READ:    Memory read at id: 30; Data: 255
+22:51:27.534 > READ:    Memory read at id: 31; Data: 255
+22:51:27.538 > READ:    Memory read at id: 32; Data: 255
+22:51:27.543 > READ:    Memory read at id: 33; Data: 255
+22:51:27.547 > READ:    Memory read at id: 34; Data: 255
+22:51:27.551 > READ:    Memory read at id: 35; Data: 255
+22:51:27.555 > READ:    Memory read at id: 36; Data: 255
+22:51:27.559 > READ:    Memory read at id: 37; Data: 255
+22:51:27.563 > READ:    Memory read at id: 38; Data: 255
+22:51:27.567 > READ:    Memory read at id: 39; Data: 255
+22:51:27.567 > READ:    Memory read at id: 40; Data: 255
+22:51:27.571 > READ:    Memory read at id: 41; Data: 255
+22:51:27.575 > READ:    Memory read at id: 42; Data: 255
+22:51:27.579 > READ:    Memory read at id: 43; Data: 255
+22:51:27.584 > READ:    Memory read at id: 44; Data: 255
+22:51:27.588 > READ:    Memory read at id: 45; Data: 255
+22:51:27.592 > READ:    Memory read at id: 46; Data: 255
+22:51:27.596 > READ:    Memory read at id: 47; Data: 255
+22:51:27.600 > READ:    Memory read at id: 48; Data: 255
+22:51:27.600 > READ:    Memory read at id: 49; Data: 255
+22:51:27.604 > READ:    Memory read at id: 50; Data: 255
+22:51:27.608 > READ:    Memory read at id: 51; Data: 255
+22:51:27.612 > READ:    Memory read at id: 52; Data: 255
+22:51:27.616 > READ:    Memory read at id: 53; Data: 255
+22:51:27.620 > READ:    Memory read at id: 54; Data: 255
+22:51:27.624 > READ:    Memory read at id: 55; Data: 255
+22:51:27.629 > READ:    Memory read at id: 56; Data: 255
+22:51:27.633 > READ:    Memory read at id: 57; Data: 255
+22:51:27.636 > READ:    Memory read at id: 58; Data: 255
+22:51:27.637 > READ:    Memory read at id: 59; Data: 255
+22:51:27.641 > READ:    Memory read at id: 60; Data: 255
+22:51:27.645 > READ:    Memory read at id: 61; Data: 255
+22:51:27.649 > READ:    Memory read at id: 62; Data: 255
+22:51:27.653 > READ:    Memory read at id: 63; Data: 255
+22:51:27.657 > READ:    Memory read at id: 64; Data: 255
+22:51:27.661 > READ:    Memory read at id: 65; Data: 255
+22:51:27.665 > READ:    Memory read at id: 66; Data: 255
+22:51:27.670 > READ:    Memory read at id: 67; Data: 255
+22:51:27.670 > READ:    Memory read at id: 68; Data: 255
+22:51:27.674 > READ:    Memory read at id: 69; Data: 255
+22:51:27.678 > READ:    Memory read at id: 70; Data: 255
+22:51:27.682 > READ:    Memory read at id: 71; Data: 255
+22:51:27.686 > READ:    Memory read at id: 72; Data: 255
+22:51:27.690 > READ:    Memory read at id: 73; Data: 255
+22:51:27.694 > READ:    Memory read at id: 74; Data: 255
+22:51:27.698 > READ:    Memory read at id: 75; Data: 255
+22:51:27.702 > READ:    Memory read at id: 76; Data: 255
+22:51:27.702 > READ:    Memory read at id: 77; Data: 255
+22:51:27.706 > READ:    Memory read at id: 78; Data: 255
+22:51:27.710 > READ:    Memory read at id: 79; Data: 255
+22:51:27.715 > READ:    Memory read at id: 80; Data: 255
+22:51:27.719 > READ:    Memory read at id: 81; Data: 255
+22:51:27.723 > READ:    Memory read at id: 82; Data: 255
+22:51:27.727 > READ:    Memory read at id: 83; Data: 255
+22:51:27.731 > READ:    Memory read at id: 84; Data: 255
+22:51:27.735 > READ:    Memory read at id: 85; Data: 255
+22:51:27.739 > READ:    Memory read at id: 86; Data: 255
+22:51:27.739 > READ:    Memory read at id: 87; Data: 255
+22:51:27.743 > READ:    Memory read at id: 88; Data: 255
+22:51:27.747 > READ:    Memory read at id: 89; Data: 255
+22:51:27.751 > READ:    Memory read at id: 90; Data: 255
+22:51:27.756 > READ:    Memory read at id: 91; Data: 255
+22:51:27.760 > READ:    Memory read at id: 92; Data: 255
+22:51:27.764 > READ:    Memory read at id: 93; Data: 255
+22:51:27.768 > READ:    Memory read at id: 94; Data: 255
+22:51:27.772 > READ:    Memory read at id: 95; Data: 255
+22:51:27.772 > READ:    Memory read at id: 96; Data: 255
+22:51:27.776 > READ:    Memory read at id: 97; Data: 255
+22:51:27.780 > READ:    Memory read at id: 98; Data: 255
+22:51:27.784 > READ:    Memory read at id: 99; Data: 255
+22:51:27.788 > UPDATE:  Memory write at id: 0; Data: 255->255 save count: 0
+22:51:27.792 > UPDATE:  Memory write at id: 1; Data: 255->255 save count: 0
+22:51:27.801 > UPDATE:  Memory write at id: 2; Data: 255->255 save count: 0
+22:51:27.805 > UPDATE:  Memory write at id: 3; Data: 255->255 save count: 0
+22:51:27.809 > UPDATE:  Memory write at id: 4; Data: 255->255 save count: 0
+22:51:27.813 > UPDATE:  Memory write at id: 5; Data: 255->255 save count: 0
+22:51:27.821 > UPDATE:  Memory write at id: 6; Data: 255->255 save count: 0
+22:51:27.825 > UPDATE:  Memory write at id: 7; Data: 255->255 save count: 0
+22:51:27.829 > UPDATE:  Memory write at id: 8; Data: 255->255 save count: 0
+22:51:27.837 > UPDATE:  Memory write at id: 9; Data: 255->255 save count: 0
+22:51:27.842 > UPDATE:  Memory write at id: 10; Data: 255->255 save count: 0
+22:51:27.846 > UPDATE:  Memory write at id: 11; Data: 255->255 save count: 0
+22:51:27.854 > UPDATE:  Memory write at id: 12; Data: 255->255 save count: 0
+22:51:27.858 > UPDATE:  Memory write at id: 13; Data: 255->255 save count: 0
+22:51:27.862 > UPDATE:  Memory write at id: 14; Data: 255->255 save count: 0
+22:51:27.866 > UPDATE:  Memory write at id: 15; Data: 255->255 save count: 0
+22:51:27.874 > UPDATE:  Memory write at id: 16; Data: 255->255 save count: 0
+22:51:27.878 > UPDATE:  Memory write at id: 17; Data: 255->255 save count: 0
+22:51:27.882 > UPDATE:  Memory write at id: 18; Data: 255->255 save count: 0
+22:51:27.891 > UPDATE:  Memory write at id: 19; Data: 255->255 save count: 0
+22:51:27.895 > UPDATE:  Memory write at id: 20; Data: 255->255 save count: 0
+22:51:27.899 > UPDATE:  Memory write at id: 21; Data: 255->255 save count: 0
+22:51:27.907 > UPDATE:  Memory write at id: 22; Data: 255->255 save count: 0
+22:51:27.911 > UPDATE:  Memory write at id: 23; Data: 255->255 save count: 0
+22:51:27.915 > UPDATE:  Memory write at id: 24; Data: 255->255 save count: 0
+22:51:27.923 > UPDATE:  Memory write at id: 25; Data: 255->255 save count: 0
+22:51:27.928 > UPDATE:  Memory write at id: 26; Data: 255->255 save count: 0
+22:51:27.932 > UPDATE:  Memory write at id: 27; Data: 255->255 save count: 0
+22:51:27.936 > UPDATE:  Memory write at id: 28; Data: 255->255 save count: 0
+22:51:27.944 > UPDATE:  Memory write at id: 29; Data: 255->255 save count: 0
+22:51:27.948 > UPDATE:  Memory write at id: 30; Data: 255->255 save count: 0
+22:51:27.952 > UPDATE:  Memory write at id: 31; Data: 255->255 save count: 0
+22:51:27.960 > UPDATE:  Memory write at id: 32; Data: 255->255 save count: 0
+22:51:27.964 > UPDATE:  Memory write at id: 33; Data: 255->255 save count: 0
+22:51:27.969 > UPDATE:  Memory write at id: 34; Data: 255->255 save count: 0
+22:51:27.977 > UPDATE:  Memory write at id: 35; Data: 255->255 save count: 0
+22:51:27.981 > UPDATE:  Memory write at id: 36; Data: 255->255 save count: 0
+22:51:27.985 > UPDATE:  Memory write at id: 37; Data: 255->255 save count: 0
+22:51:27.993 > UPDATE:  Memory write at id: 38; Data: 255->255 save count: 0
+22:51:27.997 > UPDATE:  Memory write at id: 39; Data: 255->255 save count: 0
+22:51:28.001 > UPDATE:  Memory write at id: 40; Data: 255->255 save count: 0
+22:51:28.005 > UPDATE:  Memory write at id: 41; Data: 255->255 save count: 0
+22:51:28.014 > UPDATE:  Memory write at id: 42; Data: 255->255 save count: 0
+22:51:28.018 > UPDATE:  Memory write at id: 43; Data: 255->255 save count: 0
+22:51:28.022 > UPDATE:  Memory write at id: 44; Data: 255->255 save count: 0
+22:51:28.030 > UPDATE:  Memory write at id: 45; Data: 255->255 save count: 0
+22:51:28.034 > UPDATE:  Memory write at id: 46; Data: 255->255 save count: 0
+22:51:28.038 > UPDATE:  Memory write at id: 47; Data: 255->255 save count: 0
+22:51:28.046 > UPDATE:  Memory write at id: 48; Data: 255->255 save count: 0
+22:51:28.050 > UPDATE:  Memory write at id: 49; Data: 255->255 save count: 0
+22:51:28.055 > UPDATE:  Memory write at id: 50; Data: 255->255 save count: 0
+22:51:28.063 > UPDATE:  Memory write at id: 51; Data: 255->255 save count: 0
+22:51:28.067 > UPDATE:  Memory write at id: 52; Data: 255->255 save count: 0
+22:51:28.071 > UPDATE:  Memory write at id: 53; Data: 255->255 save count: 0
+22:51:28.075 > UPDATE:  Memory write at id: 54; Data: 255->255 save count: 0
+22:51:28.083 > UPDATE:  Memory write at id: 55; Data: 255->255 save count: 0
+22:51:28.087 > UPDATE:  Memory write at id: 56; Data: 255->255 save count: 0
+22:51:28.091 > UPDATE:  Memory write at id: 57; Data: 255->255 save count: 0
+22:51:28.100 > UPDATE:  Memory write at id: 58; Data: 255->255 save count: 0
+22:51:28.104 > UPDATE:  Memory write at id: 59; Data: 255->255 save count: 0
+22:51:28.108 > UPDATE:  Memory write at id: 60; Data: 255->255 save count: 0
+22:51:28.116 > UPDATE:  Memory write at id: 61; Data: 255->255 save count: 0
+22:51:28.120 > UPDATE:  Memory write at id: 62; Data: 255->255 save count: 0
+22:51:28.124 > UPDATE:  Memory write at id: 63; Data: 255->255 save count: 0
+22:51:28.132 > UPDATE:  Memory write at id: 64; Data: 255->255 save count: 0
+22:51:28.136 > UPDATE:  Memory write at id: 65; Data: 255->255 save count: 0
+22:51:28.141 > UPDATE:  Memory write at id: 66; Data: 255->255 save count: 0
+22:51:28.149 > UPDATE:  Memory write at id: 67; Data: 255->255 save count: 0
+22:51:28.153 > UPDATE:  Memory write at id: 68; Data: 255->255 save count: 0
+22:51:28.157 > UPDATE:  Memory write at id: 69; Data: 255->255 save count: 0
+22:51:28.161 > UPDATE:  Memory write at id: 70; Data: 255->255 save count: 0
+22:51:28.169 > UPDATE:  Memory write at id: 71; Data: 255->255 save count: 0
+22:51:28.173 > UPDATE:  Memory write at id: 72; Data: 255->255 save count: 0
+22:51:28.177 > UPDATE:  Memory write at id: 73; Data: 255->255 save count: 0
+22:51:28.186 > UPDATE:  Memory write at id: 74; Data: 255->255 save count: 0
+22:51:28.190 > UPDATE:  Memory write at id: 75; Data: 255->255 save count: 0
+22:51:28.194 > UPDATE:  Memory write at id: 76; Data: 255->255 save count: 0
+22:51:28.202 > UPDATE:  Memory write at id: 77; Data: 255->255 save count: 0
+22:51:28.206 > UPDATE:  Memory write at id: 78; Data: 255->255 save count: 0
+22:51:28.210 > UPDATE:  Memory write at id: 79; Data: 255->255 save count: 0
+22:51:28.218 > UPDATE:  Memory write at id: 80; Data: 255->255 save count: 0
+22:51:28.222 > UPDATE:  Memory write at id: 81; Data: 255->255 save count: 0
+22:51:28.227 > UPDATE:  Memory write at id: 82; Data: 255->255 save count: 0
+22:51:28.231 > UPDATE:  Memory write at id: 83; Data: 255->255 save count: 0
+22:51:28.239 > UPDATE:  Memory write at id: 84; Data: 255->255 save count: 0
+22:51:28.243 > UPDATE:  Memory write at id: 85; Data: 255->255 save count: 0
+22:51:28.247 > UPDATE:  Memory write at id: 86; Data: 255->255 save count: 0
+22:51:28.255 > UPDATE:  Memory write at id: 87; Data: 255->255 save count: 0
+22:51:28.258 > UPDATE:  Memory write at id: 88; Data: 255->255 save count: 0
+22:51:28.263 > UPDATE:  Memory write at id: 89; Data: 255->255 save count: 0
+22:51:28.272 > UPDATE:  Memory write at id: 90; Data: 255->255 save count: 0
+22:51:28.275 > UPDATE:  Memory write at id: 91; Data: 255->255 save count: 0
+22:51:28.279 > UPDATE:  Memory write at id: 92; Data: 255->255 save count: 0
+22:51:28.287 > UPDATE:  Memory write at id: 93; Data: 255->255 save count: 0
+22:51:28.292 > UPDATE:  Memory write at id: 94; Data: 255->255 save count: 0
+22:51:28.295 > UPDATE:  Memory write at id: 95; Data: 255->255 save count: 0
+22:51:28.299 > UPDATE:  Memory write at id: 96; Data: 255->255 save count: 0
+22:51:28.308 > UPDATE:  Memory write at id: 97; Data: 255->255 save count: 0
+22:51:28.313 > UPDATE:  Memory write at id: 98; Data: 255->255 save count: 0
+22:51:28.317 > UPDATE:  Memory write at id: 99; Data: 255->255 save count: 0
+22:51:28.325 > READ:    Memory read at id: 52; Data: 255
+22:51:28.329 > MEMORY:  Size: 100; Address: 0; Redundancy: 2; Data id: 52; Save count: 0
+22:51:39.259 > SPECIAL: Emergency state!
+22:52:00.377 > SPECIAL: Emergency state!
+22:53:12.069 > UPDATE:  Memory write at id: 52; Data: 255->3 save count: 1
+22:53:12.073 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    3->2   ; Manual: None; LocNow: 3   ; LocStop: None
+22:53:14.076 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    3->2   ; Manual: None; LocNow: None; LocStop: None
+22:53:16.078 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    3->2   ; Manual: None; LocNow: None; LocStop: None
+22:53:16.770 > SPECIAL: Emergency state!
+22:53:42.729 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    3->2   ; Manual: None; LocNow: None; LocStop: 1   
+22:53:44.732 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    3->2   ; Manual: None; LocNow: None; LocStop: None
+22:53:46.734 > LOG:     Motor: Down   ; LedStrip: On ; Goal:    3->2   ; Manual: None; LocNow: None; LocStop: None
+22:53:48.029 > SPECIAL: Emergency state!

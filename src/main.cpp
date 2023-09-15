@@ -6,12 +6,12 @@
 #include "Motor.hpp"
 #include "debug.hpp"
 
-// Interval for waiting for sensor to update
-#define INITINTERVAL 2000
+// Blocked state interval
+#define WAITINGINTERVAL 1000
 // Interval for error state
-#define SENSORINTERVAL 4000
+#define ERRORINTERVAL 2000
 // Interval for emergency state
-#define EMERGENCYINTERVAL 8000
+#define EMERGENCYINTERVAL 4000
 // Interval for led strip delay
 #define LEDSTRIPDELAY 60000
 
@@ -71,15 +71,15 @@ void errorState() {
   Serial.println("ERROR:   Error state!");
 #endif
   while (true) {
-    errorLed.blink(SENSORINTERVAL);
-    ledStrip.blink(SENSORINTERVAL);
+    errorLed.blink(ERRORINTERVAL);
+    ledStrip.blink(ERRORINTERVAL);
   }
 }
 
 // Loop while emergency button is pressed
 void emergencyState() {
+  int8_t state = motor.state();
   motor.stop(0);
-  locStop = NONE;
 #ifdef DEBUG
   Serial.println("SPECIAL: Emergency state!");
 #endif
@@ -88,10 +88,14 @@ void emergencyState() {
     ledStrip.blink(EMERGENCYINTERVAL);
   }
   errorLed.off();
+  if (state != STOP) {
+    while (request.update() == NONE) ledStrip.blink(WAITINGINTERVAL);
+    state == UP ? motor.up() : motor.down();
+  }
   ledStrip.delay(true);
 }
 
-// Update input states and write to memory if current location changed
+// Update location and write to memory if current location changed
 void updateLocation() {
   int8_t last = sensor.last();
   locNow = sensor.update(true);
@@ -127,16 +131,14 @@ void setup() {
 #endif
   randomSeed(generateSeed(UNCONNECTED));
   memory.init(reset.update() != NONE);
-  memory.read() != EMPTY ? sensor.setLast(memory.read()) : sensor.setLast(NONE);
+  int8_t init = memory.read();
+  init != EMPTY ? sensor.setLast(init) : sensor.setLast(NONE);
 #ifdef DEBUG
   memory.debug();
 #endif
   locNow = sensor.update(true);
   if (locNow == NONE || locNow < FLOORBOTTOM || locNow > FlOORTOP) {
-    while (request.update() == NONE) {
-      updateLocation();
-      ledStrip.blink(INITINTERVAL);
-    }
+    while (request.update() == NONE) ledStrip.blink(WAITINGINTERVAL);
     motor.up();
     while (locNow != FlOORTOP) updateLocation();
     motor.stop(stopDelay[locNow]);
