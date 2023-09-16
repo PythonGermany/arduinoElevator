@@ -11,11 +11,11 @@
 
 class Memory {
  private:
-  int16_t size_;
-  uint16_t address_;
-  uint8_t redundancy_;
-  int16_t id_;
-  int16_t saveCount_;
+  int16_t _size;
+  uint16_t _address;
+  uint8_t _redundancy;
+  int16_t _id;
+  int16_t _saveCount;
 
  public:
   Memory(uint16_t size, uint16_t address, uint8_t redundancy = 1);

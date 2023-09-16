@@ -8,10 +8,10 @@
 
 class Led {
  private:
-  const uint8_t pin_;
-  bool state_;
-  unsigned long delay_;
-  unsigned long start_;
+  const uint8_t _pin;
+  bool _state;
+  unsigned long _delay;
+  unsigned long _start;
 
  public:
   Led(uint8_t pin, unsigned long delay = 0);

@@ -1,42 +1,42 @@
 #include "Led.hpp"
 
-Led::Led(uint8_t pin, unsigned long delay) : pin_(pin), delay_(delay) {
+Led::Led(uint8_t pin, unsigned long delay) : _pin(pin), _delay(delay) {
   init();
 }
 
 Led::~Led() {}
 
 void Led::init() {
-  start_ = millis();
-  pinMode(pin_, OUTPUT);
+  _start = millis();
+  pinMode(_pin, OUTPUT);
   off();
 }
 
 void Led::on() {
-  digitalWrite(pin_, HIGH);
-  state_ = ON;
+  digitalWrite(_pin, HIGH);
+  _state = ON;
 }
 
 void Led::off() {
-  digitalWrite(pin_, LOW);
-  state_ = OFF;
+  digitalWrite(_pin, LOW);
+  _state = OFF;
 }
 
 void Led::blink(uint16_t interval) {
-  if (millis() - start_ >= interval) {
+  if (millis() - _start >= interval) {
     state() ? off() : on();
-    start_ = millis();
+    _start = millis();
   }
 }
 
-void Led::setDelay(unsigned long delay) { delay_ = delay; }
+void Led::setDelay(unsigned long delay) { _delay = delay; }
 
 void Led::delay(bool set) {
   if (set == true) {
-    start_ = millis();
+    _start = millis();
     if (state() != ON) on();
-  } else if (millis() - start_ >= delay_)
+  } else if (millis() - _start >= _delay)
     off();
 }
 
-bool Led::state() const { return state_; }
+bool Led::state() const { return _state; }

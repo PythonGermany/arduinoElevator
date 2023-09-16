@@ -8,10 +8,10 @@
 
 class Inputs {
  private:
-  const uint8_t startPin_;
-  const uint8_t inputCount_;
-  const bool invert_;
-  int8_t last_;
+  const uint8_t _startPin;
+  const uint8_t _inputCount;
+  const bool _invert;
+  int8_t _last;
 
  public:
   Inputs(uint8_t startPin, uint8_t inputCount, bool invert = false);
