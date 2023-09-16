@@ -105,7 +105,7 @@ void updateLocation() {
   if (emergency.update() != NONE) emergencyState();
 }
 
-// Validate motor state for current request and location
+// Validate motor state for current motor state and location
 void validateMotorState() {
   if ((motor.state() == UP && (locNow > locStop || locNow == FlOORTOP)) ||
       (motor.state() == DOWN && (locNow < locStop || locNow == FLOORBOTTOM)))
