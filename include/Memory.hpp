@@ -18,6 +18,7 @@ class Memory {
   int16_t _saveCount;
 
  public:
+  Memory();
   Memory(uint16_t size, uint16_t address, uint8_t redundancy = 1);
   ~Memory();
 

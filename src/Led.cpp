@@ -1,7 +1,21 @@
 #include "Led.hpp"
 
+Led::Led() {}
+
 Led::Led(uint8_t pin, unsigned long delay) : _pin(pin), _delay(delay) {
   init();
+}
+
+Led::Led(const Led &rhs) { *this = rhs; }
+
+Led &Led::operator=(const Led &rhs) {
+  if (this != &rhs) {
+    _pin = rhs._pin;
+    _state = rhs._state;
+    _delay = rhs._delay;
+    _start = rhs._start;
+  }
+  return *this;
 }
 
 Led::~Led() {}

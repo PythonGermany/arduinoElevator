@@ -8,13 +8,16 @@
 
 class Inputs {
  private:
-  const uint8_t _startPin;
-  const uint8_t _inputCount;
-  const bool _invert;
+  uint8_t _startPin;
+  uint8_t _inputCount;
+  bool _invert;
   int8_t _last;
 
  public:
+  Inputs();
   Inputs(uint8_t startPin, uint8_t inputCount, bool invert = false);
+  Inputs(const Inputs &rhs);
+  Inputs &operator=(const Inputs &rhs);
   ~Inputs();
 
   void init();

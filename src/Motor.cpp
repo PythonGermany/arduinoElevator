@@ -1,8 +1,22 @@
 #include "Motor.hpp"
 
+Motor::Motor() {}
+
 Motor::Motor(uint8_t pinDown, uint8_t pinUp, Led *led)
     : _pinDown(pinDown), _pinUp(pinUp), _led(led) {
   init();
+}
+
+Motor::Motor(const Motor &rhs) { *this = rhs; }
+
+Motor &Motor::operator=(const Motor &rhs) {
+  if (this != &rhs) {
+    _pinDown = rhs._pinDown;
+    _pinUp = rhs._pinUp;
+    _state = rhs._state;
+    _led = rhs._led;
+  }
+  return *this;
 }
 
 Motor::~Motor() {}

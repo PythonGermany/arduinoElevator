@@ -1,8 +1,22 @@
 #include "Inputs.hpp"
 
+Inputs::Inputs() {}
+
 Inputs::Inputs(uint8_t startPin, uint8_t inputCount, bool invert)
     : _startPin(startPin), _inputCount(inputCount), _invert(invert) {
   init();
+}
+
+Inputs::Inputs(const Inputs &rhs) { *this = rhs; }
+
+Inputs &Inputs::operator=(const Inputs &rhs) {
+  if (this != &rhs) {
+    _startPin = rhs._startPin;
+    _inputCount = rhs._inputCount;
+    _invert = rhs._invert;
+    _last = rhs._last;
+  }
+  return *this;
 }
 
 Inputs::~Inputs() {}

@@ -11,13 +11,16 @@
 
 class Motor {
  private:
-  const uint8_t _pinDown;
-  const uint8_t _pinUp;
+  uint8_t _pinDown;
+  uint8_t _pinUp;
   int8_t _state;
   Led *_led;
 
  public:
+  Motor();
   Motor(uint8_t pinDown, uint8_t pinUp, Led *led_ = NULL);
+  Motor(const Motor &rhs);
+  Motor &operator=(const Motor &rhs);
   ~Motor();
 
   void init();

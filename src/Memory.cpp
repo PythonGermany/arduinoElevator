@@ -1,5 +1,7 @@
 #include "Memory.hpp"
 
+Memory::Memory() {}
+
 Memory::Memory(uint16_t size, uint16_t address, uint8_t redundancy) {
   _size = size;
   _address = address;
