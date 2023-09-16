@@ -1,21 +1,20 @@
 #include "Elevator.hpp"
 
-Elevator::Elevator() {
-  _request = Inputs(2, FLOORCOUNT);
-  _sensor = Inputs(8, FLOORCOUNT);  // DEV: Invert back for real sensor
-  _ledStrip = Led(12, LEDSTRIPDELAY);
-  _motor = Motor(6, 7, &_ledStrip);
-  _errorLed = Led(LED_BUILTIN);
-  _manual = Inputs(14, 2);
-  _emergency = Inputs(17, 1);  // DEV: Invert back for real sensor
-  _reset = Inputs(18, 1);
-
+// DEV Invert sensor and emergency input for real sensors
+Elevator::Elevator()
+    : _request(2, FLOORCOUNT),
+      _sensor(8, FLOORCOUNT),
+      _ledStrip(12, LEDSTRIPDELAY),
+      _motor(6, 7, &_ledStrip),
+      _errorLed(LED_BUILTIN),
+      _manual(14, 2),
+      _emergency(17, 1),
+      _reset(18, 1),
+      _locStop(NONE),
+      _locNow(NONE) {
   const uint8_t redundancy = 3;
   const uint16_t maxMemorySize = (EEPROM.length() - SAVESLOT) / redundancy;
   _memory = Memory(min(100, maxMemorySize), SAVESLOT, redundancy);
-
-  _locNow = NONE;
-  _locStop = NONE;
 }
 
 Elevator::~Elevator() {
@@ -29,7 +28,7 @@ void Elevator::init() {
   Serial.begin(115200);
 #endif
   randomSeed(generateSeed(UNCONNECTED));
-  _memory.init(_reset.update() != NONE);
+  if (_reset.update() != NONE) _memory.init(true);
   int8_t init = _memory.read();
   init != EMPTY ? _sensor.setLast(init) : _sensor.setLast(NONE);
 #ifdef DEBUG

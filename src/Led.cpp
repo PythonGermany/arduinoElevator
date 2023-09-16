@@ -2,9 +2,9 @@
 
 Led::Led() {}
 
-Led::Led(uint8_t pin, unsigned long delay) : _pin(pin), _delay(delay) {
-  init();
-}
+Led::Led(uint8_t pin) : _pin(pin), _delay(0) { init(); }
+
+Led::Led(uint8_t pin, uint64_t delay) : _pin(pin), _delay(delay) { init(); }
 
 Led::Led(const Led &rhs) { *this = rhs; }
 

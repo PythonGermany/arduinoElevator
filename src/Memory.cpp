@@ -2,11 +2,13 @@
 
 Memory::Memory() {}
 
-Memory::Memory(uint16_t size, uint16_t address, uint8_t redundancy) {
-  _size = size;
-  _address = address;
-  _redundancy = redundancy;
-  _saveCount = 0;
+Memory::Memory(uint16_t size, uint16_t address, uint8_t redundancy)
+    : _size(size),
+      _address(address),
+      _redundancy(redundancy),
+      _id(EMPTY),
+      _saveCount(0) {
+  init();
 }
 
 Memory::~Memory() {}
@@ -16,7 +18,6 @@ void Memory::init(bool first) {
     _id = random(_size);
     for (int16_t i = 0; i < _size; i++) writeAt(i, EMPTY);
   } else {
-    _id = EMPTY;
     for (int16_t i = 0; i < _size && _id == EMPTY; i++)
       if (readAt(i) != EMPTY) _id = i;
     if (_id == ERROR || _id == EMPTY) init(true);

@@ -15,7 +15,8 @@ class Led {
 
  public:
   Led();
-  Led(uint8_t pin, unsigned long delay = 0);
+  Led(uint8_t pin);
+  Led(uint8_t pin, uint64_t delay);
   Led(const Led &rhs);
   Led &operator=(const Led &rhs);
   ~Led();
