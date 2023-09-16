@@ -37,8 +37,8 @@ void Memory::write(int8_t data) {
 
 uint8_t Memory::readAt(int16_t id) {
 #ifdef DEBUG
-  Serial.print(String(GREEN) + "READ:    " + String(RESET));
-  Serial.print("Memory read at id: " + String(id));
+  Serial.print(String(GREEN) + "READ:    " + String(RESET) +
+               "Memory read at id: " + String(id));
 #endif
   int32_t currAddress = _address + id * _redundancy;
   for (uint8_t i = 0; i < _redundancy - 1; i++) {
@@ -62,11 +62,10 @@ uint8_t Memory::readAt(int16_t id) {
 void Memory::writeAt(int16_t id, uint8_t data) {
   uint16_t currAddress = _address + id * _redundancy;
 #ifdef DEBUG
-  Serial.print(String(GREEN) + "UPDATE:  " + String(RESET));
-  Serial.print("Memory write at id: " + String(id));
-  Serial.print("; Data: " + String(EEPROM.read(currAddress)) + "->" +
-               String(data));
-  Serial.println(" save count: " + String(_saveCount));
+  Serial.println(String(GREEN) + "UPDATE:  " + String(RESET) +
+                 "Memory write at id: " + String(id) +
+                 "; Data: " + String(EEPROM.read(currAddress)) + "->" +
+                 String(data) + " save count: " + String(_saveCount));
 #endif
   for (uint8_t i = 0; i < _redundancy; i++)
     EEPROM.update(currAddress + i, data);
@@ -74,11 +73,9 @@ void Memory::writeAt(int16_t id, uint8_t data) {
 
 #ifdef DEBUG
 void Memory::debug() {
-  Serial.print(String(GREEN) + "MEMORY:  " + String(RESET));
-  Serial.print("Size: " + String(_size));
-  Serial.print("; Address: " + String(_address));
-  Serial.print("; Redundancy: " + String(_redundancy));
-  Serial.print("; Data id: " + String(_id));
-  Serial.println("; Save count: " + String(_saveCount));
+  Serial.println(String(GREEN) + "MEMORY:  " + String(RESET) +
+                 "Size: " + String(_size) + "; Address: " + String(_address) +
+                 "; Redundancy: " + String(_redundancy) + "; Data id: " +
+                 String(_id) + "; Save count: " + String(_saveCount));
 }
 #endif
