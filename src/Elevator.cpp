@@ -2,16 +2,16 @@
 
 // DEV Invert sensor and emergency input for real sensors
 Elevator::Elevator()
-    : _request(2, FLOORCOUNT),
-      _sensor(8, FLOORCOUNT),
-      _ledStrip(12, LEDSTRIPDELAY),
-      _motor(6, 7, &_ledStrip),
+    : _ledStrip(12, LEDSTRIPDELAY),
       _errorLed(LED_BUILTIN),
+      _request(2, FLOORCOUNT),
+      _sensor(8, FLOORCOUNT),
       _manual(14, 2),
       _emergency(17, 1),
       _reset(18, 1),
-      _locStop(NONE),
-      _locNow(NONE) {
+      _motor(6, 7, &_ledStrip),
+      _locNow(NONE),
+      _locStop(NONE) {
   const uint8_t redundancy = 3;
   const uint16_t maxMemorySize = (EEPROM.length() - SAVESLOT) / redundancy;
   _memory = Memory(min(100, maxMemorySize), SAVESLOT, redundancy);

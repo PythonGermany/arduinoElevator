@@ -34,21 +34,19 @@
 
 class Elevator {
  private:
+  Led _ledStrip;
+  Led _errorLed;
   Inputs _request;
   Inputs _sensor;
   Inputs _manual;
   Inputs _emergency;
   Inputs _reset;
-  Led _ledStrip;
-  Led _errorLed;
   Motor _motor;
 
   int16_t _stopDelay[FLOORCOUNT] = {1500, 1000, 500, 0};
-
-  Memory _memory;
-
   int8_t _locNow;
   int8_t _locStop;
+  Memory _memory;
 
  public:
   Elevator();
