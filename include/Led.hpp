@@ -21,13 +21,14 @@ class Led {
   Led &operator=(const Led &rhs);
   ~Led();
 
+  bool state() const;
+
   void init();
   void on();
   void off();
   void blink(uint16_t interval = 1000);
   void setDelay(unsigned long delay);
   void delay(bool set = false);
-  bool state() const;
 };
 
 #endif

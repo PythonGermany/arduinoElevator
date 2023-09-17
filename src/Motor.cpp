@@ -21,6 +21,13 @@ Motor &Motor::operator=(const Motor &rhs) {
 
 Motor::~Motor() {}
 
+// Sets motor led
+// @param led: pointer to led
+void Motor::setLed(Led *led) { _led = led; }
+
+// Returns motor state
+int8_t Motor::state() const { return (_state); }
+
 // Initializes motor pins
 void Motor::init() {
   pinMode(_pinDown, OUTPUT);
@@ -54,6 +61,3 @@ void Motor::stop(int16_t delayTime) {
   digitalWrite(_pinUp, LOW);
   _state = STOP;
 }
-
-// Returns motor state
-int8_t Motor::state() const { return (_state); }

@@ -20,6 +20,9 @@ Led &Led::operator=(const Led &rhs) {
 
 Led::~Led() {}
 
+// Returns led state
+bool Led::state() const { return _state; }
+
 // Initializes led pin
 void Led::init() {
   _start = millis();
@@ -63,6 +66,3 @@ void Led::delay(bool set) {
   } else if (millis() - _start >= _delay)
     off();
 }
-
-// Returns led state
-bool Led::state() const { return _state; }

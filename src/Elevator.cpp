@@ -136,7 +136,7 @@ void Elevator::emergencyState() {
   }
 }
 
-// Generate random seed using analogRead(pin)
+// Generate random seed using analog pin
 // @param pin: pin to read analog value from
 unsigned long Elevator::generateSeed(uint8_t pin) {
   unsigned long seed = 0;

@@ -1,6 +1,8 @@
 #ifndef COLORS_HPP
 #define COLORS_HPP
 
+// Terminal text formatting
+
 #define RESET "\033[0m"
 #define BOLD "\033[1m"
 #define UNDERLINE "\033[4m"

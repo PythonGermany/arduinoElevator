@@ -23,11 +23,13 @@ class Motor {
   Motor &operator=(const Motor &rhs);
   ~Motor();
 
+  void setLed(Led *led);
+  int8_t state() const;
+
   void init();
   void down();
   void up();
   void stop(int16_t delayTime = 0);
-  int8_t state() const;
 };
 
 #endif
