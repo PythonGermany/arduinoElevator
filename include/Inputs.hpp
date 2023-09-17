@@ -20,17 +20,11 @@ class Inputs {
   Inputs &operator=(const Inputs &rhs);
   ~Inputs();
 
-  // Initializes input pins
   void init();
-  // Updates value of input pins and returns index of pressed pin
-  // If last is true, it will return the last pressed pin if no pin is pressed
-  int8_t update(bool last = false);
-  // Returns true if more than one pin is pressed
+  int8_t update(bool returnLast = false);
   bool error();
-  // Sets last pressed pin
   void setLast(int8_t last);
-  // Returns last pressed pin
-  int8_t last() const;
+  int8_t getLast() const;
 };
 
 #endif

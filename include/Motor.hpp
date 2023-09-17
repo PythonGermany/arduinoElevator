@@ -23,16 +23,10 @@ class Motor {
   Motor &operator=(const Motor &rhs);
   ~Motor();
 
-  // Initializes motor pins
   void init();
-  // Turns motor down. Sets led to on if _led is not null
   void down();
-  // Turns motor up. Sets led to on if _led is not null
   void up();
-  // Stops motor. Sets led delay if _led is not null
-  // @param delayTime: stop delay in milliseconds
   void stop(int16_t delayTime = 0);
-  // Returns motor state
   int8_t state() const;
 };
 

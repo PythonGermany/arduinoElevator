@@ -13,6 +13,9 @@ Memory::Memory(uint16_t size, uint16_t address, uint8_t redundancy)
 
 Memory::~Memory() {}
 
+// Initializes memory block and reads value if first is false
+// @param first: if true, it will initialize memory block if false it will try
+// to read saved value
 void Memory::init(bool first) {
   if (first) {
     _id = random(_size);
@@ -24,8 +27,11 @@ void Memory::init(bool first) {
   }
 }
 
+// Reads value from memory block
 int8_t Memory::read() { return readAt(_id); }
 
+// Writes value to memory block
+// @param data: value to write
 void Memory::write(int8_t data) {
   if (++_saveCount > _size) {
     _saveCount = 1;
@@ -35,6 +41,8 @@ void Memory::write(int8_t data) {
   writeAt(_id, data);
 }
 
+// Reads value from memory block at given address
+// @param address: address to read from
 uint8_t Memory::readAt(int16_t id) {
 #ifdef DEBUG
   Serial.print(String(GREEN) + "READ:    " + String(RESET) +
@@ -59,6 +67,9 @@ uint8_t Memory::readAt(int16_t id) {
   return ERROR;
 }
 
+// Writes value to memory block at given address
+// @param address: address to write to
+// @param data: value to write
 void Memory::writeAt(int16_t id, uint8_t data) {
   uint16_t currAddress = _address + id * _redundancy;
 #ifdef DEBUG
@@ -72,6 +83,7 @@ void Memory::writeAt(int16_t id, uint8_t data) {
 }
 
 #ifdef DEBUG
+// Prints memory block debug information to the serial monitor
 void Memory::debug() {
   Serial.println(String(GREEN) + "MEMORY:  " + String(RESET) +
                  "Size: " + String(_size) + "; Address: " + String(_address) +

@@ -21,22 +21,27 @@ Inputs &Inputs::operator=(const Inputs &rhs) {
 
 Inputs::~Inputs() {}
 
+// Initializes input pins
 void Inputs::init() {
   _last = NONE;
   for (uint8_t i = 0; i < _inputCount; i++)
     pinMode(_startPin + i, INPUT_PULLUP);
 }
 
-int8_t Inputs::update(bool last) {
+// Updates value of input pins and returns index of pressed pin
+// If returnLast is true, it will return the last pressed pin if no pin is
+// pressed
+int8_t Inputs::update(bool returnLast) {
   for (uint8_t i = 0; i < _inputCount; i++) {
     if (digitalRead(_startPin + i) == _invert) {
-      _last = i;
+      setLast(i);
       return i;
     }
   }
-  return last ? _last : NONE;
+  return returnLast ? getLast() : NONE;
 }
 
+// Returns true if more than one pin is pressed
 bool Inputs::error() {
   uint8_t pressed = 0;
   for (uint8_t i = 0; i < _inputCount; i++)
@@ -44,6 +49,8 @@ bool Inputs::error() {
   return pressed > 1;
 }
 
+// Sets last pressed pin
 void Inputs::setLast(int8_t last) { _last = last; }
 
-int8_t Inputs::last() const { return _last; }
+// Returns last pressed pin
+int8_t Inputs::getLast() const { return _last; }

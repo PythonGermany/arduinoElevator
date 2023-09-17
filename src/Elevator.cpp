@@ -23,6 +23,8 @@ Elevator::~Elevator() {
 #endif
 }
 
+// Executes elevator initialization sequence
+// If elevator location is not saved, it will move to INITFLOOR
 void Elevator::init() {
 #ifdef DEBUG
   Serial.begin(115200);
@@ -45,6 +47,7 @@ void Elevator::init() {
   }
 }
 
+// Executes elevator main loop using private elevator methods
 void Elevator::run() {
 #ifdef DEBUG
   printDebug(_motor, _ledStrip, _locNow, _locStop, _manual, _sensor, _request);
@@ -63,14 +66,17 @@ void Elevator::run() {
   processManualRequest();
 }
 
+// Updates sensor input and checks for emergency button and unrecoverable
+// errors
 void Elevator::updateSensorInput() {
-  int8_t last = _sensor.last();
+  int8_t last = _sensor.getLast();
   _locNow = _sensor.update(true);
   if (_locNow != last) _memory.write(_locNow);
   if (_sensor.error()) errorState();
   if (_emergency.update() != NONE) emergencyState();
 }
 
+// Validates if the current motor state is valid for the current sensor input
 void Elevator::validateMotorState() {
   if ((_motor.state() == UP && (_locNow >= _locStop || _locNow == FlOORTOP)) ||
       (_motor.state() == DOWN &&
@@ -78,6 +84,7 @@ void Elevator::validateMotorState() {
     errorState();
 }
 
+// Checks for a manual (up or down) request and processes it
 void Elevator::processManualRequest() {
   int8_t manualRequest = _manual.update();
   int8_t blockingFloor = manualRequest == UP ? FlOORTOP : FLOORBOTTOM;
@@ -95,6 +102,7 @@ void Elevator::processManualRequest() {
   }
 }
 
+// Blocks elevator movement forever in case of unrecoverable error
 void Elevator::errorState() {
   _motor.stop(0);
   _locStop = NONE;
@@ -108,6 +116,7 @@ void Elevator::errorState() {
   }
 }
 
+// Blocks elevator movement until emergency button is released
 void Elevator::emergencyState() {
   int8_t state = _motor.state();
   _motor.stop(0);
@@ -120,13 +129,15 @@ void Elevator::emergencyState() {
     _ledStrip.blink(EMERGENCYINTERVAL);
   }
   _errorLed.off();
+  // Wait for user input to start moving again if elevator was moving before
   if (state != STOP) {
     while (_request.update() == NONE) _ledStrip.blink(WAITINGINTERVAL);
     state == UP ? _motor.up() : _motor.down();
   }
-  _ledStrip.delay(true);
 }
 
+// Generate random seed using analogRead(pin)
+// @param pin: pin to read analog value from
 unsigned long Elevator::generateSeed(uint8_t pin) {
   unsigned long seed = 0;
   for (uint8_t i = 0; i < 32; i++) seed |= (analogRead(pin) & 0x01) << i;
