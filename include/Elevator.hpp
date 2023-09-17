@@ -52,18 +52,28 @@ class Elevator {
   Elevator();
   ~Elevator();
 
+  // Executes elevator initialization sequence
+  // If elevator location is not saved, it will move to INITFLOOR
   void init();
+  // Executes elevator main loop using private elevator methods
   void run();
 
  private:
-  // Run functions
+  // Updates sensor input and checks for emergency button and unrecoverable
+  // errors
   void updateSensorInput();
+  // Validates if the current motor state is valid for the current sensor input
   void validateMotorState();
+  // Checks for a manual (up or down) request and processes it
   void processManualRequest();
-  // Blocking states
+  // Blocks elevator movement forever in case of unrecoverable error
   void errorState();
+  // Blocks elevator movement until emergency button is released,
+  // in case the elevator was moving before the emergency button was pressed,
+  // it will wait for a button input and then start moving again
   void emergencyState();
-  // Utils
+  // Generate random seed using analogRead(pin)
+  // @param pin: pin to read analog value from
   unsigned long generateSeed(uint8_t pin);
 };
 

@@ -44,7 +44,7 @@ void Motor::up() {
 
 void Motor::stop(int16_t delayTime) {
   if (delayTime > 0) delay(delayTime);
-  if (delayTime >= 0 && _led != NULL) _led->delay(true);
+  if (_led != NULL) _led->delay(true);
   digitalWrite(_pinDown, LOW);
   digitalWrite(_pinUp, LOW);
   _state = STOP;
