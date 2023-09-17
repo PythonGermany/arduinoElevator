@@ -31,19 +31,20 @@ void Elevator::init() {
 #endif
   randomSeed(generateSeed(UNCONNECTED));
   if (_reset.update() != NONE) _memory.init(true);
-  int8_t init = _memory.read();
-  init != EMPTY ? _sensor.setLast(init) : _sensor.setLast(NONE);
+  int8_t last = _memory.read();
+  last != EMPTY ? _sensor.setLast(last) : _sensor.setLast(NONE);
 #ifdef DEBUG
   _memory.debug();
 #endif
   _locNow = _sensor.update(true);
+  // DEV: Is this way of initializing the elevator safe enough? (e.g. if the
+  // elevator is above the top floor sensor after a reset) -> Ask if the
+  // elevator should rather be initialized manually
   if (_locNow == NONE || _locNow < FLOORBOTTOM || _locNow > FlOORTOP) {
     while (_request.update() == NONE) _ledStrip.blink(WAITINGINTERVAL);
     _motor.up();
-    while (_locNow != FlOORTOP) updateSensorInput();
+    while (_locNow == NONE) updateSensorInput();
     _motor.stop(_stopDelay[_locNow]);
-    _motor.down();
-    _locStop = INITFLOOR;
   }
 }
 
