@@ -40,11 +40,18 @@ void Elevator::init() {
   // DEV: Is this way of initializing the elevator safe enough? (e.g. if the
   // elevator is above the top floor sensor after a reset) -> Ask if the
   // elevator should rather be initialized manually
-  if (_locNow == NONE || _locNow < FLOORBOTTOM || _locNow > FlOORTOP) {
-    while (_request.update() == NONE) _ledStrip.blink(WAITINGINTERVAL);
-    _motor.up();
-    while (_locNow == NONE) updateSensorInput();
-    _motor.stop(_stopDelay[_locNow]);
+  // if (_locNow == NONE || _locNow < FLOORBOTTOM || _locNow > FlOORTOP) {
+  //   while (_request.update() == NONE) _ledStrip.blink(WAITINGINTERVAL);
+  //   _motor.up();
+  //   while (_locNow == NONE) updateSensorInput();
+  //   _motor.stop(_stopDelay[_locNow]);
+  // }
+
+  // DEV: Is this a better way of initializing the elevator?
+  while (_locNow == NONE || _locNow < FLOORBOTTOM || _locNow > FlOORTOP) {
+    _ledStrip.blink(WAITINGINTERVAL);
+    int8_t manualRequest = _manual.update();
+    if (manualRequest != NONE) processManualRequest(manualRequest);
   }
 }
 
@@ -63,8 +70,9 @@ void Elevator::run() {
     _motor.stop(_stopDelay[_locNow]);
     _locStop = NONE;
   }
-  validateMotorState();
-  processManualRequest();
+  if (!validMotorState()) errorState();
+  int8_t manualRequest = _manual.update();
+  if (manualRequest != NONE) processManualRequest(manualRequest);
 }
 
 // Updates sensor input and checks for emergency button and unrecoverable
@@ -77,21 +85,22 @@ void Elevator::updateSensorInput() {
   if (_emergency.update() != NONE) emergencyState();
 }
 
-// Validates if the current motor state is valid for the current sensor input
-void Elevator::validateMotorState() {
+// Checks if the current motor state is valid for the current elevator
+// location
+bool Elevator::validMotorState() {
   if ((_motor.state() == UP && (_locNow >= _locStop || _locNow == FlOORTOP)) ||
       (_motor.state() == DOWN &&
        (_locNow <= _locStop || _locNow == FLOORBOTTOM)))
-    errorState();
+    return false;
+  return true;
 }
 
-// Checks for a manual (up or down) request and processes it
-void Elevator::processManualRequest() {
-  int8_t manualRequest = _manual.update();
-  int8_t blockingFloor = manualRequest == UP ? FlOORTOP : FLOORBOTTOM;
-  if (manualRequest != NONE && _locNow != blockingFloor) {
-    manualRequest == UP ? _motor.up() : _motor.down();
-    while (_manual.update() == manualRequest && _locNow != blockingFloor) {
+// Processes manual request and blocks elevator movement until request is done
+void Elevator::processManualRequest(int8_t request) {
+  int8_t blockingFloor = request == UP ? FlOORTOP : FLOORBOTTOM;
+  if (request != NONE && _locNow != blockingFloor) {
+    request == UP ? _motor.up() : _motor.down();
+    while (_manual.update() == request && _locNow != blockingFloor) {
       updateSensorInput();
 #ifdef DEBUG
       printDebug(_motor, _ledStrip, _locNow, _locStop, _manual, _sensor,
@@ -119,8 +128,8 @@ void Elevator::errorState() {
 
 // Blocks elevator movement until emergency button is released
 void Elevator::emergencyState() {
-  int8_t state = _motor.state();
   _motor.stop(0);
+  _locStop = NONE;
 #ifdef DEBUG
   Serial.println(String(YELLOW) + "SPECIAL:" + String(RESET) +
                  " Emergency state!");
@@ -130,11 +139,6 @@ void Elevator::emergencyState() {
     _ledStrip.blink(EMERGENCYINTERVAL);
   }
   _errorLed.off();
-  // Wait for user input to start moving again if elevator was moving before
-  if (state != STOP) {
-    while (_request.update() == NONE) _ledStrip.blink(WAITINGINTERVAL);
-    state == UP ? _motor.up() : _motor.down();
-  }
 }
 
 // Generate random seed using analog pin

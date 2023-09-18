@@ -57,8 +57,8 @@ class Elevator {
 
  private:
   void updateSensorInput();
-  void validateMotorState();
-  void processManualRequest();
+  bool validMotorState();
+  void processManualRequest(int8_t request);
   void errorState();
   void emergencyState();
   unsigned long generateSeed(uint8_t pin);
