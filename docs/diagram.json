@@ -1,0 +1,438 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -197.27,
+      "left": 236.27,
+      "attrs": {
+        "color": "green",
+        "key": "4"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": -149.67,
+      "left": 235.87,
+      "attrs": {
+        "color": "green",
+        "key": "3"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn3",
+      "top": -103.67,
+      "left": 235.2,
+      "attrs": {
+        "color": "green",
+        "key": "2"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn4",
+      "top": -59.01,
+      "left": 235.21,
+      "attrs": {
+        "color": "green",
+        "key": "1"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn5",
+      "top": -217.67,
+      "left": 37.2,
+      "attrs": {
+        "color": "blue",
+        "key": "8"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn6",
+      "top": -170.07,
+      "left": 36.8,
+      "attrs": {
+        "color": "blue",
+        "key": "7"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn7",
+      "top": -124.07,
+      "left": 36.13,
+      "attrs": {
+        "color": "blue",
+        "key": "6"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn8",
+      "top": -79.41,
+      "left": 36.14,
+      "attrs": {
+        "color": "blue",
+        "key": "5"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -233.4,
+      "left": 133.36,
+      "rotate": 90,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn9",
+      "top": 274.58,
+      "left": 154.59,
+      "attrs": {
+        "color": "red",
+        "key": "r"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn10",
+      "top": 228.95,
+      "left": 156.24,
+      "attrs": {
+        "color": "red",
+        "key": " "
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -264.66,
+      "left": 247.06,
+      "rotate": 90,
+      "attrs": {
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -295.77,
+      "left": 248.62,
+      "rotate": 90,
+      "attrs": {
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn11",
+      "top": 47.75,
+      "left": 306.48,
+      "attrs": {
+        "color": "green",
+        "key": "ArrowUp"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn12",
+      "top": 96.47,
+      "left": 305.63,
+      "attrs": {
+        "color": "green",
+        "key": "ArrowDown"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "uno:GND.1",
+      "btn4:1.l",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "uno:GND.1",
+      "btn3:1.l",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "uno:GND.1",
+      "btn2:1.l",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "uno:GND.1",
+      "btn1:1.l",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "btn1:2.r",
+      "uno:5",
+      "green",
+      [
+        "h18.73",
+        "v162.17",
+        "h-114"
+      ]
+    ],
+    [
+      "btn2:2.r",
+      "uno:4",
+      "green",
+      [
+        "h9.8",
+        "v110.57",
+        "h-101.33"
+      ]
+    ],
+    [
+      "btn3:2.r",
+      "uno:3",
+      "green",
+      [
+        "h5.13",
+        "v60.57",
+        "h-82"
+      ]
+    ],
+    [
+      "btn4:2.r",
+      "uno:2",
+      "green",
+      [
+        "h0.46",
+        "v11.91",
+        "h-67.33"
+      ]
+    ],
+    [
+      "btn8:2.r",
+      "uno:8",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "btn7:2.r",
+      "uno:9",
+      "green",
+      [
+        "h60.87",
+        "v96.3"
+      ]
+    ],
+    [
+      "btn6:2.r",
+      "uno:10",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "btn5:2.r",
+      "uno:11",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "uno:GND.1",
+      "btn8:1.l",
+      "black",
+      [
+        "v-37.43",
+        "h-91.5",
+        "v-40.67"
+      ]
+    ],
+    [
+      "uno:GND.1",
+      "btn7:1.l",
+      "black",
+      [
+        "v-36.77",
+        "h-92.17",
+        "v-89.33"
+      ]
+    ],
+    [
+      "uno:GND.1",
+      "btn6:1.l",
+      "black",
+      [
+        "v-36.77",
+        "h-91.5",
+        "v-90"
+      ]
+    ],
+    [
+      "uno:GND.1",
+      "btn5:1.l",
+      "black",
+      [
+        "v-36.77",
+        "h-91.5",
+        "v-194.67"
+      ]
+    ],
+    [
+      "uno:GND.1",
+      "led3:C",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "uno:GND.1",
+      "led2:C",
+      "black",
+      [
+        "v-284.94",
+        "h108.91",
+        "v28.33"
+      ]
+    ],
+    [
+      "led3:A",
+      "uno:7",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "led2:A",
+      "uno:6",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "led1:A",
+      "uno:12",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "uno:GND.1",
+      "led1:C",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "btn10:2.r",
+      "uno:A3",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "btn9:2.r",
+      "uno:A4",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "uno:GND.3",
+      "btn10:1.l",
+      "black",
+      [
+        "v15.58",
+        "h-34.19",
+        "v14.38"
+      ]
+    ],
+    [
+      "uno:GND.3",
+      "btn9:1.l",
+      "black",
+      [
+        "v15.58",
+        "h-34.53",
+        "v89.03"
+      ]
+    ],
+    [
+      "uno:GND.3",
+      "btn12:1.l",
+      "black",
+      [
+        "v14.55",
+        "h112.03",
+        "v-98.27"
+      ]
+    ],
+    [
+      "uno:GND.3",
+      "btn11:1.l",
+      "black",
+      [
+        "v14.55",
+        "h111.68",
+        "v-155.12"
+      ]
+    ],
+    [
+      "btn11:2.r",
+      "uno:A1",
+      "green",
+      [
+        "h14.11",
+        "v139.31",
+        "h-172.92"
+      ]
+    ],
+    [
+      "btn12:2.r",
+      "uno:A0",
+      "green",
+      [
+        "h6.4",
+        "v83.4",
+        "h-171.21"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}
