@@ -1,13 +1,13 @@
 #include "Elevator.hpp"
 
-// DEV Invert sensor and emergency input for real sensors
+// DEV Invert sensor and emergency input for real sensors (done atm)
 Elevator::Elevator()
     : _ledStrip(12, LEDSTRIPDELAY),
       _errorLed(LED_BUILTIN),
       _request(2, FLOORCOUNT),
-      _sensor(8, FLOORCOUNT),
+      _sensor(8, FLOORCOUNT, true),
       _manual(14, 2),
-      _emergency(17, 1),
+      _emergency(17, 1, true),
       _reset(18, 1),
       _motor(6, 7, &_ledStrip),
       _locNow(NONE),
@@ -96,11 +96,12 @@ bool Elevator::validMotorState() {
 }
 
 // Processes manual request and blocks elevator movement until request is done
-void Elevator::processManualRequest(int8_t request) {
-  int8_t blockingFloor = request == UP ? FlOORTOP : FLOORBOTTOM;
-  if (request != NONE && _locNow != blockingFloor) {
-    request == UP ? _motor.up() : _motor.down();
-    while (_manual.update() == request && _locNow != blockingFloor) {
+void Elevator::processManualRequest(int8_t request, bool hasBlockingFloors) {
+  int8_t blockingFloor = request == DOWN ? FLOORBOTTOM : FlOORTOP;
+  if (request != NONE && (_locNow != blockingFloor || !hasBlockingFloors)) {
+    request == DOWN ? _motor.down() : _motor.up();
+    while (_manual.update() == request &&
+           (_locNow != blockingFloor || !hasBlockingFloors)) {
       updateSensorInput();
 #ifdef DEBUG
       printDebug(_motor, _ledStrip, _locNow, _locStop, _manual, _sensor,
@@ -116,13 +117,16 @@ void Elevator::processManualRequest(int8_t request) {
 void Elevator::errorState() {
   _motor.stop(0);
   _locStop = NONE;
-  _memory.write(EMPTY);
+  _memory.write(ERROR);
 #ifdef DEBUG
   Serial.println(String(RED) + "ERROR:" + String(RESET) + "   Error state!");
 #endif
   while (true) {
     _errorLed.blink(ERRORINTERVAL);
     _ledStrip.blink(ERRORINTERVAL);
+
+    int8_t manualRequest = _manual.update();
+    if (manualRequest != NONE) processManualRequest(manualRequest, false);
   }
 }
 
