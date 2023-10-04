@@ -43,7 +43,7 @@ class Elevator {
   Inputs _reset;
   Motor _motor;
 
-  int16_t _stopDelay[FLOORCOUNT] = {1500, 1000, 500, 0};
+  int16_t _stopDelay[FLOORCOUNT] = {0, 0, 0, 0};
   int8_t _locNow;
   int8_t _locStop;
   Memory _memory;
