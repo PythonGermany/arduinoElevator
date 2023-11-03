@@ -55,10 +55,8 @@ void Elevator::run() {
     _locStop = _request.update();
     if (_locStop == _locNow) _locStop = NONE;
     if (_locStop != NONE) _locStop > _locNow ? _motor.up() : _motor.down();
-  } else if (_motor.state() != STOP && _locStop == _locNow) {
-    _motor.stop(_stopDelay[_locNow]);
-    _locStop = NONE;
-  }
+  } else if (_motor.state() != STOP && _locStop == _locNow)
+    stop(_stopDelay[_locNow]);
   if (!validMotorState()) errorState();
   processManualRequest(_manual);
 }
@@ -99,15 +97,13 @@ void Elevator::processManualRequest(Inputs &input, bool hasBlockingFloors) {
                  _request);
 #endif
     }
-    _motor.stop(0);
-    _locStop = NONE;
+    stop();
   }
 }
 
 // Blocks elevator movement forever in case of unrecoverable error
 void Elevator::errorState() {
-  _motor.stop(0);
-  _locStop = NONE;
+  stop();
   _memory.write(ERROR);
 #ifdef DEBUG
   Serial.println(String(RED) + "ERROR:" + String(RESET) + "   Error state!");
@@ -122,8 +118,7 @@ void Elevator::errorState() {
 
 // Blocks elevator movement until emergency button is released
 void Elevator::emergencyState() {
-  _motor.stop(0);
-  _locStop = NONE;
+  stop();
 #ifdef DEBUG
   Serial.println(String(YELLOW) + "SPECIAL:" + String(RESET) +
                  " Emergency state!");
@@ -133,6 +128,11 @@ void Elevator::emergencyState() {
     _ledStrip.blink(EMERGENCYINTERVAL);
   }
   _errorLed.off();
+}
+
+void Elevator::stop(int16_t delayTime) {
+  _motor.stop(delayTime);
+  _locNow = NONE;
 }
 
 // Generate random seed using analog pin

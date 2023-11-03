@@ -61,6 +61,7 @@ class Elevator {
   void processManualRequest(Inputs &input, bool hasBlockingFloors = true);
   void errorState();
   void emergencyState();
+  void stop(int16_t delayTime = (int16_t)0);
   unsigned long generateSeed(uint8_t pin);
 };
 
