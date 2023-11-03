@@ -24,7 +24,7 @@ Elevator::~Elevator() {
 }
 
 // Executes elevator initialization sequence
-// If elevator location is not saved, it will move to INITFLOOR
+// If elevator location is not saved, it will wait to be initialized manually
 void Elevator::init() {
 #ifdef DEBUG
   Serial.begin(115200);
@@ -37,21 +37,10 @@ void Elevator::init() {
   _memory.debug();
 #endif
   _locNow = _sensor.update(true);
-  // DEV: Is this way of initializing the elevator safe enough? (e.g. if the
-  // elevator is above the top floor sensor after a reset) -> Ask if the
-  // elevator should rather be initialized manually
-  // if (_locNow == NONE || _locNow < FLOORBOTTOM || _locNow > FlOORTOP) {
-  //   while (_request.update() == NONE) _ledStrip.blink(WAITINGINTERVAL);
-  //   _motor.up();
-  //   while (_locNow == NONE) updateSensorInput();
-  //   _motor.stop(_stopDelay[_locNow]);
-  // }
 
-  // DEV: Is this a better way of initializing the elevator?
   while (_locNow == NONE || _locNow < FLOORBOTTOM || _locNow > FlOORTOP) {
     _ledStrip.blink(WAITINGINTERVAL);
-    int8_t manualRequest = _manual.update();
-    if (manualRequest != NONE) processManualRequest(manualRequest);
+    processManualRequest(_manual);  // TODO: Change input once tested properly
   }
 }
 
@@ -71,8 +60,7 @@ void Elevator::run() {
     _locStop = NONE;
   }
   if (!validMotorState()) errorState();
-  int8_t manualRequest = _manual.update();
-  if (manualRequest != NONE) processManualRequest(manualRequest);
+  processManualRequest(_manual);
 }
 
 // Updates sensor input and checks for emergency button and unrecoverable
@@ -95,12 +83,15 @@ bool Elevator::validMotorState() {
   return true;
 }
 
-// Processes manual request and blocks elevator movement until request is done
-void Elevator::processManualRequest(int8_t request, bool hasBlockingFloors) {
+// Processes two buttons input into up/down movement if requested
+void Elevator::processManualRequest(Inputs &input, bool hasBlockingFloors) {
+  int8_t request = input.update();
+  if (request == NONE) return;
+
   int8_t blockingFloor = request == DOWN ? FLOORBOTTOM : FlOORTOP;
-  if (request != NONE && (_locNow != blockingFloor || !hasBlockingFloors)) {
+  if (_locNow != blockingFloor || !hasBlockingFloors) {
     request == DOWN ? _motor.down() : _motor.up();
-    while (_manual.update() == request &&
+    while (input.update() == request &&
            (_locNow != blockingFloor || !hasBlockingFloors)) {
       updateSensorInput();
 #ifdef DEBUG
@@ -124,9 +115,8 @@ void Elevator::errorState() {
   while (true) {
     _errorLed.blink(ERRORINTERVAL);
     _ledStrip.blink(ERRORINTERVAL);
-
-    int8_t manualRequest = _manual.update();
-    if (manualRequest != NONE) processManualRequest(manualRequest, false);
+    processManualRequest(_manual,
+                         false);  // TODO: Change input once tested properly
   }
 }
 
