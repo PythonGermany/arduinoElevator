@@ -4,7 +4,10 @@ Led::Led() {}
 
 Led::Led(uint8_t pin) : _pin(pin), _delay(0) { init(); }
 
-Led::Led(uint8_t pin, uint64_t delay) : _pin(pin), _delay(delay) { init(); }
+Led::Led(uint8_t pin, uint64_t delay, bool invert)
+    : _pin(pin), _delay(delay), _invert(invert) {
+  init();
+}
 
 Led::Led(const Led &rhs) { *this = rhs; }
 
@@ -32,13 +35,13 @@ void Led::init() {
 
 // Turns led on
 void Led::on() {
-  digitalWrite(_pin, HIGH);
+  digitalWrite(_pin, !_invert);
   _state = ON;
 }
 
 // Turns led off
 void Led::off() {
-  digitalWrite(_pin, LOW);
+  digitalWrite(_pin, _invert);
   _state = OFF;
 }
 

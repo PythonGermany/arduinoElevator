@@ -132,7 +132,7 @@ void Elevator::emergencyState() {
 
 void Elevator::stop(int16_t delayTime) {
   _motor.stop(delayTime);
-  _locNow = NONE;
+  _locStop = NONE;
 }
 
 // Generate random seed using analog pin

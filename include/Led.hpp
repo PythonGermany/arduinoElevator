@@ -11,12 +11,13 @@ class Led {
   uint8_t _pin;
   bool _state;
   unsigned long _delay;
+  bool _invert;
   unsigned long _start;
 
  public:
   Led();
   Led(uint8_t pin);
-  Led(uint8_t pin, uint64_t delay);
+  Led(uint8_t pin, uint64_t delay, bool invert = false);
   Led(const Led &rhs);
   Led &operator=(const Led &rhs);
   ~Led();

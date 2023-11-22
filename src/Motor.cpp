@@ -40,7 +40,7 @@ void Motor::init() {
 void Motor::down() {
   if (_state != STOP) stop(0);
   if (_led != NULL) _led->on();
-  digitalWrite(_pinDown, HIGH);
+  digitalWrite(_pinDown, LOW);
   _state = DOWN;
 }
 
@@ -48,7 +48,7 @@ void Motor::down() {
 void Motor::up() {
   if (_state != STOP) stop(0);
   if (_led != NULL) _led->on();
-  digitalWrite(_pinUp, HIGH);
+  digitalWrite(_pinUp, LOW);
   _state = UP;
 }
 
@@ -57,7 +57,7 @@ void Motor::up() {
 void Motor::stop(int16_t delayTime) {
   if (delayTime > 0) delay(delayTime);
   if (_led != NULL) _led->delay(true);
-  digitalWrite(_pinDown, LOW);
-  digitalWrite(_pinUp, LOW);
+  digitalWrite(_pinDown, HIGH);
+  digitalWrite(_pinUp, HIGH);
   _state = STOP;
 }
