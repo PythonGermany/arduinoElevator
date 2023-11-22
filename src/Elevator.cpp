@@ -2,7 +2,7 @@
 
 // DEV Invert sensor and emergency input for real sensors (done atm)
 Elevator::Elevator()
-    : _ledStrip(12, LEDSTRIPDELAY),
+    : _ledStrip(12, LEDSTRIPDELAY, true),
       _errorLed(LED_BUILTIN),
       _request(2, FLOORCOUNT),
       _sensor(8, FLOORCOUNT, true),
