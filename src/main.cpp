@@ -2,6 +2,11 @@
 
 Elevator elevator;
 
-void setup() { elevator.init(); }
+void setup() {
+#ifdef DEBUG
+    Serial.begin(115200);
+#endif
+    elevator.init();
+}
 
 void loop() { elevator.run(); }

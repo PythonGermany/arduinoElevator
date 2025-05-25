@@ -15,17 +15,13 @@ Elevator::Elevator()
   _memory = Memory(min(100, maxMemorySize), SAVESLOT, redundancy);
 }
 
-Elevator::~Elevator() {
-#ifdef DEBUG
-  Serial.end();
-#endif
-}
+Elevator::~Elevator() {}
 
 // Executes elevator initialization sequence
 // If elevator location is not saved, it will wait to be initialized manually
 void Elevator::init() {
 #ifdef DEBUG
-  Serial.begin(115200);
+  Serial.println(String(GREEN) + "ELEVATOR:" + String(RESET) + " Init" );
 #endif
   randomSeed(generateSeed(UNCONNECTED));
   if (_reset.update() != NONE) _memory.init(true);
