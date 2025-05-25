@@ -5,7 +5,11 @@ Elevator::Elevator()
     : _ledStrip(12, LEDSTRIPDELAY, true),
       _errorLed(LED_BUILTIN),
       _request(2, FLOORCOUNT),
+#ifdef DEBUG
+      _sensor(8, FLOORCOUNT),
+#else
       _sensor(8, FLOORCOUNT, true),
+#endif
       _reset(18, 1),
       _motor(6, 7, &_ledStrip),
       _locNow(NONE),
