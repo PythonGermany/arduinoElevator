@@ -15,7 +15,7 @@ class Motor;
 #ifdef DEBUG
 // Prints elevator debug information to the serial monitor
 void printDebug(Motor &motor, Led &ledStrip, int8_t &locNow, int8_t &locStop,
-                Inputs &manual, Inputs &sensor, Inputs &request);
+                Inputs &sensor, Inputs &request, String message);
 
 #include "Inputs.hpp"
 #include "Led.hpp"

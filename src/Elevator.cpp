@@ -6,7 +6,6 @@ Elevator::Elevator()
       _errorLed(LED_BUILTIN),
       _request(2, FLOORCOUNT),
       _sensor(8, FLOORCOUNT, true),
-      _manual(14, 2),
       _reset(18, 1),
       _motor(6, 7, &_ledStrip),
       _locNow(NONE),
@@ -39,14 +38,13 @@ void Elevator::init() {
 
   while (_locNow == NONE || _locNow < FLOORBOTTOM || _locNow > FlOORTOP) {
     _ledStrip.blink(WAITINGINTERVAL);
-    processManualRequest(_manual);  // TODO: Change input once tested properly
   }
 }
 
 // Executes elevator main loop using private elevator methods
 void Elevator::run() {
 #ifdef DEBUG
-  printDebug(_motor, _ledStrip, _locNow, _locStop, _manual, _sensor, _request);
+  printDebug(_motor, _ledStrip, _locNow, _locStop, _sensor, _request, "In main loop");
 #endif
   if (_motor.state() == STOP && _ledStrip.state() == ON) _ledStrip.delay();
   updateSensorInput();
@@ -56,7 +54,6 @@ void Elevator::run() {
     if (_locStop != NONE) _locStop > _locNow ? _motor.up() : _motor.down();
   } else if (_motor.state() != STOP && _locStop == _locNow)
     stop(_stopDelay[_locNow]);
-  processManualRequest(_manual);
   if (!validMotorState()) errorState("Motor state invalid");
 }
 
@@ -79,26 +76,6 @@ bool Elevator::validMotorState() {
   return true;
 }
 
-// Processes two buttons input into up/down movement if requested
-void Elevator::processManualRequest(Inputs &input, bool hasBlockingFloors) {
-  int8_t request = input.update();
-  if (request == NONE) return;
-
-  int8_t blockingFloor = request == DOWN ? FLOORBOTTOM : FlOORTOP;
-  if (_locNow != blockingFloor || !hasBlockingFloors) {
-    request == DOWN ? _motor.down() : _motor.up();
-    while (input.update() == request &&
-           (_locNow != blockingFloor || !hasBlockingFloors)) {
-      updateSensorInput();
-#ifdef DEBUG
-      printDebug(_motor, _ledStrip, _locNow, _locStop, _manual, _sensor,
-                 _request);
-#endif
-    }
-    stop();
-  }
-}
-
 // Blocks elevator movement forever in case of unrecoverable error
 void Elevator::errorState(String reason) {
   stop();
@@ -107,8 +84,6 @@ void Elevator::errorState(String reason) {
   Serial.println(String(RED) + "ERROR:" + String(RESET) + "   " + reason + "!");
 #endif
   while (true) {
-    processManualRequest(_manual,
-                         false);  // TODO: Change input once tested properly
 #ifdef DEBUG
     printDebug(_motor, _ledStrip, _locNow, _locStop, _sensor, _request, "In error loop");
 #endif
