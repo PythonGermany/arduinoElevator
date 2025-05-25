@@ -6,7 +6,7 @@
 #include "colors.hpp"
 
 #define DEBUG
-#define DEBUGINTERVAL 100
+#define DEBUGINTERVAL 1000
 
 class Inputs;
 class Led;
