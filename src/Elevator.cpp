@@ -33,6 +33,9 @@ void Elevator::init() {
   _locNow = _sensor.update(true);
 
   while (_locNow == NONE || _locNow < FLOORBOTTOM || _locNow > FlOORTOP) {
+#ifdef DEBUG
+  printDebug(_motor, _ledStrip, _locNow, _locStop, _sensor, _request, "In init loop");
+#endif
     _ledStrip.blink(WAITINGINTERVAL);
   }
 }
