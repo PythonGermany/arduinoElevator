@@ -7,7 +7,6 @@ Elevator::Elevator()
       _request(2, FLOORCOUNT),
       _sensor(8, FLOORCOUNT, true),
       _manual(14, 2),
-      _emergency(17, 1, true),
       _reset(18, 1),
       _motor(6, 7, &_ledStrip),
       _locNow(NONE),
@@ -57,8 +56,8 @@ void Elevator::run() {
     if (_locStop != NONE) _locStop > _locNow ? _motor.up() : _motor.down();
   } else if (_motor.state() != STOP && _locStop == _locNow)
     stop(_stopDelay[_locNow]);
-  if (!validMotorState()) errorState();
   processManualRequest(_manual);
+  if (!validMotorState()) errorState("Motor state invalid");
 }
 
 // Updates sensor input and checks for emergency button and unrecoverable
@@ -67,8 +66,7 @@ void Elevator::updateSensorInput() {
   int8_t last = _sensor.getLast();
   _locNow = _sensor.update(true);
   if (_locNow != last) _memory.write(_locNow);
-  if (_sensor.error()) errorState();
-  if (_emergency.update() != NONE) emergencyState();
+  if (_sensor.error()) errorState("Sensor error");
 }
 
 // Checks if the current motor state is valid for the current elevator
@@ -102,32 +100,21 @@ void Elevator::processManualRequest(Inputs &input, bool hasBlockingFloors) {
 }
 
 // Blocks elevator movement forever in case of unrecoverable error
-void Elevator::errorState() {
+void Elevator::errorState(String reason) {
   stop();
   _memory.write(ERROR);
 #ifdef DEBUG
-  Serial.println(String(RED) + "ERROR:" + String(RESET) + "   Error state!");
+  Serial.println(String(RED) + "ERROR:" + String(RESET) + "   " + reason + "!");
 #endif
   while (true) {
-    _errorLed.blink(ERRORINTERVAL);
-    _ledStrip.blink(ERRORINTERVAL);
     processManualRequest(_manual,
                          false);  // TODO: Change input once tested properly
-  }
-}
-
-// Blocks elevator movement until emergency button is released
-void Elevator::emergencyState() {
-  stop();
 #ifdef DEBUG
-  Serial.println(String(YELLOW) + "SPECIAL:" + String(RESET) +
-                 " Emergency state!");
+    printDebug(_motor, _ledStrip, _locNow, _locStop, _sensor, _request, "In error loop");
 #endif
-  while (_emergency.update() != NONE) {
-    _errorLed.blink(EMERGENCYINTERVAL);
-    _ledStrip.blink(EMERGENCYINTERVAL);
+    _errorLed.blink(ERRORINTERVAL);
+    _ledStrip.blink(ERRORINTERVAL);
   }
-  _errorLed.off();
 }
 
 void Elevator::stop(int16_t delayTime) {

@@ -39,7 +39,6 @@ class Elevator {
   Inputs _request;
   Inputs _sensor;
   Inputs _manual;
-  Inputs _emergency;
   Inputs _reset;
   Motor _motor;
 
@@ -59,8 +58,7 @@ class Elevator {
   void updateSensorInput();
   bool validMotorState();
   void processManualRequest(Inputs &input, bool hasBlockingFloors = true);
-  void errorState();
-  void emergencyState();
+  void errorState(String reason);
   void stop(int16_t delayTime = (int16_t)0);
   unsigned long generateSeed(uint8_t pin);
 };
