@@ -54,8 +54,8 @@ class Elevator {
   void run();
 
  private:
-  void updateSensorInput();
-  bool validMotorState();
+  void updateLocation();
+  bool isMotorStateValid();
   void errorState(String reason);
   void stop(int16_t delayTime = (int16_t)0);
   unsigned long generateSeed(uint8_t pin);

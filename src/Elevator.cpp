@@ -50,19 +50,19 @@ void Elevator::run() {
   printDebug(_motor, _ledStrip, _locNow, _locStop, _sensor, _request, "In main loop");
 #endif
   if (_motor.state() == STOP && _ledStrip.state() == ON) _ledStrip.delay();
-  updateSensorInput();
+  updateLocation();
   if (_locStop == NONE) {
     _locStop = _request.update();
     if (_locStop == _locNow) _locStop = NONE;
     if (_locStop != NONE) _locStop > _locNow ? _motor.up() : _motor.down();
   } else if (_motor.state() != STOP && _locStop == _locNow)
     stop(_stopDelay[_locNow]);
-  if (!validMotorState()) errorState("Motor state invalid");
+  if (!isMotorStateValid()) errorState("Motor state invalid");
 }
 
 // Updates sensor input and checks for emergency button and unrecoverable
 // errors
-void Elevator::updateSensorInput() {
+void Elevator::updateLocation() {
   int8_t last = _sensor.getLast();
   _locNow = _sensor.update(true);
   if (_locNow != last) _memory.write(_locNow);
@@ -71,7 +71,7 @@ void Elevator::updateSensorInput() {
 
 // Checks if the current motor state is valid for the current elevator
 // location
-bool Elevator::validMotorState() {
+bool Elevator::isMotorStateValid() {
   if ((_motor.state() == UP && (_locNow >= _locStop || _locNow == FlOORTOP)) ||
       (_motor.state() == DOWN &&
        (_locNow <= _locStop || _locNow == FLOORBOTTOM)))
