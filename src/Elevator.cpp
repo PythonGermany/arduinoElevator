@@ -41,6 +41,7 @@ void Elevator::init() {
   printDebug(_motor, _ledStrip, _locNow, _locStop, _sensor, _request, "In init loop");
 #endif
     _ledStrip.blink(WAITINGINTERVAL);
+    updateLocation();
   }
 }
 
